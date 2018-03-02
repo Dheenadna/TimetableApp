@@ -29,6 +29,42 @@ app.use(function (req, res, next) {
     next();
 });
 
+// Models
+var Course = mongoose.model('course', {
+    _id: String,
+    courseName: String,
+    timetable: [
+        {
+            weeks: String,
+            lecturer: String,
+            moduleName: String,
+            room: String,
+            startTime: String,
+            duration: String,
+            moduleType: String,
+            endTime: String,
+            day: String
+        }
+    ]
+});
+
+// Routes
+
+// get courses, return _id(courseId) and courseName
+app.get('/api/courses', function (req, res) {
+
+    console.log("fetching courses");
+
+    Course.find({}, { '_id': 1, 'courseName': 1 }, function (err, courses) {
+        if (err) {
+            res.send(err);
+            console.log(err)
+        } else {
+            res.json(courses);
+        }
+    });
+});
+
 // listen (start app with node server.js) ======================================
 app.listen(8081);
 console.log("App listening on port 8081");
