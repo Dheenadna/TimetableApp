@@ -65,6 +65,23 @@ app.get('/api/courses', function (req, res) {
     });
 });
 
+// find courses by id
+app.post('/api/timetable', function (req, res) {
+    
+        console.log("fetching timetable")
+    
+        Course.find({
+            _id: req.body._id,
+        }, function (err, timetable) {
+            if (err) {
+                res.send(err);
+            } else {
+                res.json(timetable);
+            }
+        });
+    
+    });
+
 // listen (start app with node server.js) ======================================
 app.listen(8081);
 console.log("App listening on port 8081");
