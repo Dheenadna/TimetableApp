@@ -8,7 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TimetableviewPage } from '../pages/timetableview/timetableview';
 import { TimetablesProvider } from '../providers/timetables/timetables';
-import { Http, Headers } from "@angular/http";
+import { HttpModule } from '@angular/http'
 
 
 @NgModule({
@@ -19,7 +19,9 @@ import { Http, Headers } from "@angular/http";
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -31,8 +33,7 @@ import { Http, Headers } from "@angular/http";
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    TimetablesProvider,
-    Http, Headers
+    TimetablesProvider
   ]
 })
 export class AppModule {}
