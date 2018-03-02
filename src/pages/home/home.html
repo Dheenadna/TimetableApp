@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Select course
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label>Course(s)</ion-label>
+        <ion-select #C (ionChange)="viewTimetable(C.value)">
+          <ion-option *ngFor="let course of courses" value = "{{course._id}}">{{course.courseName}}</ion-option>
+        </ion-select>
+      </ion-item>
+</ion-content>

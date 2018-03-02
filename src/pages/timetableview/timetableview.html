@@ -1,0 +1,38 @@
+<!--
+  Generated template for the TimetableviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>View Timetable</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+      <ion-list>
+          <ion-item *ngFor="let t of timetables" text-wrap>
+            {{t.courseName}}
+            <ion-list>
+              <ion-item *ngFor="let module of t.timetable" text-wrap>
+                  {{ module.moduleName }}
+                  <br>
+                  {{ module.lecturer }}
+                  <br>
+                  {{ module.room }}
+                  <br>
+                  {{ module.day }}
+                  <br>
+                  {{ module.startTime }}
+                  <br>
+                  {{ module.startTime }}
+                  <br>
+              </ion-item>
+            </ion-list>
+          </ion-item>
+        </ion-list>
+</ion-content>
