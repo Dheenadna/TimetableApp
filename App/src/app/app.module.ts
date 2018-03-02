@@ -8,14 +8,16 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TimetableviewPage } from '../pages/timetableview/timetableview';
 import { TimetablesProvider } from '../providers/timetables/timetables';
-import { HttpModule } from '@angular/http'
+import { CalenderPage } from '../pages/calender/calender';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    TimetableviewPage
+    TimetableviewPage,
+    CalenderPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { HttpModule } from '@angular/http'
   entryComponents: [
     MyApp,
     HomePage,
-    TimetableviewPage
+    TimetableviewPage,
+    CalenderPage
   ],
   providers: [
     StatusBar,

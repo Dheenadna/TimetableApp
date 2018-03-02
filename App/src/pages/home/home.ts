@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TimetableviewPage } from '../timetableview/timetableview';
+import { CalenderPage } from '../calender/calender';
+
 import { TimetablesProvider } from '../../providers/timetables/timetables';
 import { ModalController } from 'ionic-angular/components/modal/modal-controller';
 
@@ -28,4 +30,7 @@ export class HomePage {
     }); 
   }
 
+  viewCalender(){
+         this.navCtrl.push(CalenderPage);
+  }
 }
