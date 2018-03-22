@@ -14,25 +14,198 @@
 
 
 <ion-content>
+  <ion-list>
+    <ion-item *ngFor="let t of timetables" text-wrap>
+      {{t.courseName}}
       <ion-list>
-          <ion-item *ngFor="let t of timetables" text-wrap>
-            {{t.courseName}}
-            <ion-list>
-              <ion-item *ngFor="let module of t.timetable" text-wrap>
-                  {{ module.moduleName }}
-                  <br>
-                  {{ module.lecturer }}
-                  <br>
-                  {{ module.room }}
-                  <br>
-                  {{ module.day }}
-                  <br>
-                  {{ module.startTime }}
-                  <br>
-                  {{ module.startTime }}
-                  <br>
-              </ion-item>
-            </ion-list>
-          </ion-item>
-        </ion-list>
+        <ion-item *ngFor="let module of t.timetable" text-wrap>
+          {{ module.moduleName }}
+          <br> {{ module.lecturer }}
+          <br> {{ module.room }}
+          <br> {{ module.day }}
+          <br> {{ module.startTime }}
+          <br> {{ module.startTime }}
+          <br>
+        </ion-item>
+      </ion-list>
+    </ion-item>
+  </ion-list>
+
+
+
+
+  <!--<ion-card>
+    <ion-card-header>
+      Day of the week here
+    </ion-card-header>
+    <ion-card-content>
+      Information about the module, such as module name, location, lecturer etc.
+    </ion-card-content>
+  </ion-card>-->
+
+  <ion-card>
+    <ion-card-header>
+      Monday
+    </ion-card-header>
+    <ion-card-content>
+      Database Management Systems. Room 994. 10 - 11. Deirdre.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Monday
+    </ion-card-header>
+    <ion-card-content>
+      Mobile Apps Dev. Room 995. 12 - 14. Damien.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Monday
+    </ion-card-header>
+    <ion-card-content>
+      Graph Theory. Room 470. 15 - 16. Ian.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Monday
+    </ion-card-header>
+    <ion-card-content>
+      Graph Theory. Room 470. 15 - 16. Ian.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Tuesday
+    </ion-card-header>
+    <ion-card-content>
+      Database Management Systems. Room 994. 10 - 11. Deirdre.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Tuesday
+    </ion-card-header>
+    <ion-card-content>
+      Mobile Apps Dev. Room 995. 12 - 14. Damien.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Tuesday
+    </ion-card-header>
+    <ion-card-content>
+      Graph Theory. Room 470. 15 - 16. Ian.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Tuesday
+    </ion-card-header>
+    <ion-card-content>
+      Graph Theory. Room 470. 15 - 16. Ian.
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-header>
+      Wednesday
+    </ion-card-header>
+    <ion-card-content>
+      Database Management Systems. Room 994. 10 - 11. Deirdre.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Wednesday
+    </ion-card-header>
+    <ion-card-content>
+      Mobile Apps Dev. Room 995. 12 - 14. Damien.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Wednesday
+    </ion-card-header>
+    <ion-card-content>
+      Graph Theory. Room 470. 15 - 16. Ian.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Wednesday
+    </ion-card-header>
+    <ion-card-content>
+      Graph Theory. Room 470. 15 - 16. Ian.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Thursday
+    </ion-card-header>
+    <ion-card-content>
+      Database Management Systems. Room 994. 10 - 11. Deirdre.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Thursday
+    </ion-card-header>
+    <ion-card-content>
+      Mobile Apps Dev. Room 995. 12 - 14. Damien.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Thursday
+    </ion-card-header>
+    <ion-card-content>
+      Graph Theory. Room 470. 15 - 16. Ian.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Thursday
+    </ion-card-header>
+    <ion-card-content>
+      Graph Theory. Room 470. 15 - 16. Ian.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Friday
+    </ion-card-header>
+    <ion-card-content>
+      Database Management Systems. Room 994. 10 - 11. Deirdre.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Friday
+    </ion-card-header>
+    <ion-card-content>
+      Mobile Apps Dev. Room 995. 12 - 14. Damien.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Friday
+    </ion-card-header>
+    <ion-card-content>
+      Graph Theory. Room 470. 15 - 16. Ian.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Friday
+    </ion-card-header>
+    <ion-card-content>
+      Graph Theory. Room 470. 15 - 16. Ian.
+    </ion-card-content>
+  </ion-card>
 </ion-content>
