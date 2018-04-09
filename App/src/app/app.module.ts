@@ -11,12 +11,15 @@ import { TimetablesProvider } from '../providers/timetables/timetables';
 import { CalenderPage } from '../pages/calender/calender';
 import { HttpModule } from '@angular/http';
 import { AuthProvider } from '../providers/auth/auth';
-
+import {LoginPage} from '../pages/login/login';
+import {SignupPage} from '../pages/signup/signup';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    LoginPage,
+    SignupPage,
     TimetableviewPage,
     CalenderPage
   ],
@@ -30,6 +33,8 @@ import { AuthProvider } from '../providers/auth/auth';
   entryComponents: [
     MyApp,
     HomePage,
+    LoginPage,
+    SignupPage,
     TimetableviewPage,
     CalenderPage
   ],
