@@ -39,6 +39,24 @@ export class LoginPage {
         this.loading.dismiss();
     });
   }
-  
+
+  login(){
+    
+   // this.showLoader();
+
+    let credentials = {
+        email: this.email,
+        password: this.password
+    };
+
+    this.authService.login(credentials).then((result) => {
+        this.loading.dismiss();
+        console.log(result);
+        this.navCtrl.setRoot(HomePage);
+    }, (err) => {
+        this.loading.dismiss();
+        console.log(err);
+    });
+  }
 
 }
