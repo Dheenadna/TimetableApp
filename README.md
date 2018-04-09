@@ -38,9 +38,9 @@ To run this application on your local machine you will need to have Ionic instal
 
 ## Authors
 
-* **Donal Burke** - *Initial work* - [lanodburke](https://github.com/lanodburke)
-* **Naqi Ahmad** - *Initial work* - [nakster](https://github.com/nakster)
-* **Sean McGuire** - *Initial work* - [smcguire56](https://github.com/smcguire56)
+* **Donal Burke** - [lanodburke](https://github.com/lanodburke)
+* **Naqi Ahmad** - [nakster](https://github.com/nakster)
+* **Sean McGuire** - [smcguire56](https://github.com/smcguire56)
 
 ## License
 
