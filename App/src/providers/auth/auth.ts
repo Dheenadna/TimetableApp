@@ -40,4 +40,25 @@ export class AuthProvider {
   }
 
   //
+  createAccount(details){
+    return new Promise((resolve, reject) => {
+      
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+
+        this.http.post('https://donalburke.me/api/auth/register', JSON.stringify(details), {headers: headers})
+          .subscribe(res => {
+
+            let data = res.json();
+            this.token = data.token;
+            this.storage.set('token', data.token);
+            resolve(data);
+
+          }, (err) => {
+            reject(err);
+          });
+    });
+  }
+
+  
 }
