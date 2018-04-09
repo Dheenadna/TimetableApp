@@ -1,12 +1,12 @@
-webpackJsonp([2],{
+webpackJsonp([4],{
 
-/***/ 100:
+/***/ 102:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalenderPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -77,7 +77,7 @@ var CalenderPage = (function () {
     };
     CalenderPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-calender',template:/*ion-inline-start:"/Users/donal/Desktop/untitled folder/TimetableApp/App/src/pages/calender/calender.html"*/'<!--\n  Generated template for the CalenderPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>calender</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="calendar-header">\n    <ion-row class="calendar-month">\n      <ion-col col-2 (click)="goToLastMonth()"><ion-icon name="arrow-back"></ion-icon></ion-col>\n      <ion-col col-8>{{currentMonth}} {{currentYear}}</ion-col>\n      <ion-col col-2 (click)="goToNextMonth()"><ion-icon name="arrow-forward"></ion-icon></ion-col>\n    </ion-row>\n  </div>\n  <div class="calendar-body">\n    <ion-grid>\n      <ion-row class="calendar-weekday">\n        <ion-col>Su</ion-col>\n        <ion-col>Mo</ion-col>\n        <ion-col>Tu</ion-col>\n        <ion-col>We</ion-col>\n        <ion-col>Th</ion-col>\n        <ion-col>Fr</ion-col>\n        <ion-col>Sa</ion-col>\n      </ion-row>\n      <ion-row class="calendar-date">\n        <ion-col col-1 *ngFor="let lastDay of daysInLastMonth" class="last-month">{{lastDay}}</ion-col>\n        <ion-col col-1 *ngFor="let day of daysInThisMonth">\n          <span class="currentDate" *ngIf="currentDate === day; else otherDate">{{day}}</span>\n          <ng-template #otherDate class="otherDate">{{day}}</ng-template>\n        </ion-col>\n        <ion-col col-1 *ngFor="let nextDay of daysInNextMonth" class="next-month">{{nextDay}}</ion-col>\n      </ion-row>\n    </ion-grid>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/donal/Desktop/untitled folder/TimetableApp/App/src/pages/calender/calender.html"*/,
+            selector: 'page-calender',template:/*ion-inline-start:"C:\Users\g00332403\Desktop\New folder\TimetableApp\App\src\pages\calender\calender.html"*/'<!--\n\n  Generated template for the CalenderPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>calender</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <div class="calendar-header">\n\n    <ion-row class="calendar-month">\n\n      <ion-col col-2 (click)="goToLastMonth()"><ion-icon name="arrow-back"></ion-icon></ion-col>\n\n      <ion-col col-8>{{currentMonth}} {{currentYear}}</ion-col>\n\n      <ion-col col-2 (click)="goToNextMonth()"><ion-icon name="arrow-forward"></ion-icon></ion-col>\n\n    </ion-row>\n\n  </div>\n\n  <div class="calendar-body">\n\n    <ion-grid>\n\n      <ion-row class="calendar-weekday">\n\n        <ion-col>Su</ion-col>\n\n        <ion-col>Mo</ion-col>\n\n        <ion-col>Tu</ion-col>\n\n        <ion-col>We</ion-col>\n\n        <ion-col>Th</ion-col>\n\n        <ion-col>Fr</ion-col>\n\n        <ion-col>Sa</ion-col>\n\n      </ion-row>\n\n      <ion-row class="calendar-date">\n\n        <ion-col col-1 *ngFor="let lastDay of daysInLastMonth" class="last-month">{{lastDay}}</ion-col>\n\n        <ion-col col-1 *ngFor="let day of daysInThisMonth">\n\n          <span class="currentDate" *ngIf="currentDate === day; else otherDate">{{day}}</span>\n\n          <ng-template #otherDate class="otherDate">{{day}}</ng-template>\n\n        </ion-col>\n\n        <ion-col col-1 *ngFor="let nextDay of daysInNextMonth" class="next-month">{{nextDay}}</ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\g00332403\Desktop\New folder\TimetableApp\App\src\pages\calender\calender.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], CalenderPage);
@@ -88,13 +88,13 @@ var CalenderPage = (function () {
 
 /***/ }),
 
-/***/ 101:
+/***/ 103:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimetableviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -123,7 +123,7 @@ var TimetableviewPage = (function () {
     };
     TimetableviewPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-timetableview',template:/*ion-inline-start:"/Users/donal/Desktop/untitled folder/TimetableApp/App/src/pages/timetableview/timetableview.html"*/'<!--\n  Generated template for the TimetableviewPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>View Timetable</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-list>\n    <ion-item *ngFor="let t of timetables" text-wrap>\n      {{t.courseName}}\n      <ion-list>\n        <ion-item *ngFor="let module of t.timetable" text-wrap>\n          {{ module.moduleName }}\n          <br> {{ module.lecturer }}\n          <br> {{ module.room }}\n          <br> {{ module.day }}\n          <br> {{ module.startTime }}\n          <br> {{ module.startTime }}\n          <br>\n        </ion-item>\n      </ion-list>\n    </ion-item>\n  </ion-list>\n\n\n\n\n  <!--<ion-card>\n    <ion-card-header>\n      Day of the week here\n    </ion-card-header>\n    <ion-card-content>\n      Information about the module, such as module name, location, lecturer etc.\n    </ion-card-content>\n  </ion-card>-->\n\n  <ion-card>\n    <ion-card-header>\n      Monday\n    </ion-card-header>\n    <ion-card-content>\n      Database Management Systems. Room 994. 10 - 11. Deirdre.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Monday\n    </ion-card-header>\n    <ion-card-content>\n      Mobile Apps Dev. Room 995. 12 - 14. Damien.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Monday\n    </ion-card-header>\n    <ion-card-content>\n      Graph Theory. Room 470. 15 - 16. Ian.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Monday\n    </ion-card-header>\n    <ion-card-content>\n      Graph Theory. Room 470. 15 - 16. Ian.\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header>\n      Tuesday\n    </ion-card-header>\n    <ion-card-content>\n      Database Management Systems. Room 994. 10 - 11. Deirdre.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Tuesday\n    </ion-card-header>\n    <ion-card-content>\n      Mobile Apps Dev. Room 995. 12 - 14. Damien.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Tuesday\n    </ion-card-header>\n    <ion-card-content>\n      Graph Theory. Room 470. 15 - 16. Ian.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Tuesday\n    </ion-card-header>\n    <ion-card-content>\n      Graph Theory. Room 470. 15 - 16. Ian.\n    </ion-card-content>\n  </ion-card>\n\n\n  <ion-card>\n    <ion-card-header>\n      Wednesday\n    </ion-card-header>\n    <ion-card-content>\n      Database Management Systems. Room 994. 10 - 11. Deirdre.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Wednesday\n    </ion-card-header>\n    <ion-card-content>\n      Mobile Apps Dev. Room 995. 12 - 14. Damien.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Wednesday\n    </ion-card-header>\n    <ion-card-content>\n      Graph Theory. Room 470. 15 - 16. Ian.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Wednesday\n    </ion-card-header>\n    <ion-card-content>\n      Graph Theory. Room 470. 15 - 16. Ian.\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header>\n      Thursday\n    </ion-card-header>\n    <ion-card-content>\n      Database Management Systems. Room 994. 10 - 11. Deirdre.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Thursday\n    </ion-card-header>\n    <ion-card-content>\n      Mobile Apps Dev. Room 995. 12 - 14. Damien.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Thursday\n    </ion-card-header>\n    <ion-card-content>\n      Graph Theory. Room 470. 15 - 16. Ian.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Thursday\n    </ion-card-header>\n    <ion-card-content>\n      Graph Theory. Room 470. 15 - 16. Ian.\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header>\n      Friday\n    </ion-card-header>\n    <ion-card-content>\n      Database Management Systems. Room 994. 10 - 11. Deirdre.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Friday\n    </ion-card-header>\n    <ion-card-content>\n      Mobile Apps Dev. Room 995. 12 - 14. Damien.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Friday\n    </ion-card-header>\n    <ion-card-content>\n      Graph Theory. Room 470. 15 - 16. Ian.\n    </ion-card-content>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      Friday\n    </ion-card-header>\n    <ion-card-content>\n      Graph Theory. Room 470. 15 - 16. Ian.\n    </ion-card-content>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"/Users/donal/Desktop/untitled folder/TimetableApp/App/src/pages/timetableview/timetableview.html"*/,
+            selector: 'page-timetableview',template:/*ion-inline-start:"C:\Users\g00332403\Desktop\New folder\TimetableApp\App\src\pages\timetableview\timetableview.html"*/'<!--\n\n  Generated template for the TimetableviewPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>View Timetable</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-item *ngFor="let t of timetables" text-wrap>\n\n      {{t.courseName}}\n\n      <ion-list>\n\n        <ion-item *ngFor="let module of t.timetable" text-wrap>\n\n          {{ module.moduleName }}\n\n          <br> {{ module.lecturer }}\n\n          <br> {{ module.room }}\n\n          <br> {{ module.day }}\n\n          <br> {{ module.startTime }}\n\n          <br> {{ module.startTime }}\n\n          <br>\n\n        </ion-item>\n\n      </ion-list>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n\n\n\n\n\n\n  <!--<ion-card>\n\n    <ion-card-header>\n\n      Day of the week here\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Information about the module, such as module name, location, lecturer etc.\n\n    </ion-card-content>\n\n  </ion-card>-->\n\n\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Monday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Database Management Systems. Room 994. 10 - 11. Deirdre.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Monday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Mobile Apps Dev. Room 995. 12 - 14. Damien.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Monday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Graph Theory. Room 470. 15 - 16. Ian.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Monday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Graph Theory. Room 470. 15 - 16. Ian.\n\n    </ion-card-content>\n\n  </ion-card>\n\n\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Tuesday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Database Management Systems. Room 994. 10 - 11. Deirdre.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Tuesday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Mobile Apps Dev. Room 995. 12 - 14. Damien.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Tuesday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Graph Theory. Room 470. 15 - 16. Ian.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Tuesday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Graph Theory. Room 470. 15 - 16. Ian.\n\n    </ion-card-content>\n\n  </ion-card>\n\n\n\n\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Wednesday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Database Management Systems. Room 994. 10 - 11. Deirdre.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Wednesday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Mobile Apps Dev. Room 995. 12 - 14. Damien.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Wednesday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Graph Theory. Room 470. 15 - 16. Ian.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Wednesday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Graph Theory. Room 470. 15 - 16. Ian.\n\n    </ion-card-content>\n\n  </ion-card>\n\n\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Thursday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Database Management Systems. Room 994. 10 - 11. Deirdre.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Thursday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Mobile Apps Dev. Room 995. 12 - 14. Damien.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Thursday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Graph Theory. Room 470. 15 - 16. Ian.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Thursday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Graph Theory. Room 470. 15 - 16. Ian.\n\n    </ion-card-content>\n\n  </ion-card>\n\n\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Friday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Database Management Systems. Room 994. 10 - 11. Deirdre.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Friday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Mobile Apps Dev. Room 995. 12 - 14. Damien.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Friday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Graph Theory. Room 470. 15 - 16. Ian.\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Friday\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      Graph Theory. Room 470. 15 - 16. Ian.\n\n    </ion-card-content>\n\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"C:\Users\g00332403\Desktop\New folder\TimetableApp\App\src\pages\timetableview\timetableview.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], TimetableviewPage);
@@ -134,7 +134,7 @@ var TimetableviewPage = (function () {
 
 /***/ }),
 
-/***/ 112:
+/***/ 113:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -147,20 +147,28 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 112;
+webpackEmptyAsyncContext.id = 113;
 
 /***/ }),
 
-/***/ 154:
+/***/ 155:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/calender/calender.module": [
-		276,
+		283,
+		3
+	],
+	"../pages/login/login.module": [
+		284,
+		2
+	],
+	"../pages/signup/signup.module": [
+		286,
 		1
 	],
 	"../pages/timetableview/timetableview.module": [
-		277,
+		285,
 		0
 	]
 };
@@ -175,22 +183,22 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 154;
+webpackAsyncContext.id = 155;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 197:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__timetableview_timetableview__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__calender_calender__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_timetables_timetables__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular_components_modal_modal_controller__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__timetableview_timetableview__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__calender_calender__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_timetables_timetables__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular_components_modal_modal_controller__ = __webpack_require__(78);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -240,7 +248,7 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/donal/Desktop/untitled folder/TimetableApp/App/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Select course\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-item>\n    <ion-label>Course(s)</ion-label>\n    <ion-select #C (ionChange)="viewTimetable(C.value)">\n      <ion-option *ngFor="let course of courses" value="{{course._id}}">{{course.courseName}}</ion-option>\n    </ion-select>\n  </ion-item>\n  <button ion-button block outline (click)="viewCalender()">Calender View</button>\n\n<ion-list>\n\n <button ion-button block color="dark" (click)="doAlert()">Show Next Class</button>\n\n  <ion-item>\n    <ion-label stacked>Username</ion-label>\n    <ion-input type="text"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label stacked>Password</ion-label>\n    <ion-input type="password"></ion-input>\n  </ion-item>\n\n\n</ion-list>\n\n<button ion-button color="light" round>Login</button>\n</ion-content>'/*ion-inline-end:"/Users/donal/Desktop/untitled folder/TimetableApp/App/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\g00332403\Desktop\New folder\TimetableApp\App\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Select course\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-item>\n\n    <ion-label>Course(s)</ion-label>\n\n    <ion-select #C (ionChange)="viewTimetable(C.value)">\n\n      <ion-option *ngFor="let course of courses" value="{{course._id}}">{{course.courseName}}</ion-option>\n\n    </ion-select>\n\n  </ion-item>\n\n  <button ion-button block outline (click)="viewCalender()">Calender View</button>\n\n\n\n<ion-list>\n\n\n\n <button ion-button block color="dark" (click)="doAlert()">Show Next Class</button>\n\n\n\n  <ion-item>\n\n    <ion-label stacked>Username</ion-label>\n\n    <ion-input type="text"></ion-input>\n\n  </ion-item>\n\n\n\n  <ion-item>\n\n    <ion-label stacked>Password</ion-label>\n\n    <ion-input type="password"></ion-input>\n\n  </ion-item>\n\n\n\n\n\n</ion-list>\n\n\n\n<button ion-button color="light" round>Login</button>\n\n</ion-content>'/*ion-inline-end:"C:\Users\g00332403\Desktop\New folder\TimetableApp\App\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular_components_modal_modal_controller__["a" /* ModalController */], __WEBPACK_IMPORTED_MODULE_4__providers_timetables_timetables__["a" /* TimetablesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], HomePage);
@@ -251,14 +259,14 @@ var HomePage = (function () {
 
 /***/ }),
 
-/***/ 198:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimetablesProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -324,13 +332,103 @@ var TimetablesProvider = (function () {
 
 /***/ }),
 
-/***/ 200:
+/***/ 201:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the LoginPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var LoginPage = (function () {
+    function LoginPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    LoginPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad LoginPage');
+    };
+    LoginPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-login',template:/*ion-inline-start:"C:\Users\g00332403\Desktop\New folder\TimetableApp\App\src\pages\login\login.html"*/'<!--\n\n  Generated template for the LoginPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="secondary">\n\n    <ion-title>LoginPage</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n \n\n<ion-content>\n\n \n\n    <ion-row class="login-form">\n\n        <ion-col>\n\n            <ion-list inset>\n\n \n\n              <ion-item>\n\n                <ion-label><ion-icon name="person"></ion-icon></ion-label>\n\n                <ion-input [(ngModel)]="email" placeholder="email" type="text"></ion-input>\n\n              </ion-item>\n\n \n\n              <ion-item>\n\n                <ion-label><ion-icon name="lock"></ion-icon></ion-label>\n\n                <ion-input [(ngModel)]="password" placeholder="password" type="password"></ion-input>\n\n              </ion-item>\n\n \n\n            </ion-list>\n\n \n\n            <button ion-button full (click)="login()" color="primary" class="login-button">Login</button>\n\n \n\n        </ion-col>\n\n    </ion-row>\n\n \n\n    <ion-row>\n\n        <ion-col>\n\n            <button ion-button (click)="launchSignup()" class="create-account">Create an Account</button>\n\n        </ion-col>\n\n    </ion-row>\n\n \n\n</ion-content>'/*ion-inline-end:"C:\Users\g00332403\Desktop\New folder\TimetableApp\App\src\pages\login\login.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], LoginPage);
+    return LoginPage;
+}());
+
+//# sourceMappingURL=login.js.map
+
+/***/ }),
+
+/***/ 202:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the SignupPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var SignupPage = (function () {
+    function SignupPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    SignupPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad SignupPage');
+    };
+    SignupPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\g00332403\Desktop\New folder\TimetableApp\App\src\pages\signup\signup.html"*/'<!--\n\n  Generated template for the SignupPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>SignupPage</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\g00332403\Desktop\New folder\TimetableApp\App\src\pages\signup\signup.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], SignupPage);
+    return SignupPage;
+}());
+
+//# sourceMappingURL=signup.js.map
+
+/***/ }),
+
+/***/ 203:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(227);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -338,28 +436,34 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 224:
+/***/ 227:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(274);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_timetableview_timetableview__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_timetables_timetables__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_calender_calender__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_timetableview_timetableview__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_timetables_timetables__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_calender_calender__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_auth_auth__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_login_login__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup__ = __webpack_require__(202);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -379,6 +483,8 @@ var AppModule = (function () {
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup__["a" /* SignupPage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_timetableview_timetableview__["a" /* TimetableviewPage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_calender_calender__["a" /* CalenderPage */]
             ],
@@ -388,7 +494,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/calender/calender.module#CalenderPageModule', name: 'CalenderPage', segment: 'calender', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/timetableview/timetableview.module#TimetableviewPageModule', name: 'TimetableviewPage', segment: 'timetableview', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/timetableview/timetableview.module#TimetableviewPageModule', name: 'TimetableviewPage', segment: 'timetableview', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
@@ -396,6 +504,8 @@ var AppModule = (function () {
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup__["a" /* SignupPage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_timetableview_timetableview__["a" /* TimetableviewPage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_calender_calender__["a" /* CalenderPage */]
             ],
@@ -403,7 +513,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_8__providers_timetables_timetables__["a" /* TimetablesProvider */]
+                __WEBPACK_IMPORTED_MODULE_8__providers_timetables_timetables__["a" /* TimetablesProvider */],
+                __WEBPACK_IMPORTED_MODULE_11__providers_auth_auth__["a" /* AuthProvider */]
             ]
         })
     ], AppModule);
@@ -414,16 +525,16 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 274:
+/***/ 277:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -437,10 +548,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+// import { HomePage } from '../pages/home/home';
 
 var MyApp = (function () {
     function MyApp(platform, statusBar, splashScreen) {
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_login_login__["a" /* LoginPage */];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
@@ -449,16 +561,115 @@ var MyApp = (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/donal/Desktop/untitled folder/TimetableApp/App/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/donal/Desktop/untitled folder/TimetableApp/App/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\g00332403\Desktop\New folder\TimetableApp\App\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\g00332403\Desktop\New folder\TimetableApp\App\src\app\app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _c || Object])
     ], MyApp);
     return MyApp;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=app.component.js.map
 
+/***/ }),
+
+/***/ 278:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/*
+  Generated class for the AuthProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var AuthProvider = (function () {
+    function AuthProvider(http, storage) {
+        this.http = http;
+        this.storage = storage;
+        console.log('Hello AuthProvider Provider');
+    }
+    //checks authentication
+    AuthProvider.prototype.checkAuthentication = function () {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            //Load token if exists
+            _this.storage.get('token').then(function (value) {
+                _this.token = value;
+                var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+                headers.append('Authorization', _this.token);
+                _this.http.get('https://donalburke.me/api/auth/protected', { headers: headers })
+                    .subscribe(function (res) {
+                    resolve(res);
+                }, function (err) {
+                    reject(err);
+                });
+            });
+        });
+    };
+    //
+    AuthProvider.prototype.createAccount = function (details) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+            headers.append('Content-Type', 'application/json');
+            _this.http.post('https://donalburke.me/api/auth/register', JSON.stringify(details), { headers: headers })
+                .subscribe(function (res) {
+                var data = res.json();
+                _this.token = data.token;
+                _this.storage.set('token', data.token);
+                resolve(data);
+            }, function (err) {
+                reject(err);
+            });
+        });
+    };
+    AuthProvider.prototype.login = function (credentials) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+            headers.append('Content-Type', 'application/json');
+            _this.http.post('https://donalburke.me/api/auth/login', JSON.stringify(credentials), { headers: headers })
+                .subscribe(function (res) {
+                var data = res.json();
+                _this.token = data.token;
+                _this.storage.set('token', data.token);
+                resolve(data);
+                resolve(res.json());
+            }, function (err) {
+                reject(err);
+            });
+        });
+    };
+    AuthProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */]])
+    ], AuthProvider);
+    return AuthProvider;
+}());
+
+//# sourceMappingURL=auth.js.map
+
 /***/ })
 
-},[200]);
+},[203]);
 //# sourceMappingURL=main.js.map
