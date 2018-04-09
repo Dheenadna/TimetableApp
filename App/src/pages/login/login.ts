@@ -28,7 +28,7 @@ export class LoginPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
-    //this.showLoader();
+    this.showLoader();
     //Check if already authenticated
     this.authService.checkAuthentication().then((res) => {
         console.log("Already authorized");
@@ -42,7 +42,7 @@ export class LoginPage {
 
   login(){
     
-   // this.showLoader();
+    this.showLoader();
 
     let credentials = {
         email: this.email,
@@ -57,6 +57,20 @@ export class LoginPage {
         this.loading.dismiss();
         console.log(err);
     });
+  }
+
+  launchSignup(){
+    this.navCtrl.push(SignupPage);
+  }
+
+  showLoader(){
+
+      this.loading = this.loadingCtrl.create({
+          content: 'Authenticating...'
+      });
+
+      this.loading.present();
+
   }
 
 }
