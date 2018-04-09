@@ -10,6 +10,7 @@ import { TimetableviewPage } from '../pages/timetableview/timetableview';
 import { TimetablesProvider } from '../providers/timetables/timetables';
 import { CalenderPage } from '../pages/calender/calender';
 import { HttpModule } from '@angular/http';
+import { AuthProvider } from '../providers/auth/auth';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { HttpModule } from '@angular/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    TimetablesProvider
+    TimetablesProvider,
+    AuthProvider
   ]
 })
 export class AppModule {}
