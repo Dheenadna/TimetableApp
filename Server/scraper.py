@@ -94,7 +94,11 @@ class ArchitectFinderScraper(object):
 
         soup = BeautifulSoup(self.br.response().read())
 
-        list_modules = []
+        mondays = []
+        tuesdays = []
+        wednesdays = []
+        thursdays = []
+        fridays = []
 
         days = soup.findAll('span', {'class': 'labelone'})
 
@@ -123,7 +127,6 @@ class ArchitectFinderScraper(object):
                     index = index + 1
 
                 module = {
-                    "day": day, 
                     "moduleName": moduleName,
                     "moduleType": moduleType,
                     "startTime": startTime,
@@ -134,14 +137,25 @@ class ArchitectFinderScraper(object):
                     "lecturer": lecturer
                 }
 
-                list_modules.append(module)
-
-        timetables = list_modules
+                if day == 'Monday':
+                    mondays.append(module)
+                if day == 'Tuesday':
+                    tuesdays.append(module)
+                if day == 'Wednesday':
+                    wednesdays.append(module)
+                if day == 'Thursday':
+                    thursdays.append(module)
+                if day == 'Friday':
+                    fridays.append(module)
 
         jsonObj = {
             "_id": item.name,
-            "courseName": item.attrs['label'],
-            "timetable" : timetables
+            "courseName": item.attrs['label'].split(' ', 1)[1],
+            "Monday":     mondays,
+            "Tuesday":    tuesdays,
+            "Wednesday":  wednesdays,
+            "Thursday":   thursdays,
+            "Friday":     fridays
         }
 
         courses = db.courses
