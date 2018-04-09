@@ -13,6 +13,7 @@ import { HttpModule } from '@angular/http';
 import { AuthProvider } from '../providers/auth/auth';
 import {LoginPage} from '../pages/login/login';
 import {SignupPage} from '../pages/signup/signup';
+import {Storage} from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {SignupPage} from '../pages/signup/signup';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     TimetablesProvider,
-    AuthProvider
+    AuthProvider,
+    Storage
   ]
 })
 export class AppModule {}

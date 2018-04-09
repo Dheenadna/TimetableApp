@@ -70,7 +70,5 @@ export class LoginPage {
       });
 
       this.loading.present();
-
   }
-
 }
