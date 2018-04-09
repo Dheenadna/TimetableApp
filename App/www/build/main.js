@@ -285,7 +285,7 @@ var SignupPage = (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\naqia\Desktop\ionic\TimetableApp\App\src\pages\signup\signup.html"*/'<!--\n\n  Generated template for the SignupPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  \n\n   <ion-navbar color="secondary">\n\n     <ion-title>Create Account</ion-title>\n\n   </ion-navbar>\n\n  \n\n </ion-header>\n\n  \n\n  \n\n <ion-content padding>\n\n  \n\n     <ion-row class="account-form">\n\n         <ion-col>\n\n             <ion-list inset>\n\n  \n\n                 <ion-item>\n\n                     <ion-label><ion-icon name="mail"></ion-icon></ion-label>\n\n                     <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>\n\n                 </ion-item>\n\n  \n\n                 <ion-item>\n\n                     <ion-label><ion-icon name="lock"></ion-icon></ion-label>\n\n                     <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>\n\n                 </ion-item>\n\n  \n\n                 <ion-item>\n\n                     <ion-label>Role</ion-label>\n\n                     <ion-select [(ngModel)]="role">\n\n                         <ion-option value="reader">Reader</ion-option>\n\n                         <ion-option value="creator">Creator</ion-option>\n\n                         <ion-option value="editor">Editor</ion-option>\n\n                     </ion-select>\n\n                 </ion-item>\n\n  \n\n             </ion-list>\n\n  \n\n             <button ion-button (click)="register()" class="continue-button">Register</button>\n\n  \n\n         </ion-col>\n\n     </ion-row>\n\n  \n\n </ion-content>'/*ion-inline-end:"C:\Users\naqia\Desktop\ionic\TimetableApp\App\src\pages\signup\signup.html"*/,
+            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\naqia\Desktop\ionic\TimetableApp\App\src\pages\signup\signup.html"*/'<!--\n\n  Generated template for the SignupPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  \n\n   <ion-navbar color="secondary">\n\n     <ion-title>Create Account</ion-title>\n\n   </ion-navbar>\n\n  \n\n </ion-header>\n\n  \n\n  \n\n <ion-content padding>\n\n  \n\n     <ion-row class="account-form">\n\n         <ion-col>\n\n             <ion-list inset>\n\n  \n\n                 <ion-item>\n\n                     <ion-label><ion-icon name="mail"></ion-icon></ion-label>\n\n                     <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>\n\n                 </ion-item>\n\n  \n\n                 <ion-item>\n\n                     <ion-label><ion-icon name="lock"></ion-icon></ion-label>\n\n                     <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>\n\n                 </ion-item>\n\n  \n\n                 <ion-item>\n\n                     <ion-label>Role</ion-label>\n\n                     <ion-select [(ngModel)]="role">\n\n                         <ion-option value="student">student</ion-option>\n\n                         <ion-option value="lecturer">lecturer</ion-option>\n\n                         <ion-option value="moderator">Editor</ion-option>\n\n                         <ion-option value="administrator">Editor</ion-option>\n\n                     </ion-select>\n\n                 </ion-item>\n\n  \n\n             </ion-list>\n\n  \n\n             <button ion-button (click)="register()" class="continue-button">Register</button>\n\n  \n\n         </ion-col>\n\n     </ion-row>\n\n  \n\n </ion-content>'/*ion-inline-end:"C:\Users\naqia\Desktop\ionic\TimetableApp\App\src\pages\signup\signup.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
     ], SignupPage);
@@ -326,11 +326,11 @@ var map = {
 		2
 	],
 	"../pages/signup/signup.module": [
-		285,
+		286,
 		1
 	],
 	"../pages/timetableview/timetableview.module": [
-		286,
+		285,
 		0
 	]
 };
@@ -498,8 +498,8 @@ var AppModule = (function () {
                     links: [
                         { loadChildren: '../pages/calender/calender.module#CalenderPageModule', name: 'CalenderPage', segment: 'calender', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/timetableview/timetableview.module#TimetableviewPageModule', name: 'TimetableviewPage', segment: 'timetableview', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/timetableview/timetableview.module#TimetableviewPageModule', name: 'TimetableviewPage', segment: 'timetableview', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],

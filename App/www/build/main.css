@@ -28112,3 +28112,64 @@ page-calender .calendar-body .calendar-date {
   background-color: transparent;
   border: 1px solid #fff;
 }
+
+.ios page-signup ion-content, .md page-signup ion-content {
+  background-color: #32db64;
+}
+
+.ios page-signup scroll-content, .md page-signup scroll-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.ios page-signup ion-item, .md page-signup ion-item {
+  border-radius: 30px !important;
+  padding-left: 10px !important;
+  margin-bottom: 10px;
+  background-color: #f6f6f6;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.ios page-signup ion-list, .md page-signup ion-list {
+  margin: 0;
+}
+
+.ios page-signup .heading-text, .md page-signup .heading-text {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ios page-signup .heading-text h3, .md page-signup .heading-text h3 {
+  color: #fff;
+}
+
+.ios page-signup .account-form, .md page-signup .account-form {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.ios page-signup .continue-button, .md page-signup .continue-button {
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 30px;
+  font-size: 0.9em;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
