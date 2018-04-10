@@ -6,7 +6,7 @@
 -->
 <ion-header>
   
-   <ion-navbar color="secondary">
+   <ion-navbar color="donal">
      <ion-title>Create Account</ion-title>
    </ion-navbar>
   
@@ -37,6 +37,13 @@
                          <ion-option value="moderator">Editor</ion-option>
                          <ion-option value="administrator">Editor</ion-option>
                      </ion-select>
+                 </ion-item>
+
+                 <ion-item>
+                    <ion-label>Select Course</ion-label>
+                    <ion-select [(ngModel)]="courseId">
+                        <ion-option *ngFor="let course of courses" value="{{course._id}}">{{course.courseName}}</ion-option>
+                    </ion-select>
                  </ion-item>
   
              </ion-list>

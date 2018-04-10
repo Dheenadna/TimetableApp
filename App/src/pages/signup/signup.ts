@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,LoadingController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
+import { TimetablesProvider } from '../../providers/timetables/timetables';
 import { HomePage } from '../home/home';
 
 /**
@@ -21,12 +22,17 @@ export class SignupPage {
   role: string;
   email: string;
   password: string;
+  courseId: string;
+  courses: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public authService: AuthProvider, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public authService: AuthProvider, public timetable: TimetablesProvider, public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SignupPage');
+    this.timetable.getCourses().then((data) => {
+      console.log(data);
+      this.courses = data;
+    });
   }
 
   register(){
@@ -36,7 +42,8 @@ export class SignupPage {
     let details = {
         email: this.email,
         password: this.password,
-        role: this.role
+        role: this.role,
+        courseId: this.courseId
     };
 
     this.authService.createAccount(details).then((result) => {

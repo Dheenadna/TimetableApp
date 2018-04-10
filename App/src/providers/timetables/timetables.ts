@@ -23,7 +23,7 @@ export class TimetablesProvider {
  
     return new Promise(resolve => {
  
-      this.http.get('http://donalburke.me/api/courses')
+      this.http.get('http://donalburke.me/api/courses/')
         .map(res => res.json())
         .subscribe(data => {
           this.data = data;
