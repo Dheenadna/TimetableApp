@@ -38,6 +38,7 @@ export class AuthProvider {
              });        
          });
   }
+  
 
   //
   createAccount(details){

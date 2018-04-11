@@ -49,7 +49,7 @@ export class SignupPage {
     this.authService.createAccount(details).then((result) => {
       this.loading.dismiss();
       console.log(result);
-      this.navCtrl.setRoot(HomePage);
+      this.navCtrl.setRoot(HomePage, this.email);
     }, (err) => {
         this.loading.dismiss();
     });
