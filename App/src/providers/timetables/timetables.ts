@@ -12,6 +12,7 @@ import "rxjs/add/operator/map";
 @Injectable()
 export class TimetablesProvider {
   data: any;
+  email: any;
 
   constructor(public http: Http, public authService: AuthProvider) {
     this.data = null;
@@ -33,19 +34,21 @@ export class TimetablesProvider {
     });
   }
 
-  getCourseId(email) {
+  getCourseId(value) {
     return new Promise(resolve => {
       let headers = new Headers();
       headers.append('Authorization', this.authService.token);
 
-      email = { email: email };
+      value = { email: value };
+
+      console.log(value);
 
       this.http
-        .post("https://donalburke.me/api/auth/course", JSON.stringify(email), {
+        .post("https://donalburke.me/api/courses/course", JSON.stringify(value), {
           headers: headers
         }).map(res => res.json())
         .subscribe(data => {
-          this.data = data;
+          this.email = data;
           resolve(data);
         });
     });
@@ -59,7 +62,7 @@ export class TimetablesProvider {
       value = { _id: value };
 
       this.http
-        .post("https://donalburke.me/api/timetable/", JSON.stringify(value), {
+        .post("https://donalburke.me/api/courses/", JSON.stringify(value), {
           headers: headers
         }).map(res => res.json())
         .subscribe(data => {

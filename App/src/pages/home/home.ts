@@ -23,6 +23,7 @@ export class HomePage {
 
   ionViewDidLoad() {
     this.timetable.getCourseId(this.email).then((data) => {
+      console.log("Email: " + this.email);
       console.log(data);
       this.courseId = data;
       this.timetable.getTimetable(this.courseId).then((data) => {

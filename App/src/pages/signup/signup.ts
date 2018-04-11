@@ -36,14 +36,13 @@ export class SignupPage {
   }
 
   register(){
-    
     this.showLoader();
 
     let details = {
         email: this.email,
         password: this.password,
-        role: this.role,
-        courseId: this.courseId
+        courseId: this.courseId,
+        role: this.role
     };
 
     this.authService.createAccount(details).then((result) => {
