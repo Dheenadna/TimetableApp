@@ -28130,6 +28130,21 @@ page-calender .calendar-body .calendar-date {
   border: 1px solid #fff;
 }
 
+.ios page-signup .form, .md page-signup .form {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+
+.ios page-signup .form .thumbnail, .md page-signup .form .thumbnail {
+  margin: 0 auto 30px;
+  padding: 30px 50px 0px 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .ios page-signup ion-content, .md page-signup ion-content {
   background-color: #428bca;
 }
