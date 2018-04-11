@@ -52,7 +52,7 @@ export class LoginPage {
     this.authService.login(credentials).then((result) => {
         this.loading.dismiss();
         console.log(result);
-        this.navCtrl.setRoot(HomePage);
+        this.navCtrl.setRoot(HomePage, this.email);
     }, (err) => {
         this.loading.dismiss();
         console.log(err);
