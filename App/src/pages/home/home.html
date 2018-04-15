@@ -7,30 +7,20 @@
 </ion-header>
 
 <ion-content>
-  <ion-item>
-    <ion-label>Course(s)</ion-label>
-    <ion-select #C (ionChange)="viewTimetable(C.value)">
-      <ion-option *ngFor="let course of courses" value="{{course._id}}">{{course.courseName}}</ion-option>
-    </ion-select>
-  </ion-item>
-  <button ion-button block outline (click)="viewCalender()">Calender View</button>
-
-<ion-list>
-
- <button ion-button block color="dark" (click)="doAlert()">Show Next Class</button>
-
-  <ion-item>
-    <ion-label stacked>Username</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label stacked>Password</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
-
-
-</ion-list>
-
-<button ion-button color="light" round>Login</button>
+  <ion-list>
+    <ion-item *ngFor="let course of courses" text-wrap>
+      {{course.courseName}}
+      <ion-list>
+        <ion-item *ngFor="let module of course.Monday" text-wrap>
+          {{ module.moduleName }}
+          <br> {{ module.lecturer }}
+          <br> {{ module.room }}
+          <br> {{ module.day }}
+          <br> {{ module.startTime }}
+          <br> {{ module.endTime }}
+          <br>
+        </ion-item>
+      </ion-list>
+    </ion-item>
+  </ion-list>
 </ion-content>

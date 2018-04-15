@@ -5,6 +5,7 @@ import { Storage } from '@ionic/storage'
 import { TimetablesProvider } from '../../providers/timetables/timetables';
 import { ModalController } from 'ionic-angular/components/modal/modal-controller';
 import { LoginPage } from '../login/login'
+import { AuthProvider } from '../../providers/auth/auth'
 
 import { AlertController } from 'ionic-angular';
 
@@ -15,9 +16,8 @@ import { AlertController } from 'ionic-angular';
 export class HomePage {
 
   courses: any
-  courseId: any
 
-  constructor(public navCtrl: NavController, public storage: Storage, public modalCtrl: ModalController, public timetable: TimetablesProvider, public alerCtrl: AlertController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public authService: AuthProvider, public storage: Storage, public modalCtrl: ModalController, public timetable: TimetablesProvider, public alerCtrl: AlertController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -30,10 +30,9 @@ export class HomePage {
     });
   }
 
-  logout() {
-    this.storage.remove('token');
-    this.storage.remove('user')
-    this.navCtrl.push(LoginPage);
+  logout(){
+    this.authService.logout();
+    this.navCtrl.setRoot(LoginPage);
   }
 
 }

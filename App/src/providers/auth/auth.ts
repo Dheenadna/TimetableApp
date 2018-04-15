@@ -31,7 +31,8 @@ export class AuthProvider {
       
                  this.http.get('https://donalburke.me/api/auth/protected', {headers: headers})
                      .subscribe(res => {
-                         let data = res.json;
+                         let data = res.json();
+                         this.storage.set('user', data);
                          console.log(data);
                          resolve(res);
                      }, (err) => {
@@ -42,8 +43,6 @@ export class AuthProvider {
          });
   }
   
-
-  //
   createAccount(details){
     return new Promise((resolve, reject) => {
       
@@ -66,7 +65,7 @@ export class AuthProvider {
     });
   }
 
-  login(credentials){
+  login(credentials) {
     return new Promise((resolve, reject) => {
              let headers = new Headers();
              headers.append('Content-Type', 'application/json');
@@ -86,6 +85,11 @@ export class AuthProvider {
                });
       
          });
+  }
+
+  logout(){
+    this.storage.set('token', '');
+    this.storage.set('user', '');
   }
 
 
