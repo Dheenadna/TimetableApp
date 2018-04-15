@@ -48,7 +48,7 @@ export class SignupPage {
     this.authService.createAccount(details).then((result) => {
       this.loading.dismiss();
       console.log(result);
-      this.navCtrl.setRoot(HomePage, this.email);
+      this.navCtrl.setRoot(HomePage);
     }, (err) => {
         this.loading.dismiss();
     });
