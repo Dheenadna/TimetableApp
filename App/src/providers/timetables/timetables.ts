@@ -34,25 +34,25 @@ export class TimetablesProvider {
     });
   }
 
-  getCourseId(value) {
-    return new Promise(resolve => {
-      let headers = new Headers();
-      headers.append('Authorization', this.authService.token);
+  // getCourseId(value) {
+  //   return new Promise(resolve => {
+  //     let headers = new Headers();
+  //     headers.append('Authorization', this.authService.token);
 
-      value = { email: value };
+  //     value = { email: value };
 
-      console.log(value);
+  //     console.log(value);
 
-      this.http
-        .post("https://donalburke.me/api/courses/course", JSON.stringify(value), {
-          headers: headers
-        }).map(res => res.json())
-        .subscribe(data => {
-          this.email = data;
-          resolve(data);
-        });
-    });
-  }
+  //     this.http
+  //       .post("https://donalburke.me/api/courses/course", JSON.stringify(value), {
+  //         headers: headers
+  //       }).map(res => res.json())
+  //       .subscribe(data => {
+  //         this.email = data;
+  //         resolve(data);
+  //       });
+  //   });
+  // }
 
   getTimetable(value) {
     return new Promise(resolve => {
@@ -62,7 +62,7 @@ export class TimetablesProvider {
       value = { _id: value };
 
       this.http
-        .post("https://donalburke.me/api/courses/", JSON.stringify(value), {
+        .post("https://donalburke.me/api/courses", JSON.stringify(value), {
           headers: headers
         }).map(res => res.json())
         .subscribe(data => {

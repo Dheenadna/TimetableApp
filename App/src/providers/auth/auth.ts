@@ -14,6 +14,7 @@ import 'rxjs/add/operator/map';
 export class AuthProvider {
 
   public token: any;
+
   constructor(public http: Http, public storage: Storage) {
     console.log('Hello AuthProvider Provider');
   }
@@ -30,6 +31,8 @@ export class AuthProvider {
       
                  this.http.get('https://donalburke.me/api/auth/protected', {headers: headers})
                      .subscribe(res => {
+                         let data = res.json;
+                         console.log(data);
                          resolve(res);
                      }, (err) => {
                          reject(err);
@@ -49,10 +52,12 @@ export class AuthProvider {
 
         this.http.post('https://donalburke.me/api/auth/register', JSON.stringify(details), {headers: headers})
           .subscribe(res => {
-
             let data = res.json();
             this.token = data.token;
             this.storage.set('token', data.token);
+            this.storage.set('user', data.user);
+
+            console.log(data.user);
             resolve(data);
 
           }, (err) => {
@@ -63,16 +68,16 @@ export class AuthProvider {
 
   login(credentials){
     return new Promise((resolve, reject) => {
-      
              let headers = new Headers();
              headers.append('Content-Type', 'application/json');
       
              this.http.post('https://donalburke.me/api/auth/login', JSON.stringify(credentials), {headers: headers})
                .subscribe(res => {
-      
                  let data = res.json();
                  this.token = data.token;
                  this.storage.set('token', data.token);
+                 this.storage.set('user', data.user);
+                 
                  resolve(data);
       
                  resolve(res.json());
