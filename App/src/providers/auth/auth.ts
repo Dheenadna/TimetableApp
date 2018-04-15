@@ -18,7 +18,7 @@ export class AuthProvider {
     console.log('Hello AuthProvider Provider');
   }
   //checks authentication
-  checkAuthentication(){
+  checkAuthentication() {
     return new Promise((resolve, reject) => {    
              //Load token if exists
              this.storage.get('token').then((value) => {
