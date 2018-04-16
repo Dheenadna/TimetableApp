@@ -1,12 +1,152 @@
-<ion-header>
-  <ion-navbar>
+<ion-header *ngFor="let course of courses">
+  <ion-navbar no-border-bottom>
     <ion-title>
-      Select course
+      {{ course.courseName }}
     </ion-title>
   </ion-navbar>
-</ion-header>
 
-<ion-content>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="timetable">
+      <ion-segment-button value="monday">
+        Mon
+      </ion-segment-button>
+      <ion-segment-button value="tuesday">
+        Tue
+      </ion-segment-button>
+      <ion-segment-button value="wednesday">
+        Wed
+      </ion-segment-button>
+      <ion-segment-button value="thursday">
+        Thu
+      </ion-segment-button>
+      <ion-segment-button value="friday">
+        Fri
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<br>
+<br>
+<ion-content *ngFor="let course of courses">
+  <div [ngSwitch]="timetable">
+    <ion-list *ngSwitchCase="'monday'">
+      <ion-item-group *ngFor="let module of course.Monday" [hidden]="course.hide">
+        <ion-item-divider sticky>
+          <ion-label>
+            {{ module.startTime }}
+          </ion-label>
+        </ion-item-divider>
+  
+        <ion-item-sliding #slidingItem [hidden]="course.hide">
+  
+          <button ion-item (click)="goToSessionDetail(session)">
+            <h3>{{ module.moduleName }}</h3>
+            <p>
+              {{ module.lecturer }}&mdash;
+              Room {{ module.room }}
+            </p>
+          </button>
+  
+        </ion-item-sliding>
+  
+      </ion-item-group>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'tuesday'">
+        <ion-item-group *ngFor="let module of course.Tuesday" [hidden]="course.hide">
+            <ion-item-divider sticky>
+              <ion-label>
+                {{ module.startTime }}
+              </ion-label>
+            </ion-item-divider>
+      
+            <ion-item-sliding #slidingItem [hidden]="course.hide">
+      
+              <button ion-item (click)="goToSessionDetail(session)">
+                <h3>{{ module.moduleName }}</h3>
+                <p>
+                    {{ module.lecturer }}&mdash;
+                    Room {{ module.room }}
+                </p>
+              </button>
+      
+            </ion-item-sliding>
+      
+          </ion-item-group>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'wednesday'">
+        <ion-item-group *ngFor="let module of course.Wednesday" [hidden]="course.hide">
+            <ion-item-divider sticky>
+              <ion-label>
+                {{ module.startTime }}
+              </ion-label>
+            </ion-item-divider>
+      
+            <ion-item-sliding #slidingItem [hidden]="course.hide">
+      
+              <button ion-item (click)="goToSessionDetail(session)">
+                <h3>{{ module.moduleName }}</h3>
+                <p>
+                    {{ module.lecturer }}&mdash;
+              Room {{ module.room }}
+                </p>
+              </button>
+      
+            </ion-item-sliding>
+      
+          </ion-item-group>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'thursday'">
+        <ion-item-group *ngFor="let module of course.Thursday" [hidden]="course.hide">
+            <ion-item-divider sticky>
+              <ion-label>
+                {{ module.startTime }}
+              </ion-label>
+            </ion-item-divider>
+      
+            <ion-item-sliding #slidingItem [hidden]="course.hide">
+      
+              <button ion-item (click)="goToSessionDetail(session)">
+                <h3>{{ module.moduleName }}</h3>
+                <p>
+                    {{ module.lecturer }}&mdash;
+                    Room {{ module.room }}
+                </p>
+              </button>
+      
+            </ion-item-sliding>
+      
+          </ion-item-group>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'friday'">
+        <ion-item-group *ngFor="let module of course.Friday" [hidden]="course.hide">
+            <ion-item-divider sticky>
+              <ion-label>
+                {{ module.startTime }}
+              </ion-label>
+            </ion-item-divider>
+      
+            <ion-item-sliding #slidingItem [hidden]="course.hide">
+      
+              <button ion-item (click)="goToSessionDetail(session)">
+                <h3>{{ module.moduleName }}</h3>
+                <p>
+                    {{ module.lecturer }}&mdash;
+              Room {{ module.room }}
+                </p>
+              </button>
+      
+            </ion-item-sliding>
+      
+          </ion-item-group>
+    </ion-list>
+  </div>
+</ion-content>
+
+<!-- <ion-content>
   <ion-list>
     <ion-item *ngFor="let course of courses" text-wrap>
       {{course.courseName}}
@@ -23,4 +163,4 @@
       </ion-list>
     </ion-item>
   </ion-list>
-</ion-content>
+</ion-content> -->
