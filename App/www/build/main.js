@@ -6,10 +6,10 @@ webpackJsonp([4],{
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(82);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -70,9 +70,9 @@ var SignupPage = (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/pages/signup/signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  \n   <ion-navbar color="donal">\n     <ion-title>Create Account</ion-title>\n   </ion-navbar>\n  \n </ion-header>\n  \n  \n <ion-content padding>\n    <div class="form">\n        <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg"/></div>\n     \n     <ion-row class="account-form">\n         <ion-col>\n             <ion-list inset>\n  \n                 <ion-item>\n                     <ion-label><ion-icon name="mail"></ion-icon></ion-label>\n                     <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>\n                 </ion-item>\n  \n                 <ion-item>\n                     <ion-label><ion-icon name="lock"></ion-icon></ion-label>\n                     <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>\n                 </ion-item>\n  \n                 <ion-item>\n                     <ion-label>Role</ion-label>\n                     <ion-select [(ngModel)]="role">\n                         <ion-option value="student">student</ion-option>\n                         <ion-option value="lecturer">lecturer</ion-option>\n                         <ion-option value="moderator">Editor</ion-option>\n                         <ion-option value="administrator">Editor</ion-option>\n                     </ion-select>\n                 </ion-item>\n\n                 <ion-item>\n                    <ion-label>Select Course</ion-label>\n                    <ion-select [(ngModel)]="courseId">\n                        <ion-option *ngFor="let course of courses" value="{{course._id}}">{{course.courseName}}</ion-option>\n                    </ion-select>\n                 </ion-item>\n  \n             </ion-list>\n  \n             <button ion-button (click)="register()" class="continue-button">Register</button>\n  \n         </ion-col>\n     </ion-row>\n    </div>\n </ion-content>'/*ion-inline-end:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/pages/signup/signup.html"*/,
+            selector: 'page-signup',template:/*ion-inline-start:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/pages/signup/signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  \n   <ion-navbar color="donal">\n     <ion-title>Create Account</ion-title>\n   </ion-navbar>\n  \n </ion-header>\n  \n  \n <ion-content padding>\n    <div class="form">\n        <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg"/></div>\n     \n     <ion-row class="account-form">\n         <ion-col>\n             <ion-list inset>\n  \n                 <ion-item>\n                     <ion-label><ion-icon name="mail"></ion-icon></ion-label>\n                     <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>\n                 </ion-item>\n  \n                 <ion-item>\n                     <ion-label><ion-icon name="lock"></ion-icon></ion-label>\n                     <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>\n                 </ion-item>\n  \n                 <ion-item>\n                     <ion-label>Role</ion-label>\n                     <ion-select [(ngModel)]="role">\n                         <ion-option value="student">Student</ion-option>\n                         <ion-option value="lecturer">Lecturer</ion-option>\n                         <ion-option value="moderator">Moderator</ion-option>\n                         <ion-option value="administrator">Administrator</ion-option>\n                     </ion-select>\n                 </ion-item>\n\n                 <ion-item>\n                    <ion-label>Select Course</ion-label>\n                    <ion-select [(ngModel)]="courseId">\n                        <ion-option text-wrap *ngFor="let course of courses" value="{{course._id}}">{{course.courseName}}</ion-option>\n                    </ion-select>\n                 </ion-item>\n  \n             </ion-list>\n  \n             <button ion-button (click)="register()" class="continue-button">Register</button>\n  \n         </ion-col>\n     </ion-row>\n    </div>\n </ion-content>'/*ion-inline-end:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/pages/signup/signup.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
     ], SignupPage);
     return SignupPage;
 }());
@@ -107,7 +107,7 @@ var map = {
 		3
 	],
 	"../pages/login/login.module": [
-		286,
+		284,
 		2
 	],
 	"../pages/signup/signup.module": [
@@ -115,7 +115,7 @@ var map = {
 		1
 	],
 	"../pages/timetableview/timetableview.module": [
-		284,
+		286,
 		0
 	]
 };
@@ -141,7 +141,7 @@ module.exports = webpackAsyncContext;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalenderPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -214,7 +214,7 @@ var CalenderPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-calender',template:/*ion-inline-start:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/pages/calender/calender.html"*/'<!--\n  Generated template for the CalenderPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>calender</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="calendar-header">\n    <ion-row class="calendar-month">\n      <ion-col col-2 (click)="goToLastMonth()"><ion-icon name="arrow-back"></ion-icon></ion-col>\n      <ion-col col-8>{{currentMonth}} {{currentYear}}</ion-col>\n      <ion-col col-2 (click)="goToNextMonth()"><ion-icon name="arrow-forward"></ion-icon></ion-col>\n    </ion-row>\n  </div>\n  <div class="calendar-body">\n    <ion-grid>\n      <ion-row class="calendar-weekday">\n        <ion-col>Su</ion-col>\n        <ion-col>Mo</ion-col>\n        <ion-col>Tu</ion-col>\n        <ion-col>We</ion-col>\n        <ion-col>Th</ion-col>\n        <ion-col>Fr</ion-col>\n        <ion-col>Sa</ion-col>\n      </ion-row>\n      <ion-row class="calendar-date">\n        <ion-col col-1 *ngFor="let lastDay of daysInLastMonth" class="last-month">{{lastDay}}</ion-col>\n        <ion-col col-1 *ngFor="let day of daysInThisMonth">\n          <span class="currentDate" *ngIf="currentDate === day; else otherDate">{{day}}</span>\n          <ng-template #otherDate class="otherDate">{{day}}</ng-template>\n        </ion-col>\n        <ion-col col-1 *ngFor="let nextDay of daysInNextMonth" class="next-month">{{nextDay}}</ion-col>\n      </ion-row>\n    </ion-grid>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/pages/calender/calender.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], CalenderPage);
     return CalenderPage;
 }());
@@ -229,7 +229,7 @@ var CalenderPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimetableviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -260,7 +260,7 @@ var TimetableviewPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-timetableview',template:/*ion-inline-start:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/pages/timetableview/timetableview.html"*/'<!--\n  Generated template for the TimetableviewPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>View Timetable</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-list>\n    <ion-item *ngFor="let t of timetables" text-wrap>\n      {{t.courseName}}\n      <ion-list>\n        <ion-item *ngFor="let module of t.timetable" text-wrap>\n          {{ module.moduleName }}\n          <br> {{ module.lecturer }}\n          <br> {{ module.room }}\n          <br> {{ module.day }}\n          <br> {{ module.startTime }}\n          <br> {{ module.startTime }}\n          <br>\n        </ion-item>\n      </ion-list>\n    </ion-item>\n  </ion-list>\n\n  <ion-content>\n    <ion-card>\n    <ion-card-header>\n      Day of the week here\n    </ion-card-header>\n    <ion-card-content>\n      Information about the module, such as module name, location, lecturer etc.\n    </ion-card-content>\n  </ion-card>\n  </ion-content>\n\n\n'/*ion-inline-end:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/pages/timetableview/timetableview.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], TimetableviewPage);
     return TimetableviewPage;
 }());
@@ -290,13 +290,13 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(282);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_timetableview_timetableview__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_timetables_timetables__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_timetables_timetables__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_calender_calender__ = __webpack_require__(203);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_auth_auth__ = __webpack_require__(40);
@@ -340,16 +340,16 @@ var AppModule = (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_10__angular_http__["c" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/calender/calender.module#CalenderPageModule', name: 'CalenderPage', segment: 'calender', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/timetableview/timetableview.module#TimetableviewPageModule', name: 'TimetableviewPage', segment: 'timetableview', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/timetableview/timetableview.module#TimetableviewPageModule', name: 'TimetableviewPage', segment: 'timetableview', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicApp */]],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
@@ -361,7 +361,7 @@ var AppModule = (function () {
             providers: [
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
+                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicErrorHandler */] },
                 __WEBPACK_IMPORTED_MODULE_8__providers_timetables_timetables__["a" /* TimetablesProvider */],
                 __WEBPACK_IMPORTED_MODULE_11__providers_auth_auth__["a" /* AuthProvider */],
                 __WEBPACK_IMPORTED_MODULE_14__ionic_storage__["a" /* Storage */]
@@ -381,7 +381,7 @@ var AppModule = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(51);
@@ -413,7 +413,7 @@ var MyApp = (function () {
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
@@ -535,9 +535,9 @@ var AuthProvider = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__signup_signup__ = __webpack_require__(107);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -609,7 +609,7 @@ var LoginPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-login',template:/*ion-inline-start:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="donal">\n    <ion-title>LoginPage</ion-title>\n  </ion-navbar>\n\n</ion-header>\n \n<ion-content>\n  <div class="form">\n    <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg"/></div>\n \n\n    <ion-row class="login-form">\n        <ion-col>\n            <ion-list inset>\n \n              <ion-item>\n                <ion-label><ion-icon name="person"></ion-icon></ion-label>\n                <ion-input [(ngModel)]="email" placeholder="Email" type="text"></ion-input>\n              </ion-item>\n \n              <ion-item>\n                <ion-label><ion-icon name="lock"></ion-icon></ion-label>\n                <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>\n              </ion-item>\n \n            </ion-list>\n \n            <button ion-button full (click)="login()" color="primary" class="login-button">Login</button>\n \n        </ion-col>\n    </ion-row>\n \n    <ion-row>\n        <ion-col>\n            <button ion-button (click)="launchSignup()" class="create-account">Create an Account</button>\n        </ion-col>\n    </ion-row>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
     ], LoginPage);
     return LoginPage;
 }());
@@ -619,6 +619,81 @@ var LoginPage = (function () {
 /***/ }),
 
 /***/ 82:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_auth_auth__ = __webpack_require__(40);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+var HomePage = (function () {
+    function HomePage(navCtrl, authService, storage, modalCtrl, timetable, alerCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.authService = authService;
+        this.storage = storage;
+        this.modalCtrl = modalCtrl;
+        this.timetable = timetable;
+        this.alerCtrl = alerCtrl;
+        this.navParams = navParams;
+    }
+    HomePage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.storage.get('user').then(function (value) {
+            console.log(value.courseId);
+            _this.timetable.getTimetable(value.courseId).then(function (data) {
+                _this.courses = data;
+                console.log(data);
+            });
+        });
+    };
+    HomePage.prototype.resize = function () {
+        this.content.resize();
+    };
+    HomePage.prototype.logout = function () {
+        this.authService.logout();
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__login_login__["a" /* LoginPage */]);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Content */]),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Content */]) === "function" && _a || Object)
+    ], HomePage.prototype, "content", void 0);
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/pages/home/home.html"*/'<ion-header (load)="resize()" *ngFor="let course of courses">\n  <ion-navbar>\n    <ion-title text-wrap>\n      {{ course.courseName }}\n    </ion-title>\n  </ion-navbar>\n  <ion-toolbar>\n    <ion-segment padding [(ngModel)]="timetable">\n      <ion-segment-button value="monday">\n        Mon\n      </ion-segment-button>\n      <ion-segment-button value="tuesday">\n        Tue\n      </ion-segment-button>\n      <ion-segment-button value="wednesday">\n        Wed\n      </ion-segment-button>\n      <ion-segment-button value="thursday">\n        Thu\n      </ion-segment-button>\n      <ion-segment-button value="friday">\n        Fri\n      </ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content *ngFor="let course of courses">\n  <div [ngSwitch]="timetable">\n    <ion-list *ngSwitchCase="\'monday\'">\n      <ion-item-group *ngFor="let module of course.Monday" [hidden]="course.hide">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n  \n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n  \n          <button ion-item>\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              {{ module.lecturer }}&mdash;\n              Room {{ module.room }}\n            </p>\n          </button>\n  \n        </ion-item-sliding>\n  \n      </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'tuesday\'">\n        <ion-item-group *ngFor="let module of course.Tuesday" [hidden]="course.hide">\n            <ion-item-divider sticky>\n              <ion-label>\n                {{ module.startTime }}\n              </ion-label>\n            </ion-item-divider>\n      \n            <ion-item-sliding #slidingItem [hidden]="course.hide">\n      \n              <button ion-item>\n                <h3 text-wrap>{{ module.moduleName }}</h3>\n                <p>\n                    {{ module.lecturer }}&mdash;\n                    Room {{ module.room }}\n                </p>\n              </button>\n      \n            </ion-item-sliding>\n      \n          </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'wednesday\'">\n        <ion-item-group *ngFor="let module of course.Wednesday" [hidden]="course.hide">\n            <ion-item-divider sticky>\n              <ion-label>\n                {{ module.startTime }}\n              </ion-label>\n            </ion-item-divider>\n      \n            <ion-item-sliding #slidingItem [hidden]="course.hide">\n      \n              <button ion-item>\n                <h3 text-wrap>{{ module.moduleName }}</h3>\n                <p>\n                    {{ module.lecturer }}&mdash;\n              Room {{ module.room }}\n                </p>\n              </button>\n      \n            </ion-item-sliding>\n      \n          </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'thursday\'">\n        <ion-item-group *ngFor="let module of course.Thursday" [hidden]="course.hide">\n            <ion-item-divider sticky>\n              <ion-label>\n                {{ module.startTime }}\n              </ion-label>\n            </ion-item-divider>\n      \n            <ion-item-sliding #slidingItem [hidden]="course.hide">\n      \n              <button ion-item>\n                <h3 text-wrap>{{ module.moduleName }}</h3>\n                <p>\n                    {{ module.lecturer }}&mdash;\n                    Room {{ module.room }}\n                </p>\n              </button>\n      \n            </ion-item-sliding>\n      \n          </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'friday\'">\n        <ion-item-group *ngFor="let module of course.Friday" [hidden]="course.hide">\n            <ion-item-divider sticky>\n              <ion-label>\n                {{ module.startTime }}\n              </ion-label>\n            </ion-item-divider>\n      \n            <ion-item-sliding #slidingItem [hidden]="course.hide">\n      \n              <button ion-item>\n                <h3 text-wrap>{{ module.moduleName }}</h3>\n                <p>\n                    {{ module.lecturer }}&mdash;\n              Room {{ module.room }}\n                </p>\n              </button>\n      \n            </ion-item-sliding>\n      \n          </ion-item-group>\n    </ion-list>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/pages/home/home.html"*/
+        }),
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__providers_auth_auth__["a" /* AuthProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__providers_auth_auth__["a" /* AuthProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__["a" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__["a" /* ModalController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _h || Object])
+    ], HomePage);
+    return HomePage;
+    var _a, _b, _c, _d, _e, _f, _g, _h;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 83:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -694,72 +769,6 @@ var TimetablesProvider = (function () {
 }());
 
 //# sourceMappingURL=timetables.js.map
-
-/***/ }),
-
-/***/ 83:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_auth_auth__ = __webpack_require__(40);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-var HomePage = (function () {
-    function HomePage(navCtrl, authService, storage, modalCtrl, timetable, alerCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.authService = authService;
-        this.storage = storage;
-        this.modalCtrl = modalCtrl;
-        this.timetable = timetable;
-        this.alerCtrl = alerCtrl;
-        this.navParams = navParams;
-    }
-    HomePage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.storage.get('user').then(function (value) {
-            console.log(value.courseId);
-            _this.timetable.getTimetable(value.courseId).then(function (data) {
-                _this.courses = data;
-                console.log(data);
-            });
-        });
-    };
-    HomePage.prototype.logout = function () {
-        this.authService.logout();
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__login_login__["a" /* LoginPage */]);
-    };
-    HomePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/pages/home/home.html"*/'<ion-header *ngFor="let course of courses">\n  <ion-navbar no-border-bottom>\n    <ion-title>\n      {{ course.courseName }}\n    </ion-title>\n  </ion-navbar>\n\n  <ion-toolbar no-border-top>\n    <ion-segment [(ngModel)]="timetable">\n      <ion-segment-button value="monday">\n        Mon\n      </ion-segment-button>\n      <ion-segment-button value="tuesday">\n        Tue\n      </ion-segment-button>\n      <ion-segment-button value="wednesday">\n        Wed\n      </ion-segment-button>\n      <ion-segment-button value="thursday">\n        Thu\n      </ion-segment-button>\n      <ion-segment-button value="friday">\n        Fri\n      </ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n</ion-header>\n<br>\n<br>\n<ion-content *ngFor="let course of courses">\n  <div [ngSwitch]="timetable">\n    <ion-list *ngSwitchCase="\'monday\'">\n      <ion-item-group *ngFor="let module of course.Monday" [hidden]="course.hide">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n  \n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n  \n          <button ion-item (click)="goToSessionDetail(session)">\n            <h3>{{ module.moduleName }}</h3>\n            <p>\n              {{ module.lecturer }}&mdash;\n              Room {{ module.room }}\n            </p>\n          </button>\n  \n        </ion-item-sliding>\n  \n      </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'tuesday\'">\n        <ion-item-group *ngFor="let module of course.Tuesday" [hidden]="course.hide">\n            <ion-item-divider sticky>\n              <ion-label>\n                {{ module.startTime }}\n              </ion-label>\n            </ion-item-divider>\n      \n            <ion-item-sliding #slidingItem [hidden]="course.hide">\n      \n              <button ion-item (click)="goToSessionDetail(session)">\n                <h3>{{ module.moduleName }}</h3>\n                <p>\n                    {{ module.lecturer }}&mdash;\n                    Room {{ module.room }}\n                </p>\n              </button>\n      \n            </ion-item-sliding>\n      \n          </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'wednesday\'">\n        <ion-item-group *ngFor="let module of course.Wednesday" [hidden]="course.hide">\n            <ion-item-divider sticky>\n              <ion-label>\n                {{ module.startTime }}\n              </ion-label>\n            </ion-item-divider>\n      \n            <ion-item-sliding #slidingItem [hidden]="course.hide">\n      \n              <button ion-item (click)="goToSessionDetail(session)">\n                <h3>{{ module.moduleName }}</h3>\n                <p>\n                    {{ module.lecturer }}&mdash;\n              Room {{ module.room }}\n                </p>\n              </button>\n      \n            </ion-item-sliding>\n      \n          </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'thursday\'">\n        <ion-item-group *ngFor="let module of course.Thursday" [hidden]="course.hide">\n            <ion-item-divider sticky>\n              <ion-label>\n                {{ module.startTime }}\n              </ion-label>\n            </ion-item-divider>\n      \n            <ion-item-sliding #slidingItem [hidden]="course.hide">\n      \n              <button ion-item (click)="goToSessionDetail(session)">\n                <h3>{{ module.moduleName }}</h3>\n                <p>\n                    {{ module.lecturer }}&mdash;\n                    Room {{ module.room }}\n                </p>\n              </button>\n      \n            </ion-item-sliding>\n      \n          </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'friday\'">\n        <ion-item-group *ngFor="let module of course.Friday" [hidden]="course.hide">\n            <ion-item-divider sticky>\n              <ion-label>\n                {{ module.startTime }}\n              </ion-label>\n            </ion-item-divider>\n      \n            <ion-item-sliding #slidingItem [hidden]="course.hide">\n      \n              <button ion-item (click)="goToSessionDetail(session)">\n                <h3>{{ module.moduleName }}</h3>\n                <p>\n                    {{ module.lecturer }}&mdash;\n              Room {{ module.room }}\n                </p>\n              </button>\n      \n            </ion-item-sliding>\n      \n          </ion-item-group>\n    </ion-list>\n  </div>\n</ion-content>\n\n<!-- <ion-content>\n  <ion-list>\n    <ion-item *ngFor="let course of courses" text-wrap>\n      {{course.courseName}}\n      <ion-list>\n        <ion-item *ngFor="let module of course.Monday" text-wrap>\n          {{ module.moduleName }}\n          <br> {{ module.lecturer }}\n          <br> {{ module.room }}\n          <br> {{ module.day }}\n          <br> {{ module.startTime }}\n          <br> {{ module.endTime }}\n          <br>\n        </ion-item>\n      </ion-list>\n    </ion-item>\n  </ion-list>\n</ion-content> -->'/*ion-inline-end:"/Users/donal/Desktop/Group Project/TimetableApp/App/src/pages/home/home.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_6__providers_auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__["a" /* ModalController */], __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-    ], HomePage);
-    return HomePage;
-}());
-
-//# sourceMappingURL=home.js.map
 
 /***/ })
 

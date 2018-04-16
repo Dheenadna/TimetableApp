@@ -33,7 +33,6 @@ export class AuthProvider {
                      .subscribe(res => {
                          let data = res.json();
                          this.storage.set('user', data);
-                         console.log(data);
                          resolve(res);
                      }, (err) => {
                          reject(err);
@@ -55,8 +54,6 @@ export class AuthProvider {
             this.token = data.token;
             this.storage.set('token', data.token);
             this.storage.set('user', data.user);
-
-            console.log(data.user);
             resolve(data);
 
           }, (err) => {
@@ -76,7 +73,6 @@ export class AuthProvider {
                  this.token = data.token;
                  this.storage.set('token', data.token);
                  this.storage.set('user', data.user);
-                 
                  resolve(data);
       
                  resolve(res.json());

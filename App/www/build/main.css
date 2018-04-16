@@ -27972,6 +27972,18 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.alert-ios .alert-radio-label {
+  white-space: pre-line;
+}
+
+.alert-md .alert-radio-label {
+  white-space: pre-line;
+}
+
+.alert-wp .alert-radio-label {
+  white-space: pre-line;
+}
+
 page-calender [col-1] {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 8.33333%;

@@ -34,17 +34,17 @@
                  <ion-item>
                      <ion-label>Role</ion-label>
                      <ion-select [(ngModel)]="role">
-                         <ion-option value="student">student</ion-option>
-                         <ion-option value="lecturer">lecturer</ion-option>
-                         <ion-option value="moderator">Editor</ion-option>
-                         <ion-option value="administrator">Editor</ion-option>
+                         <ion-option value="student">Student</ion-option>
+                         <ion-option value="lecturer">Lecturer</ion-option>
+                         <ion-option value="moderator">Moderator</ion-option>
+                         <ion-option value="administrator">Administrator</ion-option>
                      </ion-select>
                  </ion-item>
 
                  <ion-item>
                     <ion-label>Select Course</ion-label>
                     <ion-select [(ngModel)]="courseId">
-                        <ion-option *ngFor="let course of courses" value="{{course._id}}">{{course.courseName}}</ion-option>
+                        <ion-option text-wrap *ngFor="let course of courses" value="{{course._id}}">{{course.courseName}}</ion-option>
                     </ion-select>
                  </ion-item>
   

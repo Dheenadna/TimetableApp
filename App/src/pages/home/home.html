@@ -1,12 +1,11 @@
-<ion-header *ngFor="let course of courses">
-  <ion-navbar no-border-bottom>
-    <ion-title>
+<ion-header (load)="resize()" *ngFor="let course of courses">
+  <ion-navbar>
+    <ion-title text-wrap>
       {{ course.courseName }}
     </ion-title>
   </ion-navbar>
-
-  <ion-toolbar no-border-top>
-    <ion-segment [(ngModel)]="timetable">
+  <ion-toolbar>
+    <ion-segment padding [(ngModel)]="timetable">
       <ion-segment-button value="monday">
         Mon
       </ion-segment-button>
@@ -25,8 +24,7 @@
     </ion-segment>
   </ion-toolbar>
 </ion-header>
-<br>
-<br>
+
 <ion-content *ngFor="let course of courses">
   <div [ngSwitch]="timetable">
     <ion-list *ngSwitchCase="'monday'">
@@ -39,8 +37,8 @@
   
         <ion-item-sliding #slidingItem [hidden]="course.hide">
   
-          <button ion-item (click)="goToSessionDetail(session)">
-            <h3>{{ module.moduleName }}</h3>
+          <button ion-item>
+            <h3 text-wrap>{{ module.moduleName }}</h3>
             <p>
               {{ module.lecturer }}&mdash;
               Room {{ module.room }}
@@ -62,8 +60,8 @@
       
             <ion-item-sliding #slidingItem [hidden]="course.hide">
       
-              <button ion-item (click)="goToSessionDetail(session)">
-                <h3>{{ module.moduleName }}</h3>
+              <button ion-item>
+                <h3 text-wrap>{{ module.moduleName }}</h3>
                 <p>
                     {{ module.lecturer }}&mdash;
                     Room {{ module.room }}
@@ -85,8 +83,8 @@
       
             <ion-item-sliding #slidingItem [hidden]="course.hide">
       
-              <button ion-item (click)="goToSessionDetail(session)">
-                <h3>{{ module.moduleName }}</h3>
+              <button ion-item>
+                <h3 text-wrap>{{ module.moduleName }}</h3>
                 <p>
                     {{ module.lecturer }}&mdash;
               Room {{ module.room }}
@@ -108,8 +106,8 @@
       
             <ion-item-sliding #slidingItem [hidden]="course.hide">
       
-              <button ion-item (click)="goToSessionDetail(session)">
-                <h3>{{ module.moduleName }}</h3>
+              <button ion-item>
+                <h3 text-wrap>{{ module.moduleName }}</h3>
                 <p>
                     {{ module.lecturer }}&mdash;
                     Room {{ module.room }}
@@ -131,8 +129,8 @@
       
             <ion-item-sliding #slidingItem [hidden]="course.hide">
       
-              <button ion-item (click)="goToSessionDetail(session)">
-                <h3>{{ module.moduleName }}</h3>
+              <button ion-item>
+                <h3 text-wrap>{{ module.moduleName }}</h3>
                 <p>
                     {{ module.lecturer }}&mdash;
               Room {{ module.room }}
@@ -145,22 +143,3 @@
     </ion-list>
   </div>
 </ion-content>
-
-<!-- <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let course of courses" text-wrap>
-      {{course.courseName}}
-      <ion-list>
-        <ion-item *ngFor="let module of course.Monday" text-wrap>
-          {{ module.moduleName }}
-          <br> {{ module.lecturer }}
-          <br> {{ module.room }}
-          <br> {{ module.day }}
-          <br> {{ module.startTime }}
-          <br> {{ module.endTime }}
-          <br>
-        </ion-item>
-      </ion-list>
-    </ion-item>
-  </ion-list>
-</ion-content> -->

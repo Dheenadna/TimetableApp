@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { Content } from 'ionic-angular';
 import { NavController, NavParams  } from 'ionic-angular';
 import { Storage } from '@ionic/storage'
 
@@ -13,8 +14,10 @@ import { AlertController } from 'ionic-angular';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
 
+  @ViewChild(Content) content: Content;
   courses: any
 
   constructor(public navCtrl: NavController, public authService: AuthProvider, public storage: Storage, public modalCtrl: ModalController, public timetable: TimetablesProvider, public alerCtrl: AlertController, public navParams: NavParams) {
@@ -28,6 +31,10 @@ export class HomePage {
         console.log(data);
       });
     });
+  }
+
+  resize() {
+    this.content.resize();
   }
 
   logout(){
