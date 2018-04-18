@@ -31,6 +31,22 @@ module.exports = [
     "clobbers": [
       "window.Keyboard"
     ]
+  },
+  {
+    "id": "cordova-plugin-firebase.FirebasePlugin",
+    "file": "plugins/cordova-plugin-firebase/www/firebase.js",
+    "pluginId": "cordova-plugin-firebase",
+    "clobbers": [
+      "FirebasePlugin"
+    ]
+  },
+  {
+    "id": "phonegap-plugin-push.PushNotification",
+    "file": "plugins/phonegap-plugin-push/www/push.js",
+    "pluginId": "phonegap-plugin-push",
+    "clobbers": [
+      "PushNotification"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -41,7 +57,9 @@ module.exports.metadata =
   "cordova-plugin-device": "2.0.1",
   "cordova-plugin-splashscreen": "5.0.2",
   "cordova-plugin-ionic-webview": "1.2.0",
-  "cordova-plugin-ionic-keyboard": "2.0.5"
+  "cordova-plugin-ionic-keyboard": "2.0.5",
+  "cordova-plugin-firebase": "1.0.0",
+  "phonegap-plugin-push": "2.1.3"
 };
 // BOTTOM OF METADATA
 });

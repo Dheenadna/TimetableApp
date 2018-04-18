@@ -25,6 +25,34 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService" />
+        <service android:name="org.apache.cordova.firebase.FirebasePluginMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="org.apache.cordova.firebase.FirebasePluginInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <receiver android:name="org.apache.cordova.firebase.OnNotificationOpenReceiver" />
+        <activity android:exported="true" android:name="com.adobe.phonegap.push.PushHandlerActivity" android:permission="${applicationId}.permission.PushHandlerActivity" />
+        <receiver android:name="com.adobe.phonegap.push.BackgroundActionButtonHandler" />
+        <receiver android:name="com.adobe.phonegap.push.PushDismissedHandler" />
+        <service android:name="com.adobe.phonegap.push.FCMService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.adobe.phonegap.push.PushInstanceIDListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
     </application>
     <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 </manifest>

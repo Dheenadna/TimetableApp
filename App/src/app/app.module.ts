@@ -14,6 +14,7 @@ import { AuthProvider } from '../providers/auth/auth';
 import {LoginPage} from '../pages/login/login';
 import {SignupPage} from '../pages/signup/signup';
 import {Storage} from '@ionic/storage';
+import { SelectSearchableModule } from 'ionic-select-searchable';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {Storage} from '@ionic/storage';
   imports: [
     BrowserModule,
     HttpModule,
+    SelectSearchableModule,
     IonicModule.forRoot(MyApp)
     
   ],

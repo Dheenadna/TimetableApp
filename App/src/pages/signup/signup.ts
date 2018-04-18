@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams,LoadingController } from 'ionic-ang
 import { AuthProvider } from '../../providers/auth/auth';
 import { TimetablesProvider } from '../../providers/timetables/timetables';
 import { HomePage } from '../home/home';
+import { SelectSearchable } from 'ionic-select-searchable';
 
 /**
  * Generated class for the SignupPage page.
@@ -16,6 +17,8 @@ import { HomePage } from '../home/home';
   selector: 'page-signup',
   templateUrl: 'signup.html',
 })
+
+
 export class SignupPage {
   
   loading: any;
@@ -25,7 +28,12 @@ export class SignupPage {
   courseId: string;
   courses: any;
 
+
   constructor(public navCtrl: NavController, public navParams: NavParams,public authService: AuthProvider, public timetable: TimetablesProvider, public loadingCtrl: LoadingController) {
+  }
+ 
+  courseChange(event: { component: SelectSearchable, value: any }) {
+    console.log('course:', event.value);
   }
 
   ionViewDidLoad() {

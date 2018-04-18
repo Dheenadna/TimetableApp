@@ -40,13 +40,27 @@
                          <ion-option value="administrator">Administrator</ion-option>
                      </ion-select>
                  </ion-item>
-
-                 <ion-item>
+                 <ion-item-group margin-bottom>
+                        <ion-item>
+                            <select-searchable
+                                [(ngModel)]="courseId"
+                                title="Select Course"
+                                itemValueField="courseId"
+                                itemTextField="courseName"
+                                [items]="courses"
+                                [canSearch]="true"
+                                [multiple]="true"
+                                [canReset]="true"
+                                (onChange)="courseChange($event)">
+                            </select-searchable>
+                        </ion-item>
+                    </ion-item-group>
+                 <!-- <ion-item>
                     <ion-label>Select Course</ion-label>
                     <ion-select [(ngModel)]="courseId">
                         <ion-option text-wrap *ngFor="let course of courses" value="{{course._id}}">{{course.courseName}}</ion-option>
                     </ion-select>
-                 </ion-item>
+                 </ion-item> -->
   
              </ion-list>
   

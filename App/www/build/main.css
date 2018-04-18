@@ -27972,6 +27972,133 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.item-select-searchable:not(.item-select-searchable-is-enabled) {
+  pointer-events: none;
+}
+
+.item-select-searchable .label {
+  margin-right: 0;
+}
+
+.select-searchable {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.select-searchable-label {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.select-searchable-value {
+  max-width: 45%;
+}
+
+.select-searchable-value-item {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.select-searchable-value-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.select-searchable-icon {
+  position: relative;
+  width: 20px;
+}
+
+.select-searchable-icon-inner {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  border-top: 5px solid;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  pointer-events: none;
+}
+
+.select-searchable-ios .select-searchable-icon {
+  height: 18px;
+}
+
+.select-searchable-ios .select-searchable-icon-inner {
+  margin-top: -2px;
+  color: #999;
+}
+
+.select-searchable-ios .select-searchable-value {
+  padding-left: 16px;
+}
+
+.select-searchable-md .select-searchable-icon {
+  height: 19px;
+}
+
+.select-searchable-md .select-searchable-icon-inner {
+  margin-top: -3px;
+  color: #999;
+}
+
+.select-searchable-md .select-searchable-value {
+  padding-left: 16px;
+}
+
+.select-searchable-md .select-searchable-label {
+  color: #999;
+}
+
+.select-searchable:not(.select-searchable-is-enabled) .select-searchable-value {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.select-searchable-spinner {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.select-searchable-spinner-background {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.05;
+}
+
+.select-searchable-spinner ion-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  margin-top: -14px;
+  margin-left: -14px;
+}
+
+.select-searchable-page.select-searchable-page-can-reset.select-searchable-page-multiple .footer .col:first-child {
+  padding-right: 8px;
+}
+
+.select-searchable-page.select-searchable-page-can-reset.select-searchable-page-multiple .footer .col:last-child {
+  padding-left: 8px;
+}
+
+.select-searchable-page.select-searchable-page-is-searching .scroll-content {
+  overflow-y: hidden;
+}
+
 .alert-ios .alert-radio-label {
   white-space: pre-line;
 }

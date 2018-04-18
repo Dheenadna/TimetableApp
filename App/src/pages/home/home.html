@@ -37,7 +37,7 @@
   
         <ion-item-sliding #slidingItem [hidden]="course.hide">
   
-          <button ion-item>
+          <button ion-item (click)="toggleToolbar()">
             <h3 text-wrap>{{ module.moduleName }}</h3>
             <p>
               {{ module.lecturer }}&mdash;

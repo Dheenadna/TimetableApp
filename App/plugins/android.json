@@ -24,6 +24,13 @@
     },
     "cordova-plugin-ionic-keyboard": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "com.timetable.push"
+    },
+    "phonegap-plugin-push": {
+      "FCM_VERSION": "11.6.2",
+      "PACKAGE_NAME": "com.timetable.push"
     }
   },
   "dependent_plugins": {}
