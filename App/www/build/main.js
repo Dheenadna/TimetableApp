@@ -6,7 +6,7 @@ webpackJsonp([4],{
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(82);
@@ -74,7 +74,7 @@ var SignupPage = (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Donal\Desktop\Timetable App\TimetableApp\App\src\pages\signup\signup.html"*/'<!--\n\n  Generated template for the SignupPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar color="donal">\n\n        <ion-title>Create Account</ion-title>\n\n    </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <div class="form">\n\n        <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg" /></div>\n\n\n\n        <ion-row class="account-form">\n\n            <ion-col>\n\n                <ion-list inset>\n\n\n\n                    <ion-item>\n\n                        <ion-label>\n\n                            <ion-icon name="mail"></ion-icon>\n\n                        </ion-label>\n\n                        <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>\n\n                    </ion-item>\n\n\n\n                    <ion-item>\n\n                        <ion-label>\n\n                            <ion-icon name="lock"></ion-icon>\n\n                        </ion-label>\n\n                        <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>\n\n                    </ion-item>\n\n\n\n                    <ion-item>\n\n                        <ion-label>Role</ion-label>\n\n                        <ion-select [(ngModel)]="role">\n\n                            <ion-option value="student">Student</ion-option>\n\n                            <ion-option value="lecturer">Lecturer</ion-option>\n\n                            <ion-option value="moderator">Moderator</ion-option>\n\n                            <ion-option value="administrator">Administrator</ion-option>\n\n                        </ion-select>\n\n                    </ion-item>\n\n\n\n                    <ion-item-group margin-bottom>\n\n                        <ion-item>\n\n                            <select-search \n\n                                [(ngModel)]="course" \n\n                                title="Select Course" \n\n                                itemTextField="courseName" \n\n                                [items]="courses"\n\n                                [canSearch]="true" \n\n                                [multiple]="false" \n\n                                (onChange)="courseChange($event)">\n\n                            </select-search>\n\n                        </ion-item>\n\n                    </ion-item-group>\n\n                    <!-- <ion-item>\n\n                    <ion-label>Select Course</ion-label>\n\n                    <ion-select [(ngModel)]="courseId">\n\n                        <ion-option text-wrap *ngFor="let course of courses" value="{{course._id}}">{{course.courseName}}</ion-option>\n\n                    </ion-select>\n\n                 </ion-item> -->\n\n\n\n                </ion-list>\n\n\n\n                <button ion-button (click)="register()" class="continue-button">Register</button>\n\n\n\n            </ion-col>\n\n        </ion-row>\n\n    </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Donal\Desktop\Timetable App\TimetableApp\App\src\pages\signup\signup.html"*/,
+            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Donal\Desktop\Timetable App\TimetableApp\App\src\pages\signup\signup.html"*/'<!--\n\n  Generated template for the SignupPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar color="donal">\n\n        <ion-title>Create Account</ion-title>\n\n    </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <div class="form">\n\n        <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg" /></div>\n\n\n\n        <ion-row class="account-form">\n\n            <ion-col>\n\n                <ion-list inset>\n\n\n\n                    <ion-item>\n\n                        <ion-label>\n\n                            <ion-icon name="mail"></ion-icon>\n\n                        </ion-label>\n\n                        <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>\n\n                    </ion-item>\n\n\n\n                    <ion-item>\n\n                        <ion-label>\n\n                            <ion-icon name="lock"></ion-icon>\n\n                        </ion-label>\n\n                        <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>\n\n                    </ion-item>\n\n\n\n                    <ion-item>\n\n                        <ion-label>Role</ion-label>\n\n                        <ion-select [(ngModel)]="role">\n\n                            <ion-option value="student">Student</ion-option>\n\n                            <ion-option value="lecturer">Lecturer</ion-option>\n\n                            <ion-option value="moderator">Moderator</ion-option>\n\n                            <ion-option value="administrator">Administrator</ion-option>\n\n                        </ion-select>\n\n                    </ion-item>\n\n\n\n                    <ion-item-group margin-bottom>\n\n                        <ion-item>\n\n                            <select-search\n\n                                [(ngModel)]="course" \n\n                                title="Select Course" \n\n                                itemTextField="courseName" \n\n                                [items]="courses"\n\n                                [canSearch]="true" \n\n                                [multiple]="false" \n\n                                (onChange)="courseChange($event)">\n\n                            </select-search>\n\n                        </ion-item>\n\n                    </ion-item-group>\n\n                    <!-- <ion-item>\n\n                    <ion-label>Select Course</ion-label>\n\n                    <ion-select [(ngModel)]="courseId">\n\n                        <ion-option text-wrap *ngFor="let course of courses" value="{{course._id}}">{{course.courseName}}</ion-option>\n\n                    </ion-select>\n\n                 </ion-item> -->\n\n\n\n                </ion-list>\n\n\n\n                <button ion-button (click)="register()" class="continue-button">Register</button>\n\n\n\n            </ion-col>\n\n        </ion-row>\n\n    </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Donal\Desktop\Timetable App\TimetableApp\App\src\pages\signup\signup.html"*/,
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* AuthProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* AuthProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */]) === "function" && _e || Object])
     ], SignupPage);
@@ -108,19 +108,19 @@ webpackEmptyAsyncContext.id = 117;
 
 var map = {
 	"../pages/calender/calender.module": [
-		283,
+		287,
 		3
 	],
 	"../pages/login/login.module": [
-		284,
+		286,
 		2
 	],
 	"../pages/signup/signup.module": [
-		285,
+		289,
 		1
 	],
 	"../pages/timetableview/timetableview.module": [
-		286,
+		288,
 		0
 	]
 };
@@ -144,9 +144,168 @@ module.exports = webpackAsyncContext;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectSearchPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SelectSearchPage = (function () {
+    function SelectSearchPage(navParams) {
+        var _this = this;
+        this.navParams = navParams;
+        this.selectedItems = [];
+        this.selectComponent = navParams.get('selectComponent');
+        this.navController = navParams.get('navController');
+        this.filteredItems = this.selectComponent.items;
+        this.filterItems();
+        if (this.selectComponent.value) {
+            if (this.selectComponent.multiple) {
+                this.selectComponent.value.forEach(function (item) {
+                    _this.selectedItems.push(item);
+                });
+            }
+            else {
+                this.selectedItems.push(this.selectComponent.value);
+            }
+        }
+    }
+    SelectSearchPage.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        if (this.searchbarComponent) {
+            // Focus after a delay because focus doesn't work without it.
+            setTimeout(function () {
+                _this.searchbarComponent.setFocus();
+            }, 1000);
+        }
+    };
+    SelectSearchPage.prototype.isItemSelected = function (item) {
+        var _this = this;
+        return this.selectedItems.find(function (selectedItem) {
+            if (_this.selectComponent.itemValueField) {
+                return item[_this.selectComponent.itemValueField] === selectedItem[_this.selectComponent.itemValueField];
+            }
+            return item === selectedItem;
+        }) !== undefined;
+    };
+    SelectSearchPage.prototype.deleteSelectedItem = function (item) {
+        var _this = this;
+        var itemToDeleteIndex;
+        this.selectedItems.forEach(function (selectedItem, itemIndex) {
+            if (_this.selectComponent.itemValueField) {
+                if (item[_this.selectComponent.itemValueField] === selectedItem[_this.selectComponent.itemValueField]) {
+                    itemToDeleteIndex = itemIndex;
+                }
+            }
+            else if (item === selectedItem) {
+                itemToDeleteIndex = itemIndex;
+            }
+        });
+        this.selectedItems.splice(itemToDeleteIndex, 1);
+    };
+    SelectSearchPage.prototype.addSelectedItem = function (item) {
+        this.selectedItems.push(item);
+    };
+    SelectSearchPage.prototype.select = function (item) {
+        if (this.selectComponent.multiple) {
+            if (this.isItemSelected(item)) {
+                this.deleteSelectedItem(item);
+            }
+            else {
+                this.addSelectedItem(item);
+            }
+        }
+        else {
+            if (!this.isItemSelected(item)) {
+                this.selectedItems = [];
+                this.addSelectedItem(item);
+                this.selectComponent.select(item);
+            }
+            this.close();
+        }
+    };
+    SelectSearchPage.prototype.ok = function () {
+        this.selectComponent.select(this.selectedItems.length ? this.selectedItems : null);
+        this.close();
+    };
+    SelectSearchPage.prototype.close = function () {
+        var _this = this;
+        // Focused input interferes with the animation.
+        // Blur it first, wait a bit and then close the page.
+        if (this.searchbarComponent) {
+            this.searchbarComponent._fireBlur();
+        }
+        setTimeout(function () {
+            _this.navController.pop();
+            if (!_this.selectComponent.hasSearchEvent) {
+                _this.selectComponent.filterText = '';
+            }
+        });
+    };
+    SelectSearchPage.prototype.reset = function () {
+        this.navController.pop();
+        this.selectComponent.reset();
+    };
+    SelectSearchPage.prototype.filterItems = function () {
+        var _this = this;
+        if (this.selectComponent.hasSearchEvent) {
+            if (this.selectComponent.isNullOrWhiteSpace(this.selectComponent.filterText)) {
+                this.selectComponent.items = [];
+            }
+            else {
+                // Delegate filtering to the event.
+                this.selectComponent.emitSearch();
+            }
+        }
+        else {
+            // Default filtering.
+            if (!this.selectComponent.filterText || !this.selectComponent.filterText.trim()) {
+                this.filteredItems = this.selectComponent.items;
+                return;
+            }
+            var filterText_1 = this.selectComponent.filterText.trim().toLowerCase();
+            this.filteredItems = this.selectComponent.items.filter(function (item) {
+                return item[_this.selectComponent.itemTextField].toLowerCase().indexOf(filterText_1) !== -1;
+            });
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('searchbarComponent'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Searchbar */])
+    ], SelectSearchPage.prototype, "searchbarComponent", void 0);
+    SelectSearchPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'select-search-page',template:/*ion-inline-start:"C:\Users\Donal\Desktop\Timetable App\TimetableApp\App\src\components\select-search\select-search-page.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>{{selectComponent.title}}</ion-title>\n\n    </ion-navbar>\n\n    <ion-toolbar *ngIf="selectComponent.canSearch">\n\n        <ion-searchbar\n\n            #searchbarComponent\n\n            [(ngModel)]="selectComponent.filterText"\n\n            (ionInput)="filterItems()"\n\n            [placeholder]="selectComponent.searchPlaceholder || \'Search\'">\n\n        </ion-searchbar>\n\n    </ion-toolbar>\n\n</ion-header>\n\n<ion-content>\n\n    <div class="select-search-spinner" *ngIf="selectComponent.isSearching">\n\n        <div class="select-search-spinner-background"></div>\n\n        <ion-spinner></ion-spinner>\n\n    </div>\n\n    <ion-list text-wrap no-margin *ngIf="filteredItems.length">\n\n        <button ion-item detail-none *ngFor="let item of filteredItems" (click)="select(item)">\n\n            <ion-icon\n\n                [name]="isItemSelected(item) ? \'checkmark-circle\' : \'radio-button-off\'"\n\n                [color]="isItemSelected(item) ? \'primary\' : \'daek\'"\n\n                item-left>\n\n            </ion-icon>\n\n            <h2>{{selectComponent.formatItem(item)}}</h2>\n\n        </button>\n\n    </ion-list>\n\n    <div *ngIf="!filteredItems.length" margin>No items found.</div>\n\n</ion-content>\n\n<ion-footer *ngIf="selectComponent.canReset || selectComponent.multiple">\n\n    <ion-toolbar padding>\n\n        <ion-row>\n\n            <ion-col no-padding *ngIf="selectComponent.canReset"\n\n                [attr.col-6]="selectComponent.canReset && selectComponent.multiple ? \'\' : null"\n\n                [attr.col-12]="selectComponent.canReset && !selectComponent.multiple ? \'\' : null">\n\n                <button ion-button full no-margin (click)="reset()" [disabled]="!selectedItems.length">\n\n                    Clear\n\n                </button>\n\n            </ion-col>\n\n            <ion-col no-padding *ngIf="selectComponent.multiple"\n\n                [attr.col-6]="selectComponent.canReset && selectComponent.multiple ? \'\' : null"\n\n                [attr.col-12]="!selectComponent.canReset && selectComponent.multiple ? \'\' : null">\n\n                <button ion-button full no-margin (click)="ok()">\n\n                    OK\n\n                </button>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\Donal\Desktop\Timetable App\TimetableApp\App\src\components\select-search\select-search-page.html"*/,
+            host: {
+                'class': 'select-search-page',
+                '[class.select-search-page-can-reset]': 'selectComponent.canReset',
+                '[class.select-search-page-multiple]': 'selectComponent.multiple'
+            }
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
+    ], SelectSearchPage);
+    return SelectSearchPage;
+}());
+
+//# sourceMappingURL=select-search-page.js.map
+
+/***/ }),
+
+/***/ 204:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalenderPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -228,13 +387,13 @@ var CalenderPage = (function () {
 
 /***/ }),
 
-/***/ 204:
+/***/ 205:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimetableviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -274,13 +433,13 @@ var TimetableviewPage = (function () {
 
 /***/ }),
 
-/***/ 205:
+/***/ 206:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(230);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -288,27 +447,27 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 229:
+/***/ 230:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(283);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_timetableview_timetableview__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_timetableview_timetableview__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_timetables_timetables__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_calender_calender__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_calender_calender__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_auth_auth__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_login_login__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_storage__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_select_search_select_search_module__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_select_search_select_search_module__ = __webpack_require__(284);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -350,10 +509,10 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_10__angular_http__["c" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/calender/calender.module#CalenderPageModule', name: 'CalenderPage', segment: 'calender', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/timetableview/timetableview.module#TimetableviewPageModule', name: 'TimetableviewPage', segment: 'timetableview', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/calender/calender.module#CalenderPageModule', name: 'CalenderPage', segment: 'calender', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/timetableview/timetableview.module#TimetableviewPageModule', name: 'TimetableviewPage', segment: 'timetableview', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
@@ -383,13 +542,13 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 282:
+/***/ 283:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(51);
@@ -430,15 +589,64 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 287:
+/***/ 284:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectSearchModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_search__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__select_search_page__ = __webpack_require__(203);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var SelectSearchModule = (function () {
+    function SelectSearchModule() {
+    }
+    SelectSearchModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__select_search__["a" /* SelectSearch */],
+                __WEBPACK_IMPORTED_MODULE_3__select_search_page__["a" /* SelectSearchPage */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__select_search__["a" /* SelectSearch */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__select_search_page__["a" /* SelectSearchPage */])
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__select_search__["a" /* SelectSearch */],
+                __WEBPACK_IMPORTED_MODULE_3__select_search_page__["a" /* SelectSearchPage */]
+            ],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_2__select_search__["a" /* SelectSearch */],
+                __WEBPACK_IMPORTED_MODULE_3__select_search_page__["a" /* SelectSearchPage */]
+            ]
+        })
+    ], SelectSearchModule);
+    return SelectSearchModule;
+}());
+
+//# sourceMappingURL=select-search-module.js.map
+
+/***/ }),
+
+/***/ 285:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectSearch; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__select_search_page__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__select_search_page__ = __webpack_require__(203);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -667,214 +875,6 @@ var SelectSearch = (function () {
 
 /***/ }),
 
-/***/ 288:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectSearchPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var SelectSearchPage = (function () {
-    function SelectSearchPage(navParams) {
-        var _this = this;
-        this.navParams = navParams;
-        this.selectedItems = [];
-        this.selectComponent = navParams.get('selectComponent');
-        this.navController = navParams.get('navController');
-        this.filteredItems = this.selectComponent.items;
-        this.filterItems();
-        if (this.selectComponent.value) {
-            if (this.selectComponent.multiple) {
-                this.selectComponent.value.forEach(function (item) {
-                    _this.selectedItems.push(item);
-                });
-            }
-            else {
-                this.selectedItems.push(this.selectComponent.value);
-            }
-        }
-    }
-    SelectSearchPage.prototype.ngAfterViewInit = function () {
-        var _this = this;
-        if (this.searchbarComponent) {
-            // Focus after a delay because focus doesn't work without it.
-            setTimeout(function () {
-                _this.searchbarComponent.setFocus();
-            }, 1000);
-        }
-    };
-    SelectSearchPage.prototype.isItemSelected = function (item) {
-        var _this = this;
-        return this.selectedItems.find(function (selectedItem) {
-            if (_this.selectComponent.itemValueField) {
-                return item[_this.selectComponent.itemValueField] === selectedItem[_this.selectComponent.itemValueField];
-            }
-            return item === selectedItem;
-        }) !== undefined;
-    };
-    SelectSearchPage.prototype.deleteSelectedItem = function (item) {
-        var _this = this;
-        var itemToDeleteIndex;
-        this.selectedItems.forEach(function (selectedItem, itemIndex) {
-            if (_this.selectComponent.itemValueField) {
-                if (item[_this.selectComponent.itemValueField] === selectedItem[_this.selectComponent.itemValueField]) {
-                    itemToDeleteIndex = itemIndex;
-                }
-            }
-            else if (item === selectedItem) {
-                itemToDeleteIndex = itemIndex;
-            }
-        });
-        this.selectedItems.splice(itemToDeleteIndex, 1);
-    };
-    SelectSearchPage.prototype.addSelectedItem = function (item) {
-        this.selectedItems.push(item);
-    };
-    SelectSearchPage.prototype.select = function (item) {
-        if (this.selectComponent.multiple) {
-            if (this.isItemSelected(item)) {
-                this.deleteSelectedItem(item);
-            }
-            else {
-                this.addSelectedItem(item);
-            }
-        }
-        else {
-            if (!this.isItemSelected(item)) {
-                this.selectedItems = [];
-                this.addSelectedItem(item);
-                this.selectComponent.select(item);
-            }
-            this.close();
-        }
-    };
-    SelectSearchPage.prototype.ok = function () {
-        this.selectComponent.select(this.selectedItems.length ? this.selectedItems : null);
-        this.close();
-    };
-    SelectSearchPage.prototype.close = function () {
-        var _this = this;
-        // Focused input interferes with the animation.
-        // Blur it first, wait a bit and then close the page.
-        if (this.searchbarComponent) {
-            this.searchbarComponent._fireBlur();
-        }
-        setTimeout(function () {
-            _this.navController.pop();
-            if (!_this.selectComponent.hasSearchEvent) {
-                _this.selectComponent.filterText = '';
-            }
-        });
-    };
-    SelectSearchPage.prototype.reset = function () {
-        this.navController.pop();
-        this.selectComponent.reset();
-    };
-    SelectSearchPage.prototype.filterItems = function () {
-        var _this = this;
-        if (this.selectComponent.hasSearchEvent) {
-            if (this.selectComponent.isNullOrWhiteSpace(this.selectComponent.filterText)) {
-                this.selectComponent.items = [];
-            }
-            else {
-                // Delegate filtering to the event.
-                this.selectComponent.emitSearch();
-            }
-        }
-        else {
-            // Default filtering.
-            if (!this.selectComponent.filterText || !this.selectComponent.filterText.trim()) {
-                this.filteredItems = this.selectComponent.items;
-                return;
-            }
-            var filterText_1 = this.selectComponent.filterText.trim().toLowerCase();
-            this.filteredItems = this.selectComponent.items.filter(function (item) {
-                return item[_this.selectComponent.itemTextField].toLowerCase().indexOf(filterText_1) !== -1;
-            });
-        }
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('searchbarComponent'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Searchbar */])
-    ], SelectSearchPage.prototype, "searchbarComponent", void 0);
-    SelectSearchPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'select-search-page',template:/*ion-inline-start:"C:\Users\Donal\Desktop\Timetable App\TimetableApp\App\src\components\select-search\select-search-page.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>{{selectComponent.title}}</ion-title>\n\n    </ion-navbar>\n\n    <ion-toolbar *ngIf="selectComponent.canSearch">\n\n        <ion-searchbar\n\n            #searchbarComponent\n\n            [(ngModel)]="selectComponent.filterText"\n\n            (ionInput)="filterItems()"\n\n            [placeholder]="selectComponent.searchPlaceholder || \'Search\'">\n\n        </ion-searchbar>\n\n    </ion-toolbar>\n\n</ion-header>\n\n<ion-content>\n\n    <div class="select-search-spinner" *ngIf="selectComponent.isSearching">\n\n        <div class="select-search-spinner-background"></div>\n\n        <ion-spinner></ion-spinner>\n\n    </div>\n\n    <ion-list no-margin *ngIf="filteredItems.length">\n\n        <button ion-item detail-none *ngFor="let item of filteredItems" (click)="select(item)">\n\n            <ion-icon\n\n                [name]="isItemSelected(item) ? \'checkmark-circle\' : \'radio-button-off\'"\n\n                [color]="isItemSelected(item) ? \'primary\' : \'daek\'"\n\n                item-left>\n\n            </ion-icon>\n\n            <h2>{{selectComponent.formatItem(item)}}</h2>\n\n        </button>\n\n    </ion-list>\n\n    <div *ngIf="!filteredItems.length" margin>No items found.</div>\n\n</ion-content>\n\n<ion-footer *ngIf="selectComponent.canReset || selectComponent.multiple">\n\n    <ion-toolbar padding>\n\n        <ion-row>\n\n            <ion-col no-padding *ngIf="selectComponent.canReset"\n\n                [attr.col-6]="selectComponent.canReset && selectComponent.multiple ? \'\' : null"\n\n                [attr.col-12]="selectComponent.canReset && !selectComponent.multiple ? \'\' : null">\n\n                <button ion-button full no-margin (click)="reset()" [disabled]="!selectedItems.length">\n\n                    Clear\n\n                </button>\n\n            </ion-col>\n\n            <ion-col no-padding *ngIf="selectComponent.multiple"\n\n                [attr.col-6]="selectComponent.canReset && selectComponent.multiple ? \'\' : null"\n\n                [attr.col-12]="!selectComponent.canReset && selectComponent.multiple ? \'\' : null">\n\n                <button ion-button full no-margin (click)="ok()">\n\n                    OK\n\n                </button>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\Donal\Desktop\Timetable App\TimetableApp\App\src\components\select-search\select-search-page.html"*/,
-            host: {
-                'class': 'select-search-page',
-                '[class.select-search-page-can-reset]': 'selectComponent.canReset',
-                '[class.select-search-page-multiple]': 'selectComponent.multiple'
-            }
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
-    ], SelectSearchPage);
-    return SelectSearchPage;
-}());
-
-//# sourceMappingURL=select-search-page.js.map
-
-/***/ }),
-
-/***/ 289:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectSearchModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_search__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__select_search_page__ = __webpack_require__(288);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-var SelectSearchModule = (function () {
-    function SelectSearchModule() {
-    }
-    SelectSearchModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__select_search__["a" /* SelectSearch */],
-                __WEBPACK_IMPORTED_MODULE_3__select_search_page__["a" /* SelectSearchPage */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__select_search__["a" /* SelectSearch */]),
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__select_search_page__["a" /* SelectSearchPage */])
-            ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_2__select_search__["a" /* SelectSearch */],
-                __WEBPACK_IMPORTED_MODULE_3__select_search_page__["a" /* SelectSearchPage */]
-            ],
-            entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_2__select_search__["a" /* SelectSearch */],
-                __WEBPACK_IMPORTED_MODULE_3__select_search_page__["a" /* SelectSearchPage */]
-            ]
-        })
-    ], SelectSearchModule);
-    return SelectSearchModule;
-}());
-
-//# sourceMappingURL=select-search-module.js.map
-
-/***/ }),
-
 /***/ 40:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -986,7 +986,7 @@ var AuthProvider = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__signup_signup__ = __webpack_require__(107);
@@ -1075,7 +1075,7 @@ var LoginPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__ = __webpack_require__(84);
@@ -1252,5 +1252,5 @@ var TimetablesProvider = (function () {
 
 /***/ })
 
-},[205]);
+},[206]);
 //# sourceMappingURL=main.js.map

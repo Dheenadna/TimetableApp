@@ -27984,6 +27984,105 @@ ion-navbar.toolbar {
   white-space: pre-line;
 }
 
+.item-select-search .label {
+  margin-right: 0;
+}
+
+.select-search {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.select-search-label {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.select-search-value {
+  max-width: 45%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.select-search-icon {
+  position: relative;
+  width: 20px;
+}
+
+.select-search-icon-inner {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  border-top: 5px solid;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  pointer-events: none;
+}
+
+.select-search-ios .select-search-icon {
+  height: 18px;
+}
+
+.select-search-ios .select-search-icon-inner {
+  margin-top: -2px;
+  color: #999;
+}
+
+.select-search-ios .select-search-value {
+  padding-left: 16px;
+}
+
+.select-search-md .select-search-icon {
+  height: 19px;
+}
+
+.select-search-md .select-search-icon-inner {
+  margin-top: -3px;
+  color: #999;
+}
+
+.select-search-md .select-search-value {
+  padding-left: 16px;
+}
+
+.select-search-md .select-search-label {
+  color: #999;
+}
+
+.select-search-spinner-background {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: #000;
+  z-index: 100;
+  opacity: 0.05;
+}
+
+.select-search-spinner ion-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  margin-top: -14px;
+  margin-left: -14px;
+}
+
+.select-search-page.select-search-page-can-reset.select-search-page-multiple .footer .col:first-child {
+  padding-right: 8px;
+}
+
+.select-search-page.select-search-page-can-reset.select-search-page-multiple .footer .col:last-child {
+  padding-left: 8px;
+}
+
 page-calender [col-1] {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 8.33333%;

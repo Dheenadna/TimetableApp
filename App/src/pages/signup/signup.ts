@@ -5,8 +5,6 @@ import { TimetablesProvider } from '../../providers/timetables/timetables';
 import { HomePage } from '../home/home';
 import { SelectSearch } from '../../components/select-search/select-search';
 
-
-
 /**
  * Generated class for the SignupPage page.
  *
