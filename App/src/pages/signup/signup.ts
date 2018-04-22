@@ -3,7 +3,9 @@ import { IonicPage, NavController, NavParams,LoadingController } from 'ionic-ang
 import { AuthProvider } from '../../providers/auth/auth';
 import { TimetablesProvider } from '../../providers/timetables/timetables';
 import { HomePage } from '../home/home';
-import { SelectSearchable } from 'ionic-select-searchable';
+import { SelectSearch } from '../../components/select-search/select-search';
+
+
 
 /**
  * Generated class for the SignupPage page.
@@ -20,19 +22,18 @@ import { SelectSearchable } from 'ionic-select-searchable';
 
 
 export class SignupPage {
-  
   loading: any;
   role: string;
   email: string;
   password: string;
-  courseId: string;
+  id: string;
   courses: any;
-
+  course: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public authService: AuthProvider, public timetable: TimetablesProvider, public loadingCtrl: LoadingController) {
   }
  
-  courseChange(event: { component: SelectSearchable, value: any }) {
+  courseChange(event: { component: SelectSearch, value: any }) {
     console.log('course:', event.value);
   }
 
@@ -49,9 +50,11 @@ export class SignupPage {
     let details = {
         email: this.email,
         password: this.password,
-        courseId: this.courseId,
+        courseId: this.course._id,
         role: this.role
     };
+
+    this.loading.dismiss();
 
     this.authService.createAccount(details).then((result) => {
       this.loading.dismiss();
@@ -63,8 +66,7 @@ export class SignupPage {
 
   }
 
-  showLoader(){
-    
+  showLoader() {
     this.loading = this.loadingCtrl.create({
       content: 'Authenticating...'
     });
