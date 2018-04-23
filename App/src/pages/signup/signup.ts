@@ -49,8 +49,11 @@ export class SignupPage {
         email: this.email,
         password: this.password,
         courseId: this.course._id,
+        courseName: this.course.courseName,
         role: this.role
     };
+
+    console.log(details);
 
     this.loading.dismiss();
 

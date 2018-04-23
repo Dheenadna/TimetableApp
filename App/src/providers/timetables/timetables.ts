@@ -18,11 +18,7 @@ export class TimetablesProvider {
     this.data = null;
   }
 
-  getCourses() {
-    if (this.data) {
-      return Promise.resolve(this.data);
-    }
- 
+  getCourses() { 
     return new Promise(resolve => {
  
       this.http.get('http://donalburke.me/api/courses/')

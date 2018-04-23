@@ -11,9 +11,10 @@ import { TimetablesProvider } from '../providers/timetables/timetables';
 import { CalenderPage } from '../pages/calender/calender';
 import { HttpModule } from '@angular/http';
 import { AuthProvider } from '../providers/auth/auth';
-import {LoginPage} from '../pages/login/login';
-import {SignupPage} from '../pages/signup/signup';
-import {Storage} from '@ionic/storage';
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
+import { AccountPage } from '../pages/account/account';
+import { Storage } from '@ionic/storage';
 import { SelectSearchModule } from '../components/select-search/select-search-module';
 
 @NgModule({
@@ -22,6 +23,7 @@ import { SelectSearchModule } from '../components/select-search/select-search-mo
     HomePage,
     LoginPage,
     SignupPage,
+    AccountPage,
     TimetableviewPage,
     CalenderPage
   ],
@@ -38,6 +40,7 @@ import { SelectSearchModule } from '../components/select-search/select-search-mo
     LoginPage,
     SignupPage,
     TimetableviewPage,
+    AccountPage,
     CalenderPage
   ],
   providers: [
