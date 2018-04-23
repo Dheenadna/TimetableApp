@@ -1,6 +1,7 @@
 import { Component, ViewChild } from "@angular/core";
 import { NavController, NavParams, Content } from "ionic-angular";
 import { Storage } from "@ionic/storage";
+import { MenuController } from 'ionic-angular';
 
 import { TimetablesProvider } from "../../providers/timetables/timetables";
 import { ModalController } from "ionic-angular/components/modal/modal-controller";
@@ -26,7 +27,8 @@ export class HomePage {
     public modalCtrl: ModalController,
     public timetableProvider: TimetablesProvider,
     public alerCtrl: AlertController,
-    public navParams: NavParams
+    public navParams: NavParams,
+    public menuCtrl: MenuController
   ) {
     let today = new Date().getDay();
     switch (today) {
@@ -57,7 +59,9 @@ export class HomePage {
     }
   }
 
-  ionViewWillEnter() {}
+  ionViewWillEnter() {
+
+  }
 
   ionViewDidLoad() {
     this.storage.get("user").then(value => {
@@ -67,10 +71,5 @@ export class HomePage {
         console.log(data);
       });
     });
-  }
-
-  logout() {
-    this.authService.logout();
-    this.navCtrl.setRoot(LoginPage);
   }
 }
