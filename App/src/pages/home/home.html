@@ -1,27 +1,27 @@
-<ion-header (load)="resize()" *ngFor="let course of courses">
+<ion-header>
   <ion-navbar color="donal">
       <button ion-button menuToggle left>
           <ion-icon name="menu"></ion-icon>
         </button>
-    <ion-title text-wrap>
-      {{ course.courseName }}
+    <ion-title>
+      Timetable
     </ion-title>
   </ion-navbar>
   <ion-toolbar>
     <ion-segment padding [(ngModel)]="timetable">
-      <ion-segment-button value="monday">
+      <ion-segment-button (ionSelect)="resize()" value="monday">
         Mon
       </ion-segment-button>
-      <ion-segment-button value="tuesday">
+      <ion-segment-button (ionSelect)="resize()" value="tuesday">
         Tue
       </ion-segment-button>
-      <ion-segment-button value="wednesday">
+      <ion-segment-button (ionSelect)="resize()" value="wednesday">
         Wed
       </ion-segment-button>
-      <ion-segment-button value="thursday">
+      <ion-segment-button (ionSelect)="resize()" value="thursday">
         Thu
       </ion-segment-button>
-      <ion-segment-button value="friday">
+      <ion-segment-button (ionSelect)="resize()" value="friday">
         Fri
       </ion-segment-button>
     </ion-segment>
@@ -40,14 +40,20 @@
   
         <ion-item-sliding #slidingItem [hidden]="course.hide">
   
-          <button ion-item (click)="toggleToolbar()">
+          <button ion-item (click)="showModuleDetails(module)">
             <h3 text-wrap>{{ module.moduleName }}</h3>
             <p>
               {{ module.lecturer }}&mdash;
               Room {{ module.room }}
             </p>
           </button>
-  
+          
+          <ion-item-options>
+              <button ion-button color="danger" (click)="deleteModule(todo)">
+                <ion-icon name="trash"></ion-icon>
+                Edit
+              </button>
+            </ion-item-options>
         </ion-item-sliding>
   
       </ion-item-group>
@@ -63,7 +69,7 @@
       
             <ion-item-sliding #slidingItem [hidden]="course.hide">
       
-              <button ion-item>
+              <button ion-item (click)="showModuleDetails(module)">
                 <h3 text-wrap>{{ module.moduleName }}</h3>
                 <p>
                     {{ module.lecturer }}&mdash;
@@ -86,7 +92,7 @@
       
             <ion-item-sliding #slidingItem [hidden]="course.hide">
       
-              <button ion-item>
+              <button ion-item (click)="showModuleDetails(module)">
                 <h3 text-wrap>{{ module.moduleName }}</h3>
                 <p>
                     {{ module.lecturer }}&mdash;
@@ -109,7 +115,7 @@
       
             <ion-item-sliding #slidingItem [hidden]="course.hide">
       
-              <button ion-item>
+              <button ion-item (click)="showModuleDetails(module)">
                 <h3 text-wrap>{{ module.moduleName }}</h3>
                 <p>
                     {{ module.lecturer }}&mdash;
@@ -132,7 +138,7 @@
       
             <ion-item-sliding #slidingItem [hidden]="course.hide">
       
-              <button ion-item>
+              <button ion-item (click)="showModuleDetails(module)">
                 <h3 text-wrap>{{ module.moduleName }}</h3>
                 <p>
                     {{ module.lecturer }}&mdash;

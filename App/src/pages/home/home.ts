@@ -1,11 +1,11 @@
 import { Component, ViewChild } from "@angular/core";
-import { NavController, NavParams, Content } from "ionic-angular";
+import { NavController, NavParams, Content, Segment } from "ionic-angular";
 import { Storage } from "@ionic/storage";
 import { MenuController } from 'ionic-angular';
 
 import { TimetablesProvider } from "../../providers/timetables/timetables";
 import { ModalController } from "ionic-angular/components/modal/modal-controller";
-import { LoginPage } from "../login/login";
+import { ModuleDetailPage } from "../module-detail/module-detail";
 import { AuthProvider } from "../../providers/auth/auth";
 
 import { AlertController } from "ionic-angular";
@@ -16,6 +16,7 @@ import { AlertController } from "ionic-angular";
 })
 export class HomePage {
   @ViewChild(Content) content: Content;
+  @ViewChild(Segment) segment: Segment;
 
   courses: any;
   timetable: any;
@@ -61,6 +62,14 @@ export class HomePage {
 
   ionViewWillEnter() {
 
+  }
+
+  showModuleDetails(module) {
+    this.navCtrl.push(ModuleDetailPage, module);
+  }
+
+  resize() {
+    this.content.resize();
   }
 
   ionViewDidLoad() {

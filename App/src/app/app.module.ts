@@ -14,6 +14,7 @@ import { AuthProvider } from '../providers/auth/auth';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { AccountPage } from '../pages/account/account';
+import { ModuleDetailPage } from '../pages/module-detail/module-detail';
 import { Storage } from '@ionic/storage';
 import { SelectSearchModule } from '../components/select-search/select-search-module';
 
@@ -25,6 +26,7 @@ import { SelectSearchModule } from '../components/select-search/select-search-mo
     SignupPage,
     AccountPage,
     TimetableviewPage,
+    ModuleDetailPage,
     CalenderPage
   ],
   imports: [
@@ -41,6 +43,7 @@ import { SelectSearchModule } from '../components/select-search/select-search-mo
     SignupPage,
     TimetableviewPage,
     AccountPage,
+    ModuleDetailPage,
     CalenderPage
   ],
   providers: [
