@@ -62,9 +62,12 @@ export class HomePage {
 
   ionViewWillEnter() {}
 
-  showModuleDetails(module, index) {
-    console.log(module, index);
-    this.navCtrl.push(ModuleDetailPage, module);
+  showModuleDetails(module, day) {
+    console.log(module, day);
+    this.navCtrl.push(ModuleDetailPage, {
+      module: module,
+      day: this.segment.value
+    });
   }
 
   deleteModule(module, index) {

@@ -16,18 +16,24 @@ import { EditModuleDetailsPage } from '../edit-module-details/edit-module-detail
 })
 export class ModuleDetailPage {
 
-  module: any = this.navParams.data;
+  module: any = this.navParams.get('module');
+  day: any = this.navParams.get('day');
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
 
   ionViewDidLoad() {
-
+    console.log(this.module, this.day);
   }
 
   gotoEditPage() {
-    this.navCtrl.push(EditModuleDetailsPage, this.module);
+    this.navCtrl.push(EditModuleDetailsPage, 
+      {
+        module: this.module, 
+        day: this.day
+      });
+      console.log(this.day);
   }
 
 }

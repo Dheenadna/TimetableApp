@@ -31,6 +31,43 @@ export class TimetablesProvider {
     });
   }
 
+  updateModule(day, module, _id) {
+    return new Promise((resolve, reject) => {
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      headers.append('Authorization', this.authService.token);
+
+      module = { 
+        _id: _id,
+        moduleName: module.moduleName,
+        lecturer: module.lecturer,
+        room: module.room,
+        startTime: module.startTime,
+        endTime: module.endTime,
+        moduleType: module.moduleType,
+        duration: module.duration
+      };
+
+      var data = {
+        day: day,
+        module: module
+      }
+
+      console.log(data);
+      
+      this.http.post('https://donalburke.me/api/courses/updateModule', JSON.stringify(data), {headers: headers})
+        .map(res => res.json())
+        .subscribe(res => {
+          resolve(res);
+          this.data = res;
+          console.log(res);
+          return this.data;
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
   getTimetable(id) {
     return new Promise((resolve, reject) => {
       let headers = new Headers();
