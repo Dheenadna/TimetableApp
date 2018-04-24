@@ -1,8 +1,8 @@
 <ion-header>
   <ion-navbar color="donal">
-      <button ion-button menuToggle left>
-          <ion-icon name="menu"></ion-icon>
-        </button>
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>
       Timetable
     </ion-title>
@@ -31,124 +31,139 @@
 <ion-content *ngFor="let course of courses">
   <div [ngSwitch]="timetable">
     <ion-list *ngSwitchCase="'monday'">
-      <ion-item-group *ngFor="let module of course.Monday" [hidden]="course.hide">
+      <ion-item-group *ngFor="let module of course.Monday; let index = index" [hidden]="course.hide">
         <ion-item-divider sticky>
           <ion-label>
             {{ module.startTime }}
           </ion-label>
         </ion-item-divider>
-  
+
         <ion-item-sliding #slidingItem [hidden]="course.hide">
-  
-          <button ion-item (click)="showModuleDetails(module)">
+
+          <button ion-item (click)="showModuleDetails(module, index)">
             <h3 text-wrap>{{ module.moduleName }}</h3>
             <p>
-              {{ module.lecturer }}&mdash;
-              Room {{ module.room }}
+              {{ module.lecturer }}&mdash; Room {{ module.room }}
             </p>
           </button>
-          
+
           <ion-item-options>
-              <button ion-button color="danger" (click)="deleteModule(todo)">
-                <ion-icon name="trash"></ion-icon>
-                Edit
-              </button>
-            </ion-item-options>
+            <button ion-button color="danger" (click)="deleteModule(module, index)">
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+          </ion-item-options>
         </ion-item-sliding>
-  
+
       </ion-item-group>
     </ion-list>
 
     <ion-list *ngSwitchCase="'tuesday'">
-        <ion-item-group *ngFor="let module of course.Tuesday" [hidden]="course.hide">
-            <ion-item-divider sticky>
-              <ion-label>
-                {{ module.startTime }}
-              </ion-label>
-            </ion-item-divider>
-      
-            <ion-item-sliding #slidingItem [hidden]="course.hide">
-      
-              <button ion-item (click)="showModuleDetails(module)">
-                <h3 text-wrap>{{ module.moduleName }}</h3>
-                <p>
-                    {{ module.lecturer }}&mdash;
-                    Room {{ module.room }}
-                </p>
-              </button>
-      
-            </ion-item-sliding>
-      
-          </ion-item-group>
+      <ion-item-group *ngFor="let module of course.Tuesday; let index = index" [hidden]="course.hide">
+        <ion-item-divider sticky>
+          <ion-label>
+            {{ module.startTime }}
+          </ion-label>
+        </ion-item-divider>
+
+        <ion-item-sliding #slidingItem [hidden]="course.hide">
+
+          <button ion-item (click)="showModuleDetails(module, index)">
+            <h3 text-wrap>{{ module.moduleName }}</h3>
+            <p>
+              {{ module.lecturer }}&mdash; Room {{ module.room }}
+            </p>
+          </button>
+          <ion-item-options>
+            <button ion-button color="danger" (click)="deleteModule(module, index)">
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+
+      </ion-item-group>
     </ion-list>
 
     <ion-list *ngSwitchCase="'wednesday'">
-        <ion-item-group *ngFor="let module of course.Wednesday" [hidden]="course.hide">
-            <ion-item-divider sticky>
-              <ion-label>
-                {{ module.startTime }}
-              </ion-label>
-            </ion-item-divider>
-      
-            <ion-item-sliding #slidingItem [hidden]="course.hide">
-      
-              <button ion-item (click)="showModuleDetails(module)">
-                <h3 text-wrap>{{ module.moduleName }}</h3>
-                <p>
-                    {{ module.lecturer }}&mdash;
-              Room {{ module.room }}
-                </p>
-              </button>
-      
-            </ion-item-sliding>
-      
-          </ion-item-group>
+      <ion-item-group *ngFor="let module of course.Wednesday; let index = index" [hidden]="course.hide">
+        <ion-item-divider sticky>
+          <ion-label>
+            {{ module.startTime }}
+          </ion-label>
+        </ion-item-divider>
+
+        <ion-item-sliding #slidingItem [hidden]="course.hide">
+
+          <button ion-item (click)="showModuleDetails(module, index)">
+            <h3 text-wrap>{{ module.moduleName }}</h3>
+            <p>
+              {{ module.lecturer }}&mdash; Room {{ module.room }}
+            </p>
+          </button>
+          <ion-item-options>
+            <button ion-button color="danger" (click)="deleteModule(module, index)">
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+
+      </ion-item-group>
     </ion-list>
 
     <ion-list *ngSwitchCase="'thursday'">
-        <ion-item-group *ngFor="let module of course.Thursday" [hidden]="course.hide">
-            <ion-item-divider sticky>
-              <ion-label>
-                {{ module.startTime }}
-              </ion-label>
-            </ion-item-divider>
-      
-            <ion-item-sliding #slidingItem [hidden]="course.hide">
-      
-              <button ion-item (click)="showModuleDetails(module)">
-                <h3 text-wrap>{{ module.moduleName }}</h3>
-                <p>
-                    {{ module.lecturer }}&mdash;
-                    Room {{ module.room }}
-                </p>
-              </button>
-      
-            </ion-item-sliding>
-      
-          </ion-item-group>
+      <ion-item-group *ngFor="let module of course.Thursday; let index = index" [hidden]="course.hide">
+        <ion-item-divider sticky>
+          <ion-label>
+            {{ module.startTime }}
+          </ion-label>
+        </ion-item-divider>
+
+        <ion-item-sliding #slidingItem [hidden]="course.hide">
+
+          <button ion-item (click)="showModuleDetails(module, index)">
+            <h3 text-wrap>{{ module.moduleName }}</h3>
+            <p>
+              {{ module.lecturer }}&mdash; Room {{ module.room }}
+            </p>
+          </button>
+          <ion-item-options>
+            <button ion-button color="danger" (click)="deleteModule(module, index)">
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+
+      </ion-item-group>
     </ion-list>
 
     <ion-list *ngSwitchCase="'friday'">
-        <ion-item-group *ngFor="let module of course.Friday" [hidden]="course.hide">
-            <ion-item-divider sticky>
-              <ion-label>
-                {{ module.startTime }}
-              </ion-label>
-            </ion-item-divider>
-      
-            <ion-item-sliding #slidingItem [hidden]="course.hide">
-      
-              <button ion-item (click)="showModuleDetails(module)">
-                <h3 text-wrap>{{ module.moduleName }}</h3>
-                <p>
-                    {{ module.lecturer }}&mdash;
-              Room {{ module.room }}
-                </p>
-              </button>
-      
-            </ion-item-sliding>
-      
-          </ion-item-group>
+      <ion-item-group *ngFor="let module of course.Friday; let index = index" [hidden]="course.hide">
+        <ion-item-divider sticky>
+          <ion-label>
+            {{ module.startTime }}
+          </ion-label>
+        </ion-item-divider>
+
+        <ion-item-sliding #slidingItem [hidden]="course.hide">
+
+          <button ion-item (click)="showModuleDetails(module, index)">
+            <h3 text-wrap>{{ module.moduleName }}</h3>
+            <p>
+              {{ module.lecturer }}&mdash; Room {{ module.room }}
+            </p>
+          </button>
+          <ion-item-options>
+            <button ion-button color="danger" (click)="deleteModule(module, index)">
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+
+      </ion-item-group>
     </ion-list>
   </div>
 </ion-content>

@@ -1,6 +1,7 @@
 import { Http, Headers } from "@angular/http";
 import { Injectable } from "@angular/core";
 import { AuthProvider } from "../auth/auth";
+import { Storage } from '@ionic/storage';
 import "rxjs/add/operator/map";
 
 /*
@@ -14,7 +15,7 @@ export class TimetablesProvider {
   data: any;
   email: any;
 
-  constructor(public http: Http, public authService: AuthProvider) {
+  constructor(public http: Http, public authService: AuthProvider, public storage: Storage) {
     this.data = null;
   }
 
@@ -43,6 +44,7 @@ export class TimetablesProvider {
         .subscribe(res => {
           resolve(res);
           this.data = res;
+          this.storage.set('timetable', this.data);
           console.log(res);
           return this.data;
         }, (err) => {

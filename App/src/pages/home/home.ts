@@ -1,7 +1,7 @@
 import { Component, ViewChild } from "@angular/core";
 import { NavController, NavParams, Content, Segment } from "ionic-angular";
 import { Storage } from "@ionic/storage";
-import { MenuController } from 'ionic-angular';
+import { MenuController } from "ionic-angular";
 
 import { TimetablesProvider } from "../../providers/timetables/timetables";
 import { ModalController } from "ionic-angular/components/modal/modal-controller";
@@ -60,12 +60,15 @@ export class HomePage {
     }
   }
 
-  ionViewWillEnter() {
+  ionViewWillEnter() {}
 
+  showModuleDetails(module, index) {
+    console.log(module, index);
+    this.navCtrl.push(ModuleDetailPage, module);
   }
 
-  showModuleDetails(module) {
-    this.navCtrl.push(ModuleDetailPage, module);
+  deleteModule(module, index) {
+    console.log(module, index);
   }
 
   resize() {
@@ -73,12 +76,19 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    this.storage.get("user").then(value => {
-      console.log(value.courseId);
-      this.timetableProvider.getTimetable(value.courseId).then(data => {
-        this.courses = data;
-        console.log(data);
-      });
+    this.storage.get("timetable").then(val => {
+      if (val == null) {
+        this.storage.get("user").then(value => {
+          console.log(value.courseId);
+          this.timetableProvider.getTimetable(value.courseId).then(data => {
+            this.courses = data;
+            console.log(data);
+          });
+        });
+      } else {
+        this.courses = val;
+        console.log(this.courses);
+      }
     });
   }
 }

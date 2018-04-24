@@ -1,4 +1,4 @@
-webpackJsonp([6],{
+webpackJsonp([7],{
 
 /***/ 106:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -150,6 +150,7 @@ var LoginPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModuleDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_module_details_edit_module_details__ = __webpack_require__(207);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -159,6 +160,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 /**
@@ -174,15 +176,18 @@ var ModuleDetailPage = (function () {
         this.module = this.navParams.data;
     }
     ModuleDetailPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ModuleDetailPage');
+    };
+    ModuleDetailPage.prototype.gotoEditPage = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__edit_module_details_edit_module_details__["a" /* EditModuleDetailsPage */], this.module);
     };
     ModuleDetailPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-module-detail',template:/*ion-inline-start:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/module-detail/module-detail.html"*/'<!--\n  Generated template for the ModuleDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="donal">\n    <ion-title>Details</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <div *ngIf="module">\n        <h4>{{module.moduleName}}</h4>\n        <h6>Room: {{module.room}}</h6>\n        <h6>\n          From: {{module.startTime}} - {{module.endTime}}\n        </h6>\n        <h6>Lecturer:  {{module.lecturer}}</h6>\n        <h6>Type: {{module.moduleType}}</h6>\n        <h6> Duration: {{module.duration}}</h6>\n      </div>\n</ion-content>\n'/*ion-inline-end:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/module-detail/module-detail.html"*/,
+            selector: 'page-module-detail',template:/*ion-inline-start:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/module-detail/module-detail.html"*/'<!--\n  Generated template for the ModuleDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="donal">\n      <ion-buttons end>\n          <button ion-button icon-only (click)="gotoEditPage()">\n            <ion-icon name="create"></ion-icon>\n          </button>\n        </ion-buttons>\n\n    <ion-title>Details</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div *ngIf="module">\n    <h4>{{module.moduleName}}</h4>\n    <h6>Room: {{module.room}}</h6>\n    <h6>\n      From: {{module.startTime}} - {{module.endTime}}\n    </h6>\n    <h6>Lecturer: {{module.lecturer}}</h6>\n    <h6>Type: {{module.moduleType}}</h6>\n    <h6> Duration: {{module.duration}}</h6>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/module-detail/module-detail.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _b || Object])
     ], ModuleDetailPage);
     return ModuleDetailPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=module-detail.js.map
@@ -299,26 +304,30 @@ webpackEmptyAsyncContext.id = 119;
 var map = {
 	"../pages/account/account.module": [
 		289,
-		5
+		6
 	],
 	"../pages/calender/calender.module": [
-		288,
+		290,
+		5
+	],
+	"../pages/edit-module-details/edit-module-details.module": [
+		291,
 		4
 	],
 	"../pages/login/login.module": [
-		290,
+		292,
 		3
 	],
 	"../pages/module-detail/module-detail.module": [
-		291,
+		293,
 		2
 	],
 	"../pages/signup/signup.module": [
-		293,
+		294,
 		1
 	],
 	"../pages/timetableview/timetableview.module": [
-		292,
+		295,
 		0
 	]
 };
@@ -589,6 +598,71 @@ var CalenderPage = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditModuleDetailsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(13);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the EditModuleDetailsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var EditModuleDetailsPage = (function () {
+    function EditModuleDetailsPage(navCtrl, navParams, formBuilder) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.formBuilder = formBuilder;
+        this.module = this.navParams.data;
+        this.moduleName = this.module.moduleName;
+        this.lecturer = this.module.lecturer;
+        this.room = this.module.room;
+        this.startTime = this.module.startTime;
+        this.endTime = this.module.endTime;
+        this.moduleType = this.module.moduleType;
+        this.duration = this.module.duration;
+        this.moduleForm = formBuilder.group({
+            moduleName: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
+            lecturer: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
+            room: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
+            startTime: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
+            endTime: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
+            moduleType: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
+            duration: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required]
+        });
+    }
+    EditModuleDetailsPage.prototype.saveModule = function (moduleName, lecturer, room, startTime, endTime, moduleType, duration) {
+        console.log(this.moduleForm.value);
+    };
+    EditModuleDetailsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-edit-module-details',template:/*ion-inline-start:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/edit-module-details/edit-module-details.html"*/'<!--\n  Generated template for the EditModuleDetailsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="donal">\n    <ion-title>Edit Details</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n    <form (submit)="saveModule()" [formGroup]="moduleForm">\n        <ion-list>\n          <ion-item>\n            <ion-label>Module Name</ion-label>\n            <ion-textarea type="text" formControlName="moduleName" value="{{module.moduleName}}"></ion-textarea>\n          </ion-item>\n    \n          <ion-item>\n            <ion-label>Lecturer</ion-label>\n            <ion-textarea type="text" formControlName="lecturer" value="{{module.lecturer}}"></ion-textarea>\n          </ion-item>\n    \n          <ion-item>\n            <ion-label>Room</ion-label>\n            <ion-textarea type="text" formControlName="room" value="{{module.room}}"></ion-textarea>\n          </ion-item>\n    \n          <ion-item>\n            <ion-label>Start Time</ion-label>\n            <ion-textarea type="text" formControlName="startTime" value="{{module.startTime}}"></ion-textarea>\n          </ion-item>\n    \n          <ion-item>\n            <ion-label>End Time</ion-label>\n            <ion-textarea type="text" formControlName="endTime" value="{{module.endTime}}"></ion-textarea>\n          </ion-item>\n    \n          <ion-item>\n            <ion-label>Module Type</ion-label>\n            <ion-textarea type="text" formControlName="moduleType" value="{{module.moduleType}}"></ion-textarea>\n          </ion-item>\n    \n          <ion-item>\n            <ion-label>Duration</ion-label>\n            <ion-textarea type="text" formControlName="duration" value="{{module.duration}}"></ion-textarea>\n          </ion-item>\n    \n          <button ion-button full type="submit">Save</button>\n        </ion-list>\n      </form>\n</ion-content>\n'/*ion-inline-end:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/edit-module-details/edit-module-details.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]])
+    ], EditModuleDetailsPage);
+    return EditModuleDetailsPage;
+}());
+
+//# sourceMappingURL=edit-module-details.js.map
+
+/***/ }),
+
+/***/ 208:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimetableviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
@@ -631,13 +705,13 @@ var TimetableviewPage = (function () {
 
 /***/ }),
 
-/***/ 208:
+/***/ 209:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(233);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -645,7 +719,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 232:
+/***/ 233:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -655,9 +729,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(286);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_timetableview_timetableview__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_timetableview_timetableview__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_timetables_timetables__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_calender_calender__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(81);
@@ -666,14 +740,16 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_account_account__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_module_detail_module_detail__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_storage__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_select_search_select_search_module__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_edit_module_details_edit_module_details__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_storage__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_select_search_select_search_module__ = __webpack_require__(287);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -705,20 +781,22 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_14__pages_account_account__["a" /* AccountPage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_timetableview_timetableview__["a" /* TimetableviewPage */],
                 __WEBPACK_IMPORTED_MODULE_15__pages_module_detail_module_detail__["a" /* ModuleDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_edit_module_details_edit_module_details__["a" /* EditModuleDetailsPage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_calender_calender__["a" /* CalenderPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_17__components_select_search_select_search_module__["a" /* SelectSearchModule */],
+                __WEBPACK_IMPORTED_MODULE_18__components_select_search_select_search_module__["a" /* SelectSearchModule */],
                 __WEBPACK_IMPORTED_MODULE_10__angular_http__["c" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/calender/calender.module#CalenderPageModule', name: 'CalenderPage', segment: 'calender', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/account/account.module#AccountPageModule', name: 'AccountPage', segment: 'account', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/calender/calender.module#CalenderPageModule', name: 'CalenderPage', segment: 'calender', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-module-details/edit-module-details.module#EditModuleDetailsPageModule', name: 'EditModuleDetailsPage', segment: 'edit-module-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/module-detail/module-detail.module#ModuleDetailPageModule', name: 'ModuleDetailPage', segment: 'module-detail', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/timetableview/timetableview.module#TimetableviewPageModule', name: 'TimetableviewPage', segment: 'timetableview', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/timetableview/timetableview.module#TimetableviewPageModule', name: 'TimetableviewPage', segment: 'timetableview', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
@@ -731,6 +809,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_7__pages_timetableview_timetableview__["a" /* TimetableviewPage */],
                 __WEBPACK_IMPORTED_MODULE_14__pages_account_account__["a" /* AccountPage */],
                 __WEBPACK_IMPORTED_MODULE_15__pages_module_detail_module_detail__["a" /* ModuleDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_edit_module_details_edit_module_details__["a" /* EditModuleDetailsPage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_calender_calender__["a" /* CalenderPage */]
             ],
             providers: [
@@ -739,7 +818,7 @@ var AppModule = (function () {
                 { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicErrorHandler */] },
                 __WEBPACK_IMPORTED_MODULE_8__providers_timetables_timetables__["a" /* TimetablesProvider */],
                 __WEBPACK_IMPORTED_MODULE_11__providers_auth_auth__["a" /* AuthProvider */],
-                __WEBPACK_IMPORTED_MODULE_16__ionic_storage__["a" /* Storage */]
+                __WEBPACK_IMPORTED_MODULE_17__ionic_storage__["a" /* Storage */]
             ]
         })
     ], AppModule);
@@ -750,7 +829,7 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 285:
+/***/ 286:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -817,14 +896,14 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 286:
+/***/ 287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectSearchModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_search__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_search__ = __webpack_require__(288);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__select_search_page__ = __webpack_require__(205);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -866,13 +945,13 @@ var SelectSearchModule = (function () {
 
 /***/ }),
 
-/***/ 287:
+/***/ 288:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectSearch; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__select_search_page__ = __webpack_require__(205);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1081,7 +1160,7 @@ var SelectSearch = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'select-search',template:/*ion-inline-start:"/Users/donal/Desktop/APP/TimetableApp/App/src/components/select-search/select-search.html"*/'<div class="select-search-label">{{title}}</div>\n<div class="select-search-value">{{formatValue()}}</div>\n<div class="select-search-icon">\n    <div class="select-search-icon-inner"></div>\n</div>\n<button aria-haspopup="true" ion-button="item-cover" class="item-cover"></button>\n'/*ion-inline-end:"/Users/donal/Desktop/APP/TimetableApp/App/src/components/select-search/select-search.html"*/,
             providers: [{
-                    provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* NG_VALUE_ACCESSOR */],
+                    provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* NG_VALUE_ACCESSOR */],
                     useExisting: Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* forwardRef */])(function () { return SelectSearch_1; }),
                     multi: true
                 }],
@@ -1297,46 +1376,51 @@ var HomePage = (function () {
             }
         }
     }
-    HomePage.prototype.ionViewWillEnter = function () {
-    };
-    HomePage.prototype.showModuleDetails = function (module) {
+    HomePage.prototype.ionViewWillEnter = function () { };
+    HomePage.prototype.showModuleDetails = function (module, index) {
+        console.log(module, index);
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__module_detail_module_detail__["a" /* ModuleDetailPage */], module);
+    };
+    HomePage.prototype.deleteModule = function (module, index) {
+        console.log(module, index);
     };
     HomePage.prototype.resize = function () {
         this.content.resize();
     };
     HomePage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.storage.get("user").then(function (value) {
-            console.log(value.courseId);
-            _this.timetableProvider.getTimetable(value.courseId).then(function (data) {
-                _this.courses = data;
-                console.log(data);
-            });
+        this.storage.get("timetable").then(function (val) {
+            if (val == null) {
+                _this.storage.get("user").then(function (value) {
+                    console.log(value.courseId);
+                    _this.timetableProvider.getTimetable(value.courseId).then(function (data) {
+                        _this.courses = data;
+                        console.log(data);
+                    });
+                });
+            }
+            else {
+                _this.courses = val;
+                console.log(_this.courses);
+            }
         });
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Content */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Content */]) === "function" && _a || Object)
     ], HomePage.prototype, "content", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Segment */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Segment */])
+        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Segment */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Segment */]) === "function" && _b || Object)
     ], HomePage.prototype, "segment", void 0);
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "page-home",template:/*ion-inline-start:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="donal">\n      <button ion-button menuToggle left>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n    <ion-title>\n      Timetable\n    </ion-title>\n  </ion-navbar>\n  <ion-toolbar>\n    <ion-segment padding [(ngModel)]="timetable">\n      <ion-segment-button (ionSelect)="resize()" value="monday">\n        Mon\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="tuesday">\n        Tue\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="wednesday">\n        Wed\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="thursday">\n        Thu\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="friday">\n        Fri\n      </ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content *ngFor="let course of courses">\n  <div [ngSwitch]="timetable">\n    <ion-list *ngSwitchCase="\'monday\'">\n      <ion-item-group *ngFor="let module of course.Monday" [hidden]="course.hide">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n  \n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n  \n          <button ion-item (click)="showModuleDetails(module)">\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              {{ module.lecturer }}&mdash;\n              Room {{ module.room }}\n            </p>\n          </button>\n          \n          <ion-item-options>\n              <button ion-button color="danger" (click)="deleteModule(todo)">\n                <ion-icon name="trash"></ion-icon>\n                Edit\n              </button>\n            </ion-item-options>\n        </ion-item-sliding>\n  \n      </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'tuesday\'">\n        <ion-item-group *ngFor="let module of course.Tuesday" [hidden]="course.hide">\n            <ion-item-divider sticky>\n              <ion-label>\n                {{ module.startTime }}\n              </ion-label>\n            </ion-item-divider>\n      \n            <ion-item-sliding #slidingItem [hidden]="course.hide">\n      \n              <button ion-item (click)="showModuleDetails(module)">\n                <h3 text-wrap>{{ module.moduleName }}</h3>\n                <p>\n                    {{ module.lecturer }}&mdash;\n                    Room {{ module.room }}\n                </p>\n              </button>\n      \n            </ion-item-sliding>\n      \n          </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'wednesday\'">\n        <ion-item-group *ngFor="let module of course.Wednesday" [hidden]="course.hide">\n            <ion-item-divider sticky>\n              <ion-label>\n                {{ module.startTime }}\n              </ion-label>\n            </ion-item-divider>\n      \n            <ion-item-sliding #slidingItem [hidden]="course.hide">\n      \n              <button ion-item (click)="showModuleDetails(module)">\n                <h3 text-wrap>{{ module.moduleName }}</h3>\n                <p>\n                    {{ module.lecturer }}&mdash;\n              Room {{ module.room }}\n                </p>\n              </button>\n      \n            </ion-item-sliding>\n      \n          </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'thursday\'">\n        <ion-item-group *ngFor="let module of course.Thursday" [hidden]="course.hide">\n            <ion-item-divider sticky>\n              <ion-label>\n                {{ module.startTime }}\n              </ion-label>\n            </ion-item-divider>\n      \n            <ion-item-sliding #slidingItem [hidden]="course.hide">\n      \n              <button ion-item (click)="showModuleDetails(module)">\n                <h3 text-wrap>{{ module.moduleName }}</h3>\n                <p>\n                    {{ module.lecturer }}&mdash;\n                    Room {{ module.room }}\n                </p>\n              </button>\n      \n            </ion-item-sliding>\n      \n          </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'friday\'">\n        <ion-item-group *ngFor="let module of course.Friday" [hidden]="course.hide">\n            <ion-item-divider sticky>\n              <ion-label>\n                {{ module.startTime }}\n              </ion-label>\n            </ion-item-divider>\n      \n            <ion-item-sliding #slidingItem [hidden]="course.hide">\n      \n              <button ion-item (click)="showModuleDetails(module)">\n                <h3 text-wrap>{{ module.moduleName }}</h3>\n                <p>\n                    {{ module.lecturer }}&mdash;\n              Room {{ module.room }}\n                </p>\n              </button>\n      \n            </ion-item-sliding>\n      \n          </ion-item-group>\n    </ion-list>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/home/home.html"*/
+            selector: "page-home",template:/*ion-inline-start:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="donal">\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      Timetable\n    </ion-title>\n  </ion-navbar>\n  <ion-toolbar>\n    <ion-segment padding [(ngModel)]="timetable">\n      <ion-segment-button (ionSelect)="resize()" value="monday">\n        Mon\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="tuesday">\n        Tue\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="wednesday">\n        Wed\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="thursday">\n        Thu\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="friday">\n        Fri\n      </ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content *ngFor="let course of courses">\n  <div [ngSwitch]="timetable">\n    <ion-list *ngSwitchCase="\'monday\'">\n      <ion-item-group *ngFor="let module of course.Monday; let index = index" [hidden]="course.hide">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n\n          <button ion-item (click)="showModuleDetails(module, index)">\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              {{ module.lecturer }}&mdash; Room {{ module.room }}\n            </p>\n          </button>\n\n          <ion-item-options>\n            <button ion-button color="danger" (click)="deleteModule(module, index)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'tuesday\'">\n      <ion-item-group *ngFor="let module of course.Tuesday; let index = index" [hidden]="course.hide">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n\n          <button ion-item (click)="showModuleDetails(module, index)">\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              {{ module.lecturer }}&mdash; Room {{ module.room }}\n            </p>\n          </button>\n          <ion-item-options>\n            <button ion-button color="danger" (click)="deleteModule(module, index)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'wednesday\'">\n      <ion-item-group *ngFor="let module of course.Wednesday; let index = index" [hidden]="course.hide">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n\n          <button ion-item (click)="showModuleDetails(module, index)">\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              {{ module.lecturer }}&mdash; Room {{ module.room }}\n            </p>\n          </button>\n          <ion-item-options>\n            <button ion-button color="danger" (click)="deleteModule(module, index)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'thursday\'">\n      <ion-item-group *ngFor="let module of course.Thursday; let index = index" [hidden]="course.hide">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n\n          <button ion-item (click)="showModuleDetails(module, index)">\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              {{ module.lecturer }}&mdash; Room {{ module.room }}\n            </p>\n          </button>\n          <ion-item-options>\n            <button ion-button color="danger" (click)="deleteModule(module, index)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'friday\'">\n      <ion-item-group *ngFor="let module of course.Friday; let index = index" [hidden]="course.hide">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n\n          <button ion-item (click)="showModuleDetails(module, index)">\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              {{ module.lecturer }}&mdash; Room {{ module.room }}\n            </p>\n          </button>\n          <ion-item-options>\n            <button ion-button color="danger" (click)="deleteModule(module, index)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_auth_auth__["a" /* AuthProvider */],
-            __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__["a" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* MenuController */]])
+        __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__providers_auth_auth__["a" /* AuthProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__providers_auth_auth__["a" /* AuthProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__["a" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__["a" /* ModalController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* MenuController */]) === "function" && _k || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -1351,8 +1435,9 @@ var HomePage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth_auth__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(162);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1366,6 +1451,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /*
   Generated class for the TimetablesProvider provider.
 
@@ -1373,9 +1459,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
   and Angular DI.
 */
 var TimetablesProvider = (function () {
-    function TimetablesProvider(http, authService) {
+    function TimetablesProvider(http, authService, storage) {
         this.http = http;
         this.authService = authService;
+        this.storage = storage;
         this.data = null;
     }
     TimetablesProvider.prototype.getCourses = function () {
@@ -1401,6 +1488,7 @@ var TimetablesProvider = (function () {
                 .subscribe(function (res) {
                 resolve(res);
                 _this.data = res;
+                _this.storage.set('timetable', _this.data);
                 console.log(res);
                 return _this.data;
             }, function (err) {
@@ -1410,14 +1498,15 @@ var TimetablesProvider = (function () {
     };
     TimetablesProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2__auth_auth__["a" /* AuthProvider */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__auth_auth__["a" /* AuthProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__auth_auth__["a" /* AuthProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["a" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["a" /* Storage */]) === "function" && _c || Object])
     ], TimetablesProvider);
     return TimetablesProvider;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=timetables.js.map
 
 /***/ })
 
-},[208]);
+},[209]);
 //# sourceMappingURL=main.js.map

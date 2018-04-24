@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { EditModuleDetailsPage } from '../edit-module-details/edit-module-details';
 
 /**
  * Generated class for the ModuleDetailPage page.
@@ -18,10 +19,15 @@ export class ModuleDetailPage {
   module: any = this.navParams.data;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ModuleDetailPage');
+
+  }
+
+  gotoEditPage() {
+    this.navCtrl.push(EditModuleDetailsPage, this.module);
   }
 
 }
