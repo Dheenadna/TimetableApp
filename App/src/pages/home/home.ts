@@ -58,6 +58,8 @@ export class HomePage {
         break;
       }
     }
+
+    this.loadTimetable();
   }
 
   ionViewWillEnter() {}
@@ -78,20 +80,17 @@ export class HomePage {
     this.content.resize();
   }
 
-  ionViewDidLoad() {
-    this.storage.get("timetable").then(val => {
-      if (val == null) {
-        this.storage.get("user").then(value => {
-          console.log(value.courseId);
-          this.timetableProvider.getTimetable(value.courseId).then(data => {
-            this.courses = data;
-            console.log(data);
-          });
-        });
-      } else {
-        this.courses = val;
-        console.log(this.courses);
-      }
+  loadTimetable() {
+    this.storage.get("user").then(value => {
+      console.log(value.courseId);
+      this.timetableProvider.getTimetable(value.courseId).then(data => {
+        this.courses = data;
+        console.log(data);
+      });
     });
+  }
+
+  ionViewDidLoad() {
+
   }
 }

@@ -7,25 +7,34 @@
 <ion-header>
 
   <ion-navbar color="donal">
-      <ion-buttons end>
-          <button ion-button icon-only (click)="gotoEditPage()">
-            <ion-icon name="create"></ion-icon>
-          </button>
-        </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoEditPage()">
+        <ion-icon name="create"></ion-icon>
+      </button>
+    </ion-buttons>
 
     <ion-title>Details</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <div *ngIf="module">
-    <h4>{{module.moduleName}}</h4>
-    <h6>Room: {{module.room}}</h6>
-    <h6>
+  <ion-card *ngIf="module" class="module-card">
+    <ion-card-header color="" text-wrap>{{module.moduleName}}</ion-card-header>
+    <ion-card-content>
+      <h2>Room: {{ module.room }}</h2>
+      <h2>{{ module.moduleType }}</h2>
+    </ion-card-content>
+    <ion-item class="module-info">
+        <ion-icon name="person" item-left></ion-icon>
+        Lecturer: {{ module.lecturer }}
+      </ion-item>
+    <ion-item class="module-info">
+      <ion-icon name="time" item-left></ion-icon>
       From: {{module.startTime}} - {{module.endTime}}
-    </h6>
-    <h6>Lecturer: {{module.lecturer}}</h6>
-    <h6>Type: {{module.moduleType}}</h6>
-    <h6> Duration: {{module.duration}}</h6>
-  </div>
+    </ion-item>
+    <ion-item class="module-info">
+        <ion-icon name="timer" item-left></ion-icon>
+        Duration: {{ module.duration }}
+      </ion-item>
+  </ion-card>
 </ion-content>

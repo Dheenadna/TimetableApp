@@ -13,44 +13,44 @@
 </ion-header>
 
 <ion-content padding>
-    <form (submit)="saveModule()" [formGroup]="moduleForm">
+    <form class="form" (submit)="saveModule()" [formGroup]="moduleForm">
         <ion-list>
           <ion-item>
             <ion-label>Module Name</ion-label>
-            <ion-textarea type="text" formControlName="moduleName" value="{{module.moduleName}}"></ion-textarea>
+            <ion-textarea text-right type="text" formControlName="moduleName" value="{{module.moduleName}}"></ion-textarea>
           </ion-item>
     
           <ion-item>
             <ion-label>Lecturer</ion-label>
-            <ion-textarea type="text" formControlName="lecturer" value="{{module.lecturer}}"></ion-textarea>
+            <ion-textarea text-right type="text" formControlName="lecturer" value="{{module.lecturer}}"></ion-textarea>
           </ion-item>
     
           <ion-item>
             <ion-label>Room</ion-label>
-            <ion-textarea type="text" formControlName="room" value="{{module.room}}"></ion-textarea>
+            <ion-textarea text-right type="text" formControlName="room" value="{{module.room}}"></ion-textarea>
           </ion-item>
     
           <ion-item>
             <ion-label>Start Time</ion-label>
-            <ion-textarea type="text" formControlName="startTime" value="{{module.startTime}}"></ion-textarea>
+            <ion-textarea text-right type="text" formControlName="startTime" value="{{module.startTime}}"></ion-textarea>
           </ion-item>
     
           <ion-item>
             <ion-label>End Time</ion-label>
-            <ion-textarea type="text" formControlName="endTime" value="{{module.endTime}}"></ion-textarea>
+            <ion-textarea text-right type="text" formControlName="endTime" value="{{module.endTime}}"></ion-textarea>
           </ion-item>
     
           <ion-item>
             <ion-label>Module Type</ion-label>
-            <ion-textarea type="text" formControlName="moduleType" value="{{module.moduleType}}"></ion-textarea>
+            <ion-textarea text-right type="text" formControlName="moduleType" value="{{module.moduleType}}"></ion-textarea>
           </ion-item>
     
           <ion-item>
             <ion-label>Duration</ion-label>
-            <ion-textarea type="text" formControlName="duration" value="{{module.duration}}"></ion-textarea>
+            <ion-textarea text-right type="text" formControlName="duration" value="{{module.duration}}"></ion-textarea>
           </ion-item>
     
-          <button ion-button full type="submit">Save</button>
+          <button ion-button full class="continue-button" type="submit">Save</button>
         </ion-list>
       </form>
 </ion-content>

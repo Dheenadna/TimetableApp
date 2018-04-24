@@ -81,7 +81,6 @@ export class TimetablesProvider {
         .subscribe(res => {
           resolve(res);
           this.data = res;
-          this.storage.set('timetable', this.data);
           console.log(res);
           return this.data;
         }, (err) => {

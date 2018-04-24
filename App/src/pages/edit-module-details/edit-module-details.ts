@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TimetablesProvider } from "../../providers/timetables/timetables";
 
+import { HomePage } from '../home/home';
+
 /**
  * Generated class for the EditModuleDetailsPage page.
  *
@@ -54,8 +56,7 @@ export class EditModuleDetailsPage {
     console.log(this.moduleForm.value);
     this.timetableProvider.updateModule(this.day, this.moduleForm.value, this.module._id).then(data => {
       console.log(data);
+      this.navCtrl.setRoot(HomePage);
     });
-
   }
-
 }
