@@ -4,77 +4,6 @@ webpackJsonp([7],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(48);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the AccountPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var AccountPage = (function () {
-    function AccountPage(navCtrl, navParams, storage, timetablesProvider) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.storage = storage;
-        this.timetablesProvider = timetablesProvider;
-        this.password = "password";
-        this.getCourses();
-    }
-    AccountPage.prototype.courseChange = function (event) {
-        console.log("course:", event.value);
-    };
-    AccountPage.prototype.getCourses = function () {
-        var _this = this;
-        this.timetablesProvider.getCourses().then(function (data) {
-            console.log(data);
-            _this.courses = data;
-        });
-    };
-    AccountPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.storage.get("user").then(function (value) {
-            console.log(value);
-            _this.role = value.role;
-            _this.courseId = value.courseId;
-            _this.courseName = value.courseName;
-            _this.email = value.email;
-        });
-    };
-    AccountPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "page-account",template:/*ion-inline-start:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/account/account.html"*/'<!--\n  Generated template for the AccountPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="donal">\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Account</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list no-lines>\n    <ion-item>\n      <ion-label>Email</ion-label>\n      <ion-input [(ngModel)]="email" type="text">{{email}}</ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Password</ion-label>\n      <ion-input [(ngModel)]="password" type="password">{{password}}</ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Role</ion-label>\n      <ion-input [(ngModel)]="role" type="text">{{role}}</ion-input>\n    </ion-item>\n    <ion-item>\n      <h3></h3>\n      <ion-label text-wrap>Course Name &mdash;{{courseName}}</ion-label>\n    </ion-item>\n    <ion-item-group margin-bottom>\n        <ion-item>\n          <select-search [(ngModel)]="course" title="Select Course" itemTextField="courseName" [items]="courses" [canSearch]="true"\n            [multiple]="false" (onChange)="courseChange($event)">\n          </select-search>\n        </ion-item>\n      </ion-item-group>\n\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/account/account.html"*/
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */]) === "function" && _d || Object])
-    ], AccountPage);
-    return AccountPage;
-    var _a, _b, _c, _d;
-}());
-
-//# sourceMappingURL=account.js.map
-
-/***/ }),
-
-/***/ 107:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddModulePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
@@ -133,6 +62,105 @@ var AddModulePage = (function () {
 
 /***/ }),
 
+/***/ 107:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__ = __webpack_require__(30);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the AccountPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var AccountPage = (function () {
+    function AccountPage(navCtrl, navParams, storage, timetablesProvider, authProvider, loadingCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.storage = storage;
+        this.timetablesProvider = timetablesProvider;
+        this.authProvider = authProvider;
+        this.loadingCtrl = loadingCtrl;
+        this.getCourses();
+    }
+    AccountPage.prototype.courseChange = function (event) {
+        console.log("course:", event.value);
+    };
+    AccountPage.prototype.getCourses = function () {
+        var _this = this;
+        this.timetablesProvider.getCourses().then(function (data) {
+            console.log(data);
+            _this.courses = data;
+        });
+    };
+    AccountPage.prototype.updateAccount = function () {
+        var _this = this;
+        this.showLoader();
+        var details = {
+            _id: this._id,
+            email: this.email,
+            courseId: this.course._id,
+            courseName: this.course.courseName,
+            role: this.role
+        };
+        console.log(details);
+        this.authProvider.updateUser(details).then(function (result) {
+            _this.loading.dismiss();
+            console.log(result);
+        }, function (err) {
+            _this.loading.dismiss();
+        });
+    };
+    AccountPage.prototype.showLoader = function () {
+        this.loading = this.loadingCtrl.create({
+            content: "Updating..."
+        });
+        this.loading.present();
+    };
+    AccountPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.storage.get("user").then(function (value) {
+            console.log(value);
+            _this._id = value._id;
+            _this.role = value.role;
+            _this.courseId = value.courseId;
+            _this.courseName = value.courseName;
+            _this.email = value.email;
+        });
+    };
+    AccountPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: "page-account",template:/*ion-inline-start:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/account/account.html"*/'<!--\n  Generated template for the AccountPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="donal">\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Account</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list no-lines>\n    <ion-item>\n      <ion-label>Email</ion-label>\n      <ion-input [(ngModel)]="email" type="text">{{email}}</ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Role</ion-label>\n      <ion-input [(ngModel)]="role" type="text">{{role}}</ion-input>\n    </ion-item>\n    <ion-item>\n      <h3></h3>\n      <ion-label text-wrap>Course Name &mdash;{{courseName}}</ion-label>\n    </ion-item>\n    <ion-item-group margin-bottom>\n        <ion-item>\n          <select-search [(ngModel)]="course" title="Select Course" itemTextField="courseName" [items]="courses" [canSearch]="true"\n            [multiple]="false" (onChange)="courseChange($event)">\n          </select-search>\n        </ion-item>\n      </ion-item-group>\n  </ion-list>\n  <button (click)="updateAccount()" full ion-button>Update</button>\n</ion-content>'/*ion-inline-end:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/account/account.html"*/
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__["a" /* AuthProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__["a" /* AuthProvider */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */]) === "function" && _f || Object])
+    ], AccountPage);
+    return AccountPage;
+    var _a, _b, _c, _d, _e, _f;
+}());
+
+//# sourceMappingURL=account.js.map
+
+/***/ }),
+
 /***/ 108:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -141,7 +169,7 @@ var AddModulePage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(42);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -214,7 +242,7 @@ var EditModuleDetailsPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__signup_signup__ = __webpack_require__(110);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -303,8 +331,8 @@ var LoginPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(49);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -335,7 +363,7 @@ var SignupPage = (function () {
         this.loadingCtrl = loadingCtrl;
     }
     SignupPage.prototype.courseChange = function (event) {
-        console.log('course:', event.value);
+        console.log("course:", event.value);
     };
     SignupPage.prototype.ionViewDidLoad = function () {
         var _this = this;
@@ -355,7 +383,6 @@ var SignupPage = (function () {
             role: this.role
         };
         console.log(details);
-        this.loading.dismiss();
         this.authService.createAccount(details).then(function (result) {
             _this.loading.dismiss();
             console.log(result);
@@ -366,17 +393,18 @@ var SignupPage = (function () {
     };
     SignupPage.prototype.showLoader = function () {
         this.loading = this.loadingCtrl.create({
-            content: 'Authenticating...'
+            content: "Authenticating..."
         });
         this.loading.present();
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/signup/signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="donal">\n        <ion-title>Create Account</ion-title>\n    </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <div class="form">\n        <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg" /></div>\n\n        <ion-row class="account-form">\n            <ion-col>\n                <ion-list inset>\n\n                    <ion-item>\n                        <ion-label>\n                            <ion-icon name="mail"></ion-icon>\n                        </ion-label>\n                        <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>\n                    </ion-item>\n\n                    <ion-item>\n                        <ion-label>\n                            <ion-icon name="lock"></ion-icon>\n                        </ion-label>\n                        <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>\n                    </ion-item>\n\n                    <ion-item>\n                        <ion-label>Role</ion-label>\n                        <ion-select [(ngModel)]="role">\n                            <ion-option value="student">Student</ion-option>\n                            <ion-option value="lecturer">Lecturer</ion-option>\n                            <ion-option value="moderator">Moderator</ion-option>\n                            <ion-option value="administrator">Administrator</ion-option>\n                        </ion-select>\n                    </ion-item>\n\n                    <ion-item-group margin-bottom>\n                        <ion-item>\n                            <select-search\n                                [(ngModel)]="course" \n                                title="Select Course" \n                                itemTextField="courseName" \n                                [items]="courses"\n                                [canSearch]="true" \n                                [multiple]="false" \n                                (onChange)="courseChange($event)">\n                            </select-search>\n                        </ion-item>\n                    </ion-item-group>\n                    <!-- <ion-item>\n                    <ion-label>Select Course</ion-label>\n                    <ion-select [(ngModel)]="courseId">\n                        <ion-option text-wrap *ngFor="let course of courses" value="{{course._id}}">{{course.courseName}}</ion-option>\n                    </ion-select>\n                 </ion-item> -->\n\n                </ion-list>\n\n                <button ion-button (click)="register()" class="continue-button">Register</button>\n\n            </ion-col>\n        </ion-row>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/signup/signup.html"*/,
+            selector: "page-signup",template:/*ion-inline-start:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/signup/signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="donal">\n        <ion-title>Create Account</ion-title>\n    </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <div class="form">\n        <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg" /></div>\n\n        <ion-row class="account-form">\n            <ion-col>\n                <ion-list inset>\n\n                    <ion-item>\n                        <ion-label>\n                            <ion-icon name="mail"></ion-icon>\n                        </ion-label>\n                        <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>\n                    </ion-item>\n\n                    <ion-item>\n                        <ion-label>\n                            <ion-icon name="lock"></ion-icon>\n                        </ion-label>\n                        <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>\n                    </ion-item>\n\n                    <ion-item>\n                        <ion-label>Role</ion-label>\n                        <ion-select [(ngModel)]="role">\n                            <ion-option value="student">Student</ion-option>\n                            <ion-option value="lecturer">Lecturer</ion-option>\n                            <ion-option value="moderator">Moderator</ion-option>\n                            <ion-option value="administrator">Administrator</ion-option>\n                        </ion-select>\n                    </ion-item>\n\n                    <ion-item-group margin-bottom>\n                        <ion-item>\n                            <select-search\n                                [(ngModel)]="course" \n                                title="Select Course" \n                                itemTextField="courseName" \n                                [items]="courses"\n                                [canSearch]="true" \n                                [multiple]="false" \n                                (onChange)="courseChange($event)">\n                            </select-search>\n                        </ion-item>\n                    </ion-item-group>\n                    <!-- <ion-item>\n                    <ion-label>Select Course</ion-label>\n                    <ion-select [(ngModel)]="courseId">\n                        <ion-option text-wrap *ngFor="let course of courses" value="{{course._id}}">{{course.courseName}}</ion-option>\n                    </ion-select>\n                 </ion-item> -->\n\n                </ion-list>\n\n                <button ion-button (click)="register()" class="continue-button">Register</button>\n\n            </ion-col>\n        </ion-row>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/signup/signup.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* AuthProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__["a" /* AuthProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */]) === "function" && _e || Object])
     ], SignupPage);
     return SignupPage;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=signup.js.map
@@ -405,11 +433,11 @@ webpackEmptyAsyncContext.id = 120;
 
 var map = {
 	"../pages/account/account.module": [
-		289,
+		291,
 		6
 	],
 	"../pages/add-module/add-module.module": [
-		291,
+		289,
 		5
 	],
 	"../pages/calender/calender.module": [
@@ -769,15 +797,15 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(286);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_timetableview_timetableview__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_timetables_timetables__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_timetables_timetables__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_calender_calender__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_auth_auth__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_auth_auth__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_login_login__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_account_account__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_account_account__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_edit_module_details_edit_module_details__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_add_module_add_module__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_add_module_add_module__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_storage__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_select_search_select_search_module__ = __webpack_require__(287);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -827,9 +855,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_10__angular_http__["c" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/account/account.module#AccountPageModule', name: 'AccountPage', segment: 'account', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/calender/calender.module#CalenderPageModule', name: 'CalenderPage', segment: 'calender', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-module/add-module.module#AddModulePageModule', name: 'AddModulePage', segment: 'add-module', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/calender/calender.module#CalenderPageModule', name: 'CalenderPage', segment: 'calender', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/account/account.module#AccountPageModule', name: 'AccountPage', segment: 'account', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-module-details/edit-module-details.module#EditModuleDetailsPageModule', name: 'EditModuleDetailsPage', segment: 'edit-module-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
@@ -877,8 +905,8 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_account_account__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_auth_auth__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_account_account__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_auth_auth__ = __webpack_require__(30);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1219,7 +1247,7 @@ var SelectSearch = (function () {
 
 /***/ }),
 
-/***/ 32:
+/***/ 30:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1279,6 +1307,7 @@ var AuthProvider = (function () {
         return new Promise(function (resolve, reject) {
             var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
             headers.append('Content-Type', 'application/json');
+            console.log(details);
             _this.http.post('https://donalburke.me/api/auth/register', JSON.stringify(details), { headers: headers })
                 .subscribe(function (res) {
                 var data = res.json();
@@ -1304,7 +1333,8 @@ var AuthProvider = (function () {
                     var data = res.json();
                     // this.token = data.token;
                     // this.storage.set('token', data.token);
-                    _this.storage.set('user', data.user);
+                    console.log(data);
+                    _this.storage.set('user', data);
                     resolve(data);
                 }, function (err) {
                     reject(err);
@@ -1346,14 +1376,14 @@ var AuthProvider = (function () {
 
 /***/ }),
 
-/***/ 48:
+/***/ 42:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimetablesProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth_auth__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth_auth__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
@@ -1526,11 +1556,11 @@ var TimetablesProvider = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_auth_auth__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_auth_auth__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__edit_module_details_edit_module_details__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__add_module_add_module__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__add_module_add_module__ = __webpack_require__(106);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);

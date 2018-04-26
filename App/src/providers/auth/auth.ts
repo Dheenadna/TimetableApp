@@ -77,7 +77,8 @@ export class AuthProvider {
             let data = res.json();
             // this.token = data.token;
             // this.storage.set('token', data.token);
-            this.storage.set('user', data.user);
+            console.log(data);
+            this.storage.set('user', data);
             resolve(data);
 
           }, (err) => {

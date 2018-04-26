@@ -21,11 +21,6 @@
     </ion-item>
 
     <ion-item>
-      <ion-label>Password</ion-label>
-      <ion-input [(ngModel)]="password" type="password">{{password}}</ion-input>
-    </ion-item>
-
-    <ion-item>
       <ion-label>Role</ion-label>
       <ion-input [(ngModel)]="role" type="text">{{role}}</ion-input>
     </ion-item>
@@ -40,6 +35,6 @@
           </select-search>
         </ion-item>
       </ion-item-group>
-
   </ion-list>
+  <button (click)="updateAccount()" full ion-button>Update</button>
 </ion-content>

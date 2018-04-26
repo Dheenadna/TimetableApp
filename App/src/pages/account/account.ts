@@ -1,8 +1,9 @@
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { IonicPage, NavController, NavParams, LoadingController } from "ionic-angular";
 import { Storage } from "@ionic/storage";
 import { TimetablesProvider } from "../../providers/timetables/timetables";
 import { SelectSearch } from "../../components/select-search/select-search";
+import { AuthProvider } from '../../providers/auth/auth';
 
 /**
  * Generated class for the AccountPage page.
@@ -18,17 +19,21 @@ import { SelectSearch } from "../../components/select-search/select-search";
 })
 export class AccountPage {
   role: any;
+  _id: any;
   courseId: any;
   email: any;
   courseName: any;
-  password: any = "password";
   courses: any;
+  course: any;
+  loading: any;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public storage: Storage,
-    public timetablesProvider: TimetablesProvider
+    public timetablesProvider: TimetablesProvider,
+    public authProvider: AuthProvider,
+    public loadingCtrl: LoadingController
   ) {
     this.getCourses();
   }
@@ -44,9 +49,40 @@ export class AccountPage {
     });
   }
 
+  updateAccount(){
+    this.showLoader();
+
+    let details = {
+        _id: this._id,
+        email: this.email,
+        courseId: this.course._id,
+        courseName: this.course.courseName,
+        role: this.role
+    };
+
+    console.log(details);
+
+    this.authProvider.updateUser(details).then((result) => {
+      this.loading.dismiss();
+      console.log(result);
+    }, (err) => {
+        this.loading.dismiss();
+    });
+
+  }
+
+  showLoader() {
+    this.loading = this.loadingCtrl.create({
+      content: "Updating..."
+    });
+
+    this.loading.present();
+  }
+  
   ionViewDidLoad() {
     this.storage.get("user").then(value => {
       console.log(value);
+      this._id = value._id;
       this.role = value.role;
       this.courseId = value.courseId;
       this.courseName = value.courseName;
