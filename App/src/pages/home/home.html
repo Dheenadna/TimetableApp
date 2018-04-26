@@ -1,8 +1,14 @@
 <ion-header>
   <ion-navbar color="donal">
+    <ion-buttons right>
+      <button end ion-button icon-only (click)="addModule()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
     <button ion-button menuToggle left>
       <ion-icon name="menu"></ion-icon>
     </button>
+
     <ion-title>
       Timetable
     </ion-title>
@@ -31,7 +37,7 @@
 <ion-content *ngFor="let course of courses">
   <div [ngSwitch]="timetable">
     <ion-list *ngSwitchCase="'monday'">
-      <ion-item-group *ngFor="let module of course.Monday; let index = index" [hidden]="course.hide">
+      <ion-item-group *ngFor="let module of course.Monday; let i = index">
         <ion-item-divider sticky>
           <ion-label>
             {{ module.startTime }}
@@ -39,15 +45,34 @@
         </ion-item-divider>
 
         <ion-item-sliding #slidingItem [hidden]="course.hide">
-          <button ion-item (click)="showModuleDetails(module, index)">
+          <button ion-item detail-none (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+            <ion-icon light item-right [name]="isGroupShown(i) ? 'arrow-down' : 'arrow-forward'"></ion-icon>
             <h3 text-wrap>{{ module.moduleName }}</h3>
             <p>
-              {{ module.lecturer }}&mdash; Room {{ module.room }}
+              <ion-icon name="map" item-left></ion-icon>Room: {{module.room}}
             </p>
-          </button>
+            <div *ngIf="isGroupShown(i)">
+              <p>
+                <ion-icon name="time" item-left></ion-icon>From: {{module.startTime}} &mdash; {{module.endTime}}
+              </p>
+              <p>
+                <ion-icon name="person" item-left></ion-icon>Lecturer: {{ module.lecturer }}
+              </p>
+              <p>
+                <ion-icon name="timer" item-left></ion-icon>Duration: {{ module.duration }}
+              </p>
+              <p>
+                <ion-icon name="calendar" item-left></ion-icon>Weeks: {{ module.weeks }}
+              </p>
 
+            </div>
+          </button>
           <ion-item-options>
-            <button ion-button color="danger" (click)="deleteModule(module, index)">
+            <button ion-button color="secondary" (click)="editModule(module)">
+              <ion-icon name="create"></ion-icon>
+              Edit
+            </button>
+            <button ion-button color="danger" (click)="deleteModule(module)">
               <ion-icon name="trash"></ion-icon>
               Delete
             </button>
@@ -58,7 +83,7 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'tuesday'">
-      <ion-item-group *ngFor="let module of course.Tuesday; let index = index" [hidden]="course.hide">
+      <ion-item-group *ngFor="let module of course.Tuesday; let i = index">
         <ion-item-divider sticky>
           <ion-label>
             {{ module.startTime }}
@@ -66,15 +91,34 @@
         </ion-item-divider>
 
         <ion-item-sliding #slidingItem [hidden]="course.hide">
-
-          <button ion-item (click)="showModuleDetails(module, index)">
+          <button ion-item detail-none (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+            <ion-icon light item-right [name]="isGroupShown(i) ? 'arrow-down' : 'arrow-forward'"></ion-icon>
             <h3 text-wrap>{{ module.moduleName }}</h3>
             <p>
-              {{ module.lecturer }}&mdash; Room {{ module.room }}
+              <ion-icon name="map" item-left></ion-icon>Room: {{module.room}}
             </p>
+            <div *ngIf="isGroupShown(i)">
+              <p>
+                <ion-icon name="time" item-left></ion-icon>From: {{module.startTime}} &mdash; {{module.endTime}}
+              </p>
+              <p>
+                <ion-icon name="person" item-left></ion-icon>Lecturer: {{ module.lecturer }}
+              </p>
+              <p>
+                <ion-icon name="timer" item-left></ion-icon>Duration: {{ module.duration }}
+              </p>
+              <p>
+                <ion-icon name="calendar" item-left></ion-icon>Weeks: {{ module.weeks }}
+              </p>
+
+            </div>
           </button>
           <ion-item-options>
-            <button ion-button color="danger" (click)="deleteModule(module, index)">
+            <button ion-button color="secondary" (click)="editModule(module)">
+              <ion-icon name="create"></ion-icon>
+              Edit
+            </button>
+            <button ion-button color="danger" (click)="deleteModule(module)">
               <ion-icon name="trash"></ion-icon>
               Delete
             </button>
@@ -83,9 +127,8 @@
 
       </ion-item-group>
     </ion-list>
-
     <ion-list *ngSwitchCase="'wednesday'">
-      <ion-item-group *ngFor="let module of course.Wednesday; let index = index" [hidden]="course.hide">
+      <ion-item-group *ngFor="let module of course.Wednesday; let i = index">
         <ion-item-divider sticky>
           <ion-label>
             {{ module.startTime }}
@@ -93,15 +136,34 @@
         </ion-item-divider>
 
         <ion-item-sliding #slidingItem [hidden]="course.hide">
-
-          <button ion-item (click)="showModuleDetails(module, index)">
+          <button ion-item detail-none (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+            <ion-icon light item-right [name]="isGroupShown(i) ? 'arrow-down' : 'arrow-forward'"></ion-icon>
             <h3 text-wrap>{{ module.moduleName }}</h3>
             <p>
-              {{ module.lecturer }}&mdash; Room {{ module.room }}
+              <ion-icon name="map" item-left></ion-icon>Room: {{module.room}}
             </p>
+            <div *ngIf="isGroupShown(i)">
+              <p>
+                <ion-icon name="time" item-left></ion-icon>From: {{module.startTime}} &mdash; {{module.endTime}}
+              </p>
+              <p>
+                <ion-icon name="person" item-left></ion-icon>Lecturer: {{ module.lecturer }}
+              </p>
+              <p>
+                <ion-icon name="timer" item-left></ion-icon>Duration: {{ module.duration }}
+              </p>
+              <p>
+                <ion-icon name="calendar" item-left></ion-icon>Weeks: {{ module.weeks }}
+              </p>
+
+            </div>
           </button>
           <ion-item-options>
-            <button ion-button color="danger" (click)="deleteModule(module, index)">
+            <button ion-button color="secondary" (click)="editModule(module)">
+              <ion-icon name="create"></ion-icon>
+              Edit
+            </button>
+            <button ion-button color="danger" (click)="deleteModule(module)">
               <ion-icon name="trash"></ion-icon>
               Delete
             </button>
@@ -110,9 +172,8 @@
 
       </ion-item-group>
     </ion-list>
-
     <ion-list *ngSwitchCase="'thursday'">
-      <ion-item-group *ngFor="let module of course.Thursday; let index = index" [hidden]="course.hide">
+      <ion-item-group *ngFor="let module of course.Thursday; let i = index">
         <ion-item-divider sticky>
           <ion-label>
             {{ module.startTime }}
@@ -120,15 +181,34 @@
         </ion-item-divider>
 
         <ion-item-sliding #slidingItem [hidden]="course.hide">
-
-          <button ion-item (click)="showModuleDetails(module, index)">
+          <button ion-item detail-none (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+            <ion-icon light item-right [name]="isGroupShown(i) ? 'arrow-down' : 'arrow-forward'"></ion-icon>
             <h3 text-wrap>{{ module.moduleName }}</h3>
             <p>
-              {{ module.lecturer }}&mdash; Room {{ module.room }}
+              <ion-icon name="map" item-left></ion-icon>Room: {{module.room}}
             </p>
+            <div *ngIf="isGroupShown(i)">
+              <p>
+                <ion-icon name="time" item-left></ion-icon>From: {{module.startTime}} &mdash; {{module.endTime}}
+              </p>
+              <p>
+                <ion-icon name="person" item-left></ion-icon>Lecturer: {{ module.lecturer }}
+              </p>
+              <p>
+                <ion-icon name="timer" item-left></ion-icon>Duration: {{ module.duration }}
+              </p>
+              <p>
+                <ion-icon name="calendar" item-left></ion-icon>Weeks: {{ module.weeks }}
+              </p>
+
+            </div>
           </button>
           <ion-item-options>
-            <button ion-button color="danger" (click)="deleteModule(module, index)">
+            <button ion-button color="secondary" (click)="editModule(module)">
+              <ion-icon name="create"></ion-icon>
+              Edit
+            </button>
+            <button ion-button color="danger" (click)="deleteModule(module)">
               <ion-icon name="trash"></ion-icon>
               Delete
             </button>
@@ -139,7 +219,7 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'friday'">
-      <ion-item-group *ngFor="let module of course.Friday; let index = index" [hidden]="course.hide">
+      <ion-item-group *ngFor="let module of course.Friday; let i = index">
         <ion-item-divider sticky>
           <ion-label>
             {{ module.startTime }}
@@ -147,15 +227,34 @@
         </ion-item-divider>
 
         <ion-item-sliding #slidingItem [hidden]="course.hide">
-
-          <button ion-item (click)="showModuleDetails(module, index)">
+          <button ion-item detail-none (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+            <ion-icon light item-right [name]="isGroupShown(i) ? 'arrow-down' : 'arrow-forward'"></ion-icon>
             <h3 text-wrap>{{ module.moduleName }}</h3>
             <p>
-              {{ module.lecturer }}&mdash; Room {{ module.room }}
+              <ion-icon name="map" item-left></ion-icon>Room: {{module.room}}
             </p>
+            <div *ngIf="isGroupShown(i)">
+              <p>
+                <ion-icon name="time" item-left></ion-icon>From: {{module.startTime}} &mdash; {{module.endTime}}
+              </p>
+              <p>
+                <ion-icon name="person" item-left></ion-icon>Lecturer: {{ module.lecturer }}
+              </p>
+              <p>
+                <ion-icon name="timer" item-left></ion-icon>Duration: {{ module.duration }}
+              </p>
+              <p>
+                <ion-icon name="calendar" item-left></ion-icon>Weeks: {{ module.weeks }}
+              </p>
+
+            </div>
           </button>
           <ion-item-options>
-            <button ion-button color="danger" (click)="deleteModule(module, index)">
+            <button ion-button color="secondary" (click)="editModule(module)">
+              <ion-icon name="create"></ion-icon>
+              Edit
+            </button>
+            <button ion-button color="danger" (click)="deleteModule(module)">
               <ion-icon name="trash"></ion-icon>
               Delete
             </button>
@@ -164,5 +263,6 @@
 
       </ion-item-group>
     </ion-list>
+
   </div>
 </ion-content>

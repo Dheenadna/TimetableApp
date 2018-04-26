@@ -56,7 +56,7 @@ export class EditModuleDetailsPage {
     console.log(this.moduleForm.value);
     this.timetableProvider.updateModule(this.day, this.moduleForm.value, this.module._id).then(data => {
       console.log(data);
-      this.navCtrl.setRoot(HomePage);
+      this.navCtrl.popToRoot();
     });
   }
 }

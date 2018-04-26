@@ -28254,6 +28254,26 @@ page-calender .calendar-body .calendar-date {
   border: 1px solid #fff;
 }
 
+page-home .ion-ios-arrow-forward {
+  font-size: 25px;
+  color: lightgray;
+}
+
+page-home .ion-ios-arrow-down {
+  font-size: 25px;
+  color: lightgray;
+}
+
+page-home .ion-md-arrow-forward {
+  font-size: 25px;
+  color: lightgray;
+}
+
+page-home .ion-md-arrow-down {
+  font-size: 25px;
+  color: lightgray;
+}
+
 .ios page-login .form, .md page-login .form {
   position: relative;
   z-index: 1;

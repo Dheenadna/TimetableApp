@@ -63,7 +63,6 @@ var AccountPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(42);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -73,7 +72,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -114,16 +112,17 @@ var EditModuleDetailsPage = (function () {
         console.log(this.moduleForm.value);
         this.timetableProvider.updateModule(this.day, this.moduleForm.value, this.module._id).then(function (data) {
             console.log(data);
-            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__home_home__["a" /* HomePage */]);
+            _this.navCtrl.popToRoot();
         });
     };
     EditModuleDetailsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-edit-module-details',template:/*ion-inline-start:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/edit-module-details/edit-module-details.html"*/'<!--\n  Generated template for the EditModuleDetailsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="donal">\n    <ion-title>Edit Details</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n    <form class="form" (submit)="saveModule()" [formGroup]="moduleForm">\n        <ion-list>\n          <ion-item>\n            <ion-label>Module Name</ion-label>\n            <ion-textarea text-right type="text" formControlName="moduleName" value="{{module.moduleName}}"></ion-textarea>\n          </ion-item>\n    \n          <ion-item>\n            <ion-label>Lecturer</ion-label>\n            <ion-textarea text-right type="text" formControlName="lecturer" value="{{module.lecturer}}"></ion-textarea>\n          </ion-item>\n    \n          <ion-item>\n            <ion-label>Room</ion-label>\n            <ion-textarea text-right type="text" formControlName="room" value="{{module.room}}"></ion-textarea>\n          </ion-item>\n    \n          <ion-item>\n            <ion-label>Start Time</ion-label>\n            <ion-textarea text-right type="text" formControlName="startTime" value="{{module.startTime}}"></ion-textarea>\n          </ion-item>\n    \n          <ion-item>\n            <ion-label>End Time</ion-label>\n            <ion-textarea text-right type="text" formControlName="endTime" value="{{module.endTime}}"></ion-textarea>\n          </ion-item>\n    \n          <ion-item>\n            <ion-label>Module Type</ion-label>\n            <ion-textarea text-right type="text" formControlName="moduleType" value="{{module.moduleType}}"></ion-textarea>\n          </ion-item>\n    \n          <ion-item>\n            <ion-label>Duration</ion-label>\n            <ion-textarea text-right type="text" formControlName="duration" value="{{module.duration}}"></ion-textarea>\n          </ion-item>\n    \n          <button ion-button full class="continue-button" type="submit">Save</button>\n        </ion-list>\n      </form>\n</ion-content>\n'/*ion-inline-end:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/edit-module-details/edit-module-details.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */]) === "function" && _d || Object])
     ], EditModuleDetailsPage);
     return EditModuleDetailsPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=edit-module-details.js.map
@@ -400,7 +399,7 @@ var map = {
 		3
 	],
 	"../pages/module-detail/module-detail.module": [
-		293,
+		294,
 		2
 	],
 	"../pages/signup/signup.module": [
@@ -408,7 +407,7 @@ var map = {
 		1
 	],
 	"../pages/timetableview/timetableview.module": [
-		294,
+		293,
 		0
 	]
 };
@@ -810,8 +809,8 @@ var AppModule = (function () {
                         { loadChildren: '../pages/account/account.module#AccountPageModule', name: 'AccountPage', segment: 'account', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-module-details/edit-module-details.module#EditModuleDetailsPageModule', name: 'EditModuleDetailsPage', segment: 'edit-module-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/module-detail/module-detail.module#ModuleDetailPageModule', name: 'ModuleDetailPage', segment: 'module-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/timetableview/timetableview.module#TimetableviewPageModule', name: 'TimetableviewPage', segment: 'timetableview', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/module-detail/module-detail.module#ModuleDetailPageModule', name: 'ModuleDetailPage', segment: 'module-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
                     ]
                 })
@@ -1334,8 +1333,8 @@ var AuthProvider = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__module_detail_module_detail__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_auth_auth__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_auth_auth__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__edit_module_details_edit_module_details__ = __webpack_require__(107);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1355,15 +1354,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var HomePage = (function () {
-    function HomePage(navCtrl, authService, storage, modalCtrl, timetableProvider, alerCtrl, navParams, menuCtrl) {
+    function HomePage(navCtrl, authService, storage, modalCtrl, timetableProvider, alertCtrl, navParams, menuCtrl, loadingCtrl) {
         this.navCtrl = navCtrl;
         this.authService = authService;
         this.storage = storage;
         this.modalCtrl = modalCtrl;
         this.timetableProvider = timetableProvider;
-        this.alerCtrl = alerCtrl;
+        this.alertCtrl = alertCtrl;
         this.navParams = navParams;
         this.menuCtrl = menuCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.shownGroup = null;
         var today = new Date().getDay();
         switch (today) {
             case 1: {
@@ -1393,16 +1394,114 @@ var HomePage = (function () {
         }
         this.loadTimetable();
     }
-    HomePage.prototype.ionViewWillEnter = function () { };
-    HomePage.prototype.showModuleDetails = function (module, day) {
-        console.log(module, day);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__module_detail_module_detail__["a" /* ModuleDetailPage */], {
+    HomePage.prototype.toggleGroup = function (group) {
+        if (this.isGroupShown(group)) {
+            this.shownGroup = null;
+        }
+        else {
+            this.shownGroup = group;
+        }
+    };
+    HomePage.prototype.isGroupShown = function (group) {
+        return this.shownGroup === group;
+    };
+    HomePage.prototype.ionViewWillEnter = function () {
+        this.loadTimetable();
+    };
+    HomePage.prototype.deleteModule = function (module) {
+        var _this = this;
+        if (module) {
+            console.log(module);
+            this.showLoader();
+            this.timetableProvider.deleteModule(module, this.segment.value).then(function (result) {
+                _this.loading.dismiss();
+                // this.courses = result;
+                console.log(result);
+                console.log("module deleted");
+                _this.loadTimetable();
+            }, function (err) {
+                _this.loading.dismiss();
+                console.log("not allowed");
+            });
+        }
+    };
+    HomePage.prototype.addModule = function (module) {
+        var _this = this;
+        var prompt = this.alertCtrl.create({
+            title: 'Add Module',
+            message: 'Add your module below:',
+            inputs: [
+                {
+                    name: 'moduleName',
+                    placeholder: 'Enter module name'
+                },
+                {
+                    name: 'room',
+                    placeholder: 'Enter room number'
+                },
+                {
+                    name: 'lecturer',
+                    placeholder: 'Enter lecturer name'
+                },
+                {
+                    name: 'day',
+                    placeholder: 'Enter day'
+                },
+                {
+                    name: 'startTime',
+                    placeholder: 'Enter module start time'
+                },
+                {
+                    name: 'endTime',
+                    placeholder: 'Enter module end time'
+                },
+                {
+                    name: 'duration',
+                    placeholder: 'Enter module duration'
+                },
+                {
+                    name: 'moduleType',
+                    placeholder: 'Type (L: lecture, P: lab)'
+                }
+            ],
+            buttons: [
+                {
+                    text: 'Cancel'
+                },
+                {
+                    text: 'Save',
+                    handler: function (module) {
+                        if (module) {
+                            console.log(module);
+                            _this.showLoader();
+                            _this.timetableProvider.createModule(module).then(function (result) {
+                                _this.loading.dismiss();
+                                // this.courses = result;
+                                console.log(result);
+                                console.log("module created");
+                                _this.loadTimetable();
+                            }, function (err) {
+                                _this.loading.dismiss();
+                                console.log("not allowed");
+                            });
+                        }
+                    }
+                }
+            ]
+        });
+        prompt.present();
+    };
+    HomePage.prototype.showLoader = function () {
+        this.loading = this.loadingCtrl.create({
+            content: 'Authenticating...'
+        });
+        this.loading.present();
+    };
+    HomePage.prototype.editModule = function (module) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__edit_module_details_edit_module_details__["a" /* EditModuleDetailsPage */], {
             module: module,
             day: this.segment.value
         });
-    };
-    HomePage.prototype.deleteModule = function (module, index) {
-        console.log(module, index);
     };
     HomePage.prototype.resize = function () {
         this.content.resize();
@@ -1417,30 +1516,23 @@ var HomePage = (function () {
             });
         });
     };
-    HomePage.prototype.ionViewDidLoad = function () {
-    };
+    HomePage.prototype.ionViewDidLoad = function () { };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Content */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Content */]) === "function" && _a || Object)
     ], HomePage.prototype, "content", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Segment */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Segment */])
+        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Segment */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Segment */]) === "function" && _b || Object)
     ], HomePage.prototype, "segment", void 0);
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: "page-home",template:/*ion-inline-start:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="donal">\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      Timetable\n    </ion-title>\n  </ion-navbar>\n  <ion-toolbar>\n    <ion-segment padding [(ngModel)]="timetable">\n      <ion-segment-button (ionSelect)="resize()" value="monday">\n        Mon\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="tuesday">\n        Tue\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="wednesday">\n        Wed\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="thursday">\n        Thu\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="friday">\n        Fri\n      </ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content *ngFor="let course of courses">\n  <div [ngSwitch]="timetable">\n    <ion-list *ngSwitchCase="\'monday\'">\n      <ion-item-group *ngFor="let module of course.Monday; let index = index" [hidden]="course.hide">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n          <button ion-item (click)="showModuleDetails(module, index)">\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              {{ module.lecturer }}&mdash; Room {{ module.room }}\n            </p>\n          </button>\n\n          <ion-item-options>\n            <button ion-button color="danger" (click)="deleteModule(module, index)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'tuesday\'">\n      <ion-item-group *ngFor="let module of course.Tuesday; let index = index" [hidden]="course.hide">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n\n          <button ion-item (click)="showModuleDetails(module, index)">\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              {{ module.lecturer }}&mdash; Room {{ module.room }}\n            </p>\n          </button>\n          <ion-item-options>\n            <button ion-button color="danger" (click)="deleteModule(module, index)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'wednesday\'">\n      <ion-item-group *ngFor="let module of course.Wednesday; let index = index" [hidden]="course.hide">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n\n          <button ion-item (click)="showModuleDetails(module, index)">\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              {{ module.lecturer }}&mdash; Room {{ module.room }}\n            </p>\n          </button>\n          <ion-item-options>\n            <button ion-button color="danger" (click)="deleteModule(module, index)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'thursday\'">\n      <ion-item-group *ngFor="let module of course.Thursday; let index = index" [hidden]="course.hide">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n\n          <button ion-item (click)="showModuleDetails(module, index)">\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              {{ module.lecturer }}&mdash; Room {{ module.room }}\n            </p>\n          </button>\n          <ion-item-options>\n            <button ion-button color="danger" (click)="deleteModule(module, index)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'friday\'">\n      <ion-item-group *ngFor="let module of course.Friday; let index = index" [hidden]="course.hide">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n\n          <button ion-item (click)="showModuleDetails(module, index)">\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              {{ module.lecturer }}&mdash; Room {{ module.room }}\n            </p>\n          </button>\n          <ion-item-options>\n            <button ion-button color="danger" (click)="deleteModule(module, index)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/home/home.html"*/
+            selector: "page-home",template:/*ion-inline-start:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="donal">\n    <ion-buttons right>\n      <button end ion-button icon-only (click)="addModule()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n    </ion-buttons>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n    <ion-title>\n      Timetable\n    </ion-title>\n  </ion-navbar>\n  <ion-toolbar>\n    <ion-segment padding [(ngModel)]="timetable">\n      <ion-segment-button (ionSelect)="resize()" value="monday">\n        Mon\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="tuesday">\n        Tue\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="wednesday">\n        Wed\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="thursday">\n        Thu\n      </ion-segment-button>\n      <ion-segment-button (ionSelect)="resize()" value="friday">\n        Fri\n      </ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content *ngFor="let course of courses">\n  <div [ngSwitch]="timetable">\n    <ion-list *ngSwitchCase="\'monday\'">\n      <ion-item-group *ngFor="let module of course.Monday; let i = index">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n          <button ion-item detail-none (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">\n            <ion-icon light item-right [name]="isGroupShown(i) ? \'arrow-down\' : \'arrow-forward\'"></ion-icon>\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              <ion-icon name="map" item-left></ion-icon>Room: {{module.room}}\n            </p>\n            <div *ngIf="isGroupShown(i)">\n              <p>\n                <ion-icon name="time" item-left></ion-icon>From: {{module.startTime}} &mdash; {{module.endTime}}\n              </p>\n              <p>\n                <ion-icon name="person" item-left></ion-icon>Lecturer: {{ module.lecturer }}\n              </p>\n              <p>\n                <ion-icon name="timer" item-left></ion-icon>Duration: {{ module.duration }}\n              </p>\n              <p>\n                <ion-icon name="calendar" item-left></ion-icon>Weeks: {{ module.weeks }}\n              </p>\n\n            </div>\n          </button>\n          <ion-item-options>\n            <button ion-button color="secondary" (click)="editModule(module)">\n              <ion-icon name="create"></ion-icon>\n              Edit\n            </button>\n            <button ion-button color="danger" (click)="deleteModule(module)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'tuesday\'">\n      <ion-item-group *ngFor="let module of course.Tuesday; let i = index">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n          <button ion-item detail-none (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">\n            <ion-icon light item-right [name]="isGroupShown(i) ? \'arrow-down\' : \'arrow-forward\'"></ion-icon>\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              <ion-icon name="map" item-left></ion-icon>Room: {{module.room}}\n            </p>\n            <div *ngIf="isGroupShown(i)">\n              <p>\n                <ion-icon name="time" item-left></ion-icon>From: {{module.startTime}} &mdash; {{module.endTime}}\n              </p>\n              <p>\n                <ion-icon name="person" item-left></ion-icon>Lecturer: {{ module.lecturer }}\n              </p>\n              <p>\n                <ion-icon name="timer" item-left></ion-icon>Duration: {{ module.duration }}\n              </p>\n              <p>\n                <ion-icon name="calendar" item-left></ion-icon>Weeks: {{ module.weeks }}\n              </p>\n\n            </div>\n          </button>\n          <ion-item-options>\n            <button ion-button color="secondary" (click)="editModule(module)">\n              <ion-icon name="create"></ion-icon>\n              Edit\n            </button>\n            <button ion-button color="danger" (click)="deleteModule(module)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n    <ion-list *ngSwitchCase="\'wednesday\'">\n      <ion-item-group *ngFor="let module of course.Wednesday; let i = index">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n          <button ion-item detail-none (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">\n            <ion-icon light item-right [name]="isGroupShown(i) ? \'arrow-down\' : \'arrow-forward\'"></ion-icon>\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              <ion-icon name="map" item-left></ion-icon>Room: {{module.room}}\n            </p>\n            <div *ngIf="isGroupShown(i)">\n              <p>\n                <ion-icon name="time" item-left></ion-icon>From: {{module.startTime}} &mdash; {{module.endTime}}\n              </p>\n              <p>\n                <ion-icon name="person" item-left></ion-icon>Lecturer: {{ module.lecturer }}\n              </p>\n              <p>\n                <ion-icon name="timer" item-left></ion-icon>Duration: {{ module.duration }}\n              </p>\n              <p>\n                <ion-icon name="calendar" item-left></ion-icon>Weeks: {{ module.weeks }}\n              </p>\n\n            </div>\n          </button>\n          <ion-item-options>\n            <button ion-button color="secondary" (click)="editModule(module)">\n              <ion-icon name="create"></ion-icon>\n              Edit\n            </button>\n            <button ion-button color="danger" (click)="deleteModule(module)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n    <ion-list *ngSwitchCase="\'thursday\'">\n      <ion-item-group *ngFor="let module of course.Thursday; let i = index">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n          <button ion-item detail-none (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">\n            <ion-icon light item-right [name]="isGroupShown(i) ? \'arrow-down\' : \'arrow-forward\'"></ion-icon>\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              <ion-icon name="map" item-left></ion-icon>Room: {{module.room}}\n            </p>\n            <div *ngIf="isGroupShown(i)">\n              <p>\n                <ion-icon name="time" item-left></ion-icon>From: {{module.startTime}} &mdash; {{module.endTime}}\n              </p>\n              <p>\n                <ion-icon name="person" item-left></ion-icon>Lecturer: {{ module.lecturer }}\n              </p>\n              <p>\n                <ion-icon name="timer" item-left></ion-icon>Duration: {{ module.duration }}\n              </p>\n              <p>\n                <ion-icon name="calendar" item-left></ion-icon>Weeks: {{ module.weeks }}\n              </p>\n\n            </div>\n          </button>\n          <ion-item-options>\n            <button ion-button color="secondary" (click)="editModule(module)">\n              <ion-icon name="create"></ion-icon>\n              Edit\n            </button>\n            <button ion-button color="danger" (click)="deleteModule(module)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'friday\'">\n      <ion-item-group *ngFor="let module of course.Friday; let i = index">\n        <ion-item-divider sticky>\n          <ion-label>\n            {{ module.startTime }}\n          </ion-label>\n        </ion-item-divider>\n\n        <ion-item-sliding #slidingItem [hidden]="course.hide">\n          <button ion-item detail-none (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">\n            <ion-icon light item-right [name]="isGroupShown(i) ? \'arrow-down\' : \'arrow-forward\'"></ion-icon>\n            <h3 text-wrap>{{ module.moduleName }}</h3>\n            <p>\n              <ion-icon name="map" item-left></ion-icon>Room: {{module.room}}\n            </p>\n            <div *ngIf="isGroupShown(i)">\n              <p>\n                <ion-icon name="time" item-left></ion-icon>From: {{module.startTime}} &mdash; {{module.endTime}}\n              </p>\n              <p>\n                <ion-icon name="person" item-left></ion-icon>Lecturer: {{ module.lecturer }}\n              </p>\n              <p>\n                <ion-icon name="timer" item-left></ion-icon>Duration: {{ module.duration }}\n              </p>\n              <p>\n                <ion-icon name="calendar" item-left></ion-icon>Weeks: {{ module.weeks }}\n              </p>\n\n            </div>\n          </button>\n          <ion-item-options>\n            <button ion-button color="secondary" (click)="editModule(module)">\n              <ion-icon name="create"></ion-icon>\n              Edit\n            </button>\n            <button ion-button color="danger" (click)="deleteModule(module)">\n              <ion-icon name="trash"></ion-icon>\n              Delete\n            </button>\n          </ion-item-options>\n        </ion-item-sliding>\n\n      </ion-item-group>\n    </ion-list>\n\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/donal/Desktop/APP/TimetableApp/App/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_auth_auth__["a" /* AuthProvider */],
-            __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__["a" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* MenuController */]])
+        __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__providers_auth_auth__["a" /* AuthProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_auth_auth__["a" /* AuthProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["a" /* Storage */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__["a" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__["a" /* ModalController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_timetables_timetables__["a" /* TimetablesProvider */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* MenuController */]) === "function" && _k || Object, typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* LoadingController */]) === "function" && _l || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -1488,7 +1580,8 @@ var TimetablesProvider = (function () {
     TimetablesProvider.prototype.getCourses = function () {
         var _this = this;
         return new Promise(function (resolve) {
-            _this.http.get('http://donalburke.me/api/courses/')
+            _this.http
+                .get("http://donalburke.me/api/courses/")
                 .map(function (res) { return res.json(); })
                 .subscribe(function (data) {
                 _this.data = data;
@@ -1496,12 +1589,65 @@ var TimetablesProvider = (function () {
             });
         });
     };
+    TimetablesProvider.prototype.createModule = function (module) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]();
+            headers.append("Content-Type", "application/json");
+            headers.append("Authorization", _this.authService.token);
+            _this.storage.get("user").then(function (value) {
+                var data = {
+                    _id: value.courseId,
+                    module: module
+                };
+                console.log(data);
+                _this.http
+                    .post("https://donalburke.me/api/courses/createModule", JSON.stringify(data), { headers: headers })
+                    .map(function (res) { return res.json(); })
+                    .subscribe(function (res) {
+                    resolve(res);
+                    _this.data = res;
+                    console.log(res);
+                    return _this.data;
+                }, function (err) {
+                    reject(err);
+                });
+            });
+        });
+    };
+    TimetablesProvider.prototype.deleteModule = function (module, day) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]();
+            headers.append("Content-Type", "application/json");
+            headers.append("Authorization", _this.authService.token);
+            _this.storage.get("user").then(function (value) {
+                var data = {
+                    _id: value.courseId,
+                    module: module,
+                    day: day
+                };
+                console.log(data);
+                _this.http
+                    .post("https://donalburke.me/api/courses/deleteModule", JSON.stringify(data), { headers: headers })
+                    .map(function (res) { return res.json(); })
+                    .subscribe(function (res) {
+                    resolve(res);
+                    _this.data = res;
+                    console.log(res);
+                    return _this.data;
+                }, function (err) {
+                    reject(err);
+                });
+            });
+        });
+    };
     TimetablesProvider.prototype.updateModule = function (day, module, _id) {
         var _this = this;
         return new Promise(function (resolve, reject) {
             var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]();
-            headers.append('Content-Type', 'application/json');
-            headers.append('Authorization', _this.authService.token);
+            headers.append("Content-Type", "application/json");
+            headers.append("Authorization", _this.authService.token);
             module = {
                 _id: _id,
                 moduleName: module.moduleName,
@@ -1517,7 +1663,8 @@ var TimetablesProvider = (function () {
                 module: module
             };
             console.log(data);
-            _this.http.post('https://donalburke.me/api/courses/updateModule', JSON.stringify(data), { headers: headers })
+            _this.http
+                .post("https://donalburke.me/api/courses/updateModule", JSON.stringify(data), { headers: headers })
                 .map(function (res) { return res.json(); })
                 .subscribe(function (res) {
                 resolve(res);
@@ -1533,10 +1680,13 @@ var TimetablesProvider = (function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
             var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]();
-            headers.append('Content-Type', 'application/json');
-            headers.append('Authorization', _this.authService.token);
+            headers.append("Content-Type", "application/json");
+            headers.append("Authorization", _this.authService.token);
             id = { _id: id };
-            _this.http.post('https://donalburke.me/api/courses/', JSON.stringify(id), { headers: headers })
+            _this.http
+                .post("https://donalburke.me/api/courses/", JSON.stringify(id), {
+                headers: headers
+            })
                 .map(function (res) { return res.json(); })
                 .subscribe(function (res) {
                 resolve(res);
@@ -1550,9 +1700,10 @@ var TimetablesProvider = (function () {
     };
     TimetablesProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2__auth_auth__["a" /* AuthProvider */], __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["a" /* Storage */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__auth_auth__["a" /* AuthProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__auth_auth__["a" /* AuthProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["a" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["a" /* Storage */]) === "function" && _c || Object])
     ], TimetablesProvider);
     return TimetablesProvider;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=timetables.js.map

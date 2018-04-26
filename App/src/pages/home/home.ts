@@ -8,7 +8,8 @@ import { ModalController } from "ionic-angular/components/modal/modal-controller
 import { ModuleDetailPage } from "../module-detail/module-detail";
 import { AuthProvider } from "../../providers/auth/auth";
 
-import { AlertController } from "ionic-angular";
+import { AlertController, LoadingController } from "ionic-angular";
+import { EditModuleDetailsPage } from "../edit-module-details/edit-module-details";
 
 @Component({
   selector: "page-home",
@@ -20,6 +21,8 @@ export class HomePage {
 
   courses: any;
   timetable: any;
+  shownGroup: any = null;
+  loading: any;
 
   constructor(
     public navCtrl: NavController,
@@ -27,9 +30,10 @@ export class HomePage {
     public storage: Storage,
     public modalCtrl: ModalController,
     public timetableProvider: TimetablesProvider,
-    public alerCtrl: AlertController,
+    public alertCtrl: AlertController,
     public navParams: NavParams,
-    public menuCtrl: MenuController
+    public menuCtrl: MenuController,
+    public loadingCtrl: LoadingController
   ) {
     let today = new Date().getDay();
     switch (today) {
@@ -62,18 +66,127 @@ export class HomePage {
     this.loadTimetable();
   }
 
-  ionViewWillEnter() {}
+  toggleGroup(group) {
+    if (this.isGroupShown(group)) {
+      this.shownGroup = null;
+    } else {
+      this.shownGroup = group;
+    }
+  }
 
-  showModuleDetails(module, day) {
-    console.log(module, day);
-    this.navCtrl.push(ModuleDetailPage, {
+  isGroupShown(group) {
+    return this.shownGroup === group;
+  }
+
+  ionViewWillEnter() {
+    this.loadTimetable();
+  }
+
+  deleteModule(module) {
+    if(module){
+      console.log(module);
+      this.showLoader();
+
+      this.timetableProvider.deleteModule(module, this.segment.value).then((result) => {
+          this.loading.dismiss();
+          // this.courses = result;
+          console.log(result);
+          console.log("module deleted");
+          this.loadTimetable();
+      }, (err) => {
+          this.loading.dismiss();
+          console.log("not allowed");
+      });
+  }
+  }
+
+  addModule(module) {
+    let prompt = this.alertCtrl.create({
+      title: 'Add Module',
+      message: 'Add your module below:',
+      inputs: [
+        {
+          name: 'moduleName',
+          placeholder: 'Enter module name'
+        },
+        {
+          name: 'room',
+          placeholder: 'Enter room number'
+        },
+        {
+          name: 'lecturer',
+          placeholder: 'Enter lecturer name'
+        },
+        {
+          name: 'day',
+          placeholder: 'Enter day'
+        },
+        {
+          name: 'startTime',
+          placeholder: 'Enter module start time'
+        },
+        {
+          name: 'endTime',
+          placeholder: 'Enter module end time'
+        },
+        {
+          name: 'duration',
+          placeholder: 'Enter module duration'
+        },
+        {
+          name: 'moduleType',
+          placeholder: 'Type (L: lecture, P: lab)'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancel'
+        },
+        {
+          text: 'Save',
+          handler: module => {
+ 
+                if(module){
+                    console.log(module);
+                    this.showLoader();
+ 
+                    this.timetableProvider.createModule(module).then((result) => {
+                        this.loading.dismiss();
+                        // this.courses = result;
+                        console.log(result);
+                        console.log("module created");
+                        this.loadTimetable();
+                    }, (err) => {
+                        this.loading.dismiss();
+                        console.log("not allowed");
+                    });
+                }
+ 
+ 
+          }
+        }
+      ]
+    });
+ 
+    prompt.present();
+  }
+
+  showLoader(){
+ 
+    this.loading = this.loadingCtrl.create({
+      content: 'Authenticating...'
+    });
+ 
+    this.loading.present();
+ 
+  }
+
+
+  editModule(module) {
+    this.navCtrl.push(EditModuleDetailsPage, {
       module: module,
       day: this.segment.value
     });
-  }
-
-  deleteModule(module, index) {
-    console.log(module, index);
   }
 
   resize() {
@@ -90,7 +203,5 @@ export class HomePage {
     });
   }
 
-  ionViewDidLoad() {
-
-  }
+  ionViewDidLoad() {}
 }

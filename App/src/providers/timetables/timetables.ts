@@ -1,7 +1,7 @@
 import { Http, Headers } from "@angular/http";
 import { Injectable } from "@angular/core";
 import { AuthProvider } from "../auth/auth";
-import { Storage } from '@ionic/storage';
+import { Storage } from "@ionic/storage";
 import "rxjs/add/operator/map";
 
 /*
@@ -15,14 +15,18 @@ export class TimetablesProvider {
   data: any;
   email: any;
 
-  constructor(public http: Http, public authService: AuthProvider, public storage: Storage) {
+  constructor(
+    public http: Http,
+    public authService: AuthProvider,
+    public storage: Storage
+  ) {
     this.data = null;
   }
 
-  getCourses() { 
+  getCourses() {
     return new Promise(resolve => {
- 
-      this.http.get('http://donalburke.me/api/courses/')
+      this.http
+        .get("http://donalburke.me/api/courses/")
         .map(res => res.json())
         .subscribe(data => {
           this.data = data;
@@ -31,13 +35,84 @@ export class TimetablesProvider {
     });
   }
 
+  createModule(module) {
+    return new Promise((resolve, reject) => {
+      let headers = new Headers();
+      headers.append("Content-Type", "application/json");
+      headers.append("Authorization", this.authService.token);
+
+      this.storage.get("user").then(value => {
+        var data = {
+          _id: value.courseId,
+          module: module
+        };
+        console.log(data);
+        this.http
+          .post(
+            "https://donalburke.me/api/courses/createModule",
+            JSON.stringify(data),
+            { headers: headers }
+          )
+          .map(res => res.json())
+          .subscribe(
+            res => {
+              resolve(res);
+              this.data = res;
+              console.log(res);
+              return this.data;
+            },
+            err => {
+              reject(err);
+            }
+          );
+      });
+    });
+  }
+
+  deleteModule(module, day) {
+    return new Promise((resolve, reject) => {
+      let headers = new Headers();
+      headers.append("Content-Type", "application/json");
+      headers.append("Authorization", this.authService.token);
+
+      this.storage.get("user").then(value => {
+        var data = {
+          _id: value.courseId,
+          module: module,
+          day: day
+        };
+        console.log(data);
+        this.http
+          .post(
+            "https://donalburke.me/api/courses/deleteModule",
+            JSON.stringify(data),
+            { headers: headers }
+          )
+          .map(res => res.json())
+          .subscribe(
+            res => {
+              resolve(res);
+              this.data = res;
+              console.log(res);
+              return this.data;
+            },
+            err => {
+              reject(err);
+            }
+          );
+      });
+    });
+  }
+
+  
+
   updateModule(day, module, _id) {
     return new Promise((resolve, reject) => {
       let headers = new Headers();
-      headers.append('Content-Type', 'application/json');
-      headers.append('Authorization', this.authService.token);
+      headers.append("Content-Type", "application/json");
+      headers.append("Authorization", this.authService.token);
 
-      module = { 
+      module = {
         _id: _id,
         moduleName: module.moduleName,
         lecturer: module.lecturer,
@@ -51,42 +126,55 @@ export class TimetablesProvider {
       var data = {
         day: day,
         module: module
-      }
+      };
 
       console.log(data);
-      
-      this.http.post('https://donalburke.me/api/courses/updateModule', JSON.stringify(data), {headers: headers})
+
+      this.http
+        .post(
+          "https://donalburke.me/api/courses/updateModule",
+          JSON.stringify(data),
+          { headers: headers }
+        )
         .map(res => res.json())
-        .subscribe(res => {
-          resolve(res);
-          this.data = res;
-          console.log(res);
-          return this.data;
-        }, (err) => {
-          reject(err);
-        });
+        .subscribe(
+          res => {
+            resolve(res);
+            this.data = res;
+            console.log(res);
+            return this.data;
+          },
+          err => {
+            reject(err);
+          }
+        );
     });
   }
 
   getTimetable(id) {
     return new Promise((resolve, reject) => {
       let headers = new Headers();
-      headers.append('Content-Type', 'application/json');
-      headers.append('Authorization', this.authService.token);
-      
+      headers.append("Content-Type", "application/json");
+      headers.append("Authorization", this.authService.token);
+
       id = { _id: id };
-      
-      this.http.post('https://donalburke.me/api/courses/', JSON.stringify(id), {headers: headers})
+
+      this.http
+        .post("https://donalburke.me/api/courses/", JSON.stringify(id), {
+          headers: headers
+        })
         .map(res => res.json())
-        .subscribe(res => {
-          resolve(res);
-          this.data = res;
-          console.log(res);
-          return this.data;
-        }, (err) => {
-          reject(err);
-        });
- 
+        .subscribe(
+          res => {
+            resolve(res);
+            this.data = res;
+            console.log(res);
+            return this.data;
+          },
+          err => {
+            reject(err);
+          }
+        );
     });
   }
 }
