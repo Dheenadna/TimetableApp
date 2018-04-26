@@ -47,6 +47,8 @@ export class AuthProvider {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
+        console.log(details);
+
         this.http.post('https://donalburke.me/api/auth/register', JSON.stringify(details), {headers: headers})
           .subscribe(res => {
             let data = res.json();

@@ -5,11 +5,11 @@ import { MenuController } from "ionic-angular";
 
 import { TimetablesProvider } from "../../providers/timetables/timetables";
 import { ModalController } from "ionic-angular/components/modal/modal-controller";
-import { ModuleDetailPage } from "../module-detail/module-detail";
 import { AuthProvider } from "../../providers/auth/auth";
 
 import { AlertController, LoadingController } from "ionic-angular";
 import { EditModuleDetailsPage } from "../edit-module-details/edit-module-details";
+import { AddModulePage } from "../add-module/add-module";
 
 @Component({
   selector: "page-home",
@@ -83,104 +83,128 @@ export class HomePage {
   }
 
   deleteModule(module) {
-    if(module){
+    if (module) {
       console.log(module);
       this.showLoader();
 
-      this.timetableProvider.deleteModule(module, this.segment.value).then((result) => {
+      this.timetableProvider.deleteModule(module, this.segment.value).then(
+        result => {
           this.loading.dismiss();
           // this.courses = result;
           console.log(result);
           console.log("module deleted");
           this.loadTimetable();
-      }, (err) => {
+        },
+        err => {
           this.loading.dismiss();
           console.log("not allowed");
-      });
-  }
+        }
+      );
+    }
   }
 
   addModule(module) {
-    let prompt = this.alertCtrl.create({
-      title: 'Add Module',
-      message: 'Add your module below:',
-      inputs: [
-        {
-          name: 'moduleName',
-          placeholder: 'Enter module name'
-        },
-        {
-          name: 'room',
-          placeholder: 'Enter room number'
-        },
-        {
-          name: 'lecturer',
-          placeholder: 'Enter lecturer name'
-        },
-        {
-          name: 'day',
-          placeholder: 'Enter day'
-        },
-        {
-          name: 'startTime',
-          placeholder: 'Enter module start time'
-        },
-        {
-          name: 'endTime',
-          placeholder: 'Enter module end time'
-        },
-        {
-          name: 'duration',
-          placeholder: 'Enter module duration'
-        },
-        {
-          name: 'moduleType',
-          placeholder: 'Type (L: lecture, P: lab)'
-        }
-      ],
-      buttons: [
-        {
-          text: 'Cancel'
-        },
-        {
-          text: 'Save',
-          handler: module => {
- 
-                if(module){
-                    console.log(module);
-                    this.showLoader();
- 
-                    this.timetableProvider.createModule(module).then((result) => {
-                        this.loading.dismiss();
-                        // this.courses = result;
-                        console.log(result);
-                        console.log("module created");
-                        this.loadTimetable();
-                    }, (err) => {
-                        this.loading.dismiss();
-                        console.log("not allowed");
-                    });
-                }
- 
- 
+    let modal = this.modalCtrl.create(AddModulePage);
+
+    modal.onDidDismiss(module => {
+      if (module) {
+        console.log(module);
+        this.showLoader();
+
+        this.timetableProvider.createModule(module).then(
+          result => {
+            this.loading.dismiss();
+            // this.courses = result;
+            console.log(result);
+            console.log("module created");
+            this.loadTimetable();
+          },
+          err => {
+            this.loading.dismiss();
+            console.log("not allowed");
           }
-        }
-      ]
+        );
+      }
     });
- 
-    prompt.present();
+
+    modal.present();
+
+    // let prompt = this.alertCtrl.create({
+    //   title: 'Add Module',
+    //   message: 'Add your module below:',
+    //   inputs: [
+    //     {
+    //       name: 'moduleName',
+    //       placeholder: 'Enter module name'
+    //     },
+    //     {
+    //       name: 'room',
+    //       placeholder: 'Enter room number'
+    //     },
+    //     {
+    //       name: 'lecturer',
+    //       placeholder: 'Enter lecturer name'
+    //     },
+    //     {
+    //       name: 'day',
+    //       placeholder: 'Enter day'
+    //     },
+    //     {
+    //       name: 'startTime',
+    //       placeholder: 'Enter module start time'
+    //     },
+    //     {
+    //       name: 'endTime',
+    //       placeholder: 'Enter module end time'
+    //     },
+    //     {
+    //       name: 'duration',
+    //       placeholder: 'Enter module duration'
+    //     },
+    //     {
+    //       name: 'moduleType',
+    //       placeholder: 'Type (L: lecture, P: lab)'
+    //     }
+    //   ],
+    //   buttons: [
+    //     {
+    //       text: 'Cancel'
+    //     },
+    //     {
+    //       text: 'Save',
+    //       handler: module => {
+
+    //             if(module){
+    //                 console.log(module);
+    //                 this.showLoader();
+
+    //                 this.timetableProvider.createModule(module).then((result) => {
+    //                     this.loading.dismiss();
+    //                     // this.courses = result;
+    //                     console.log(result);
+    //                     console.log("module created");
+    //                     this.loadTimetable();
+    //                 }, (err) => {
+    //                     this.loading.dismiss();
+    //                     console.log("not allowed");
+    //                 });
+    //             }
+
+    //       }
+    //     }
+    //   ]
+    // });
+
+    // prompt.present();
   }
 
-  showLoader(){
- 
+  showLoader() {
     this.loading = this.loadingCtrl.create({
-      content: 'Authenticating...'
+      content: "Authenticating..."
     });
- 
-    this.loading.present();
- 
-  }
 
+    this.loading.present();
+  }
 
   editModule(module) {
     this.navCtrl.push(EditModuleDetailsPage, {

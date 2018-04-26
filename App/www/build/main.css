@@ -28083,6 +28083,51 @@ ion-navbar.toolbar {
   padding-left: 8px;
 }
 
+.ios page-add-module ion-content,
+.md page-add-module ion-content {
+  background-color: #3a95da !important;
+}
+
+.ios page-add-module ion-label,
+.md page-add-module ion-label {
+  margin-left: 5px;
+}
+
+.ios page-add-module ion-list,
+.md page-add-module ion-list {
+  margin: 0;
+}
+
+.ios page-add-module ion-item,
+.md page-add-module ion-item {
+  opacity: 0.7;
+  font-size: 1.1em;
+  background: #f2f2f2;
+  width: 100%;
+  height: 65px;
+  background-color: #3a95da !important;
+}
+
+.ios page-add-module .continue-button,
+.md page-add-module .continue-button {
+  margin-top: 5%;
+  border-radius: 15px;
+  font-size: 0.9em;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.ios page-add-module ion-input,
+.ios page-add-module ion-select,
+.ios page-add-module ion-textarea,
+.md page-add-module ion-input,
+.md page-add-module ion-select,
+.md page-add-module ion-textarea {
+  background-color: #dfdfdf;
+  padding-left: 5px;
+}
+
 page-calender [col-1] {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 8.33333%;
@@ -28353,15 +28398,6 @@ page-home .ion-md-arrow-down {
   font-size: 0.9em;
   background-color: transparent;
   border: 1px solid #fff;
-}
-
-page-module-detail .module-card {
-  background: #7fc6ff;
-  border: 1px solid #2f64a8;
-}
-
-page-module-detail .module-info {
-  background: #46a9ff;
 }
 
 .ios page-signup .form, .md page-signup .form {

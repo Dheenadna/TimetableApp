@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="donal">
+    <ion-title>Add Module</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-lines>
+    <ion-item>
+      <ion-label floating>Module Name</ion-label>
+      <ion-input [(ngModel)]="moduleName" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Room</ion-label>
+      <ion-input [(ngModel)]="room"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Lecturer</ion-label>
+      <ion-input [(ngModel)]="lecturer"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Enter day</ion-label>
+      <ion-input [(ngModel)]="day"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Enter Start Time</ion-label>
+      <ion-input [(ngModel)]="startTime"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Enter End Time</ion-label>
+      <ion-input [(ngModel)]="endTime"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Enter duration</ion-label>
+      <ion-input [(ngModel)]="duration"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Enter Module Type</ion-label>
+      <ion-select [(ngModel)]="moduleType">
+        <ion-option value="L">Lecture</ion-option>
+        <ion-option value="P">Lab</ion-option>
+        <ion-option value="T">Tutorial</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <button ion-button class="continue-button" (click)="save()">Save</button>
+</ion-content>

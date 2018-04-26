@@ -6,13 +6,40 @@
 -->
 <ion-header>
   <ion-navbar color="donal">
-      <button ion-button menuToggle left>
-          <ion-icon name="menu"></ion-icon>
-        </button>
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Account</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-list no-lines>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input [(ngModel)]="email" type="text">{{email}}</ion-input>
+    </ion-item>
 
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password">{{password}}</ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Role</ion-label>
+      <ion-input [(ngModel)]="role" type="text">{{role}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <h3></h3>
+      <ion-label text-wrap>Course Name &mdash;{{courseName}}</ion-label>
+    </ion-item>
+    <ion-item-group margin-bottom>
+        <ion-item>
+          <select-search [(ngModel)]="course" title="Select Course" itemTextField="courseName" [items]="courses" [canSearch]="true"
+            [multiple]="false" (onChange)="courseChange($event)">
+          </select-search>
+        </ion-item>
+      </ion-item-group>
+
+  </ion-list>
 </ion-content>
